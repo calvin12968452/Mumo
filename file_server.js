@@ -1,7 +1,31 @@
+var express = require('express');
+var app = express(); //產生 Express Application 物件
+app.use('/template',function(req, res, next){
+  console.log(req,url);
+  next();
+} );
+app.use('/css',express.static('css'));
+app.get('/', function(req, res) {  //當連線到跟目錄的時候跳出以下訊息
+  res.sendFile(__dirname + '/template/homepage/homepage.html');
+  
+});
+
+
+app.get('/normal',function(req, res){
+  res.sendFile(__dirname + '/template/normal/normal.html');
+});
+
+app.listen(8080, function(){
+  console.log("伺服器已經啟動在 http://localhost:8080/");
+});
+
+
+
+/*
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
-var adr = 'http://localhost:8080/';
+var adr = 'http://localhost:8080/template/homepage/homepage.html';
 var q = url.parse(adr, true);
 
 console.log(q.host); //returns 'localhost:8080'
@@ -18,7 +42,7 @@ app.listen(8080, function(){
     console.log("伺服器已經啟動在 http://localhost:8080/");
 });
 
-/*
+
 //if not found page else deplay page
 http.createServer(function (req, res) {
   var q = url.parse(req.url, true);
@@ -30,7 +54,7 @@ http.createServer(function (req, res) {
     } 
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write(data);
-    return res.end();
+    return res.end('Hello my <u>first server</u>\n');
   });
 }).listen(8080); 
 */

@@ -3,18 +3,18 @@
 <title>Sign Up</title>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="signup.css">
-<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="css/signup.css">
+<link rel="stylesheet" href="css/w3.css">
 </head>
 <body>
-<img class="w3-image" src="cover.png" alt="Cover" width="1600" height="800">
-<form action="/action_page.php">
+<img class="w3-image" src="css/cover.png" alt="Cover" width="1600" height="800">
+
 <div class="w3-display-middle w3-margin-top w3-center">
   <h1>Who are you?</h1>
   <button onclick="document.getElementById('normal').style.display='block'" style="width:auto;">I'm a normal user</button>
   <button onclick="document.getElementById('vendor').style.display='block'" style="width:auto;">I'm a vendor</button>
+  <a href = http://localhost:8080/ ><h1>back to homepage</h1></a>
 </div>  
-</form>
 <!-- Normal Section -->
 <div id="normal" class="modal">
   <span onclick="document.getElementById('normal').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -52,7 +52,7 @@
 <!-- Vendor Section -->
 <div id="vendor" class="modal">
   <span onclick="document.getElementById('vendor').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content" action="/action_page.php">
+  <form class="modal-content" action="">
     <div class="container">
       <h1>Sign Up For Vendor</h1>
       <p>Please fill in this form to create an account.</p>

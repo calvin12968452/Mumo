@@ -3,6 +3,8 @@ var app = express(); //產生 Express Application 物件
 var path = require('path');
 var mysql = require('mysql');
 var routes = require('routes');
+var bodyPraser = require('body-parser');
+var fs = require('fs');
 
 //var users = require('./routes/users');
 
@@ -11,12 +13,13 @@ app.use('/template',function(req, res, next){
   console.log(req,url);
   next();
 } );
+
+
 //lets css work
 app.use('/css',express.static('css'));
 
 app.get('/', function(req, res) {  //當連線到跟目錄的時候跳出以下訊息
   res.sendFile(__dirname + '/template/homepage/homepage.html');
-  
 });
 
 //route
@@ -32,6 +35,9 @@ app.get('/vendor',function(req, res){
 app.get('/signup',function(req, res){
   res.sendFile(__dirname + '/template/signup/signup.html');
 });
+
+
+
 
 //let manager konws that server is working
 app.listen(8080, function(){
@@ -83,3 +89,30 @@ app.get('/test', function(req, res, next){
     res.render('test',{title:"use infor",data: data});
   });
 });
+
+//method
+var router = express.Router();
+app.use(bodyPraser.urlencoded({extended:true}));
+
+app.post('/file_server', function(req, res){
+  console.log('Form (from querystring): ' + req.query.form);
+  console.log('Name (from visible form field): ' + req.body.name);
+  console.log('Email (from visible form field): ' + req.body.email);
+  res.redirect(303, '/');
+});
+
+app.get('/process/submit', function(req, res, next){
+  res.render('list',{output: req.params.user});
+  
+});
+
+app.post('/process/submit', function(req, res, next){
+  var user = req.body.user
+  console.log('user (from visible form field): ' + user);
+  console.log('email (from visible form field): ' + req.body.email);
+  console.log('password (from visible form field): ' + req.body.psw);
+  res.render('list',{output: req.body.user});
+});
+
+
+module.exports = router;

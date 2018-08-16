@@ -5,14 +5,24 @@ var mysql = require('mysql');
 var routes = require('routes');
 var bodyPraser = require('body-parser');
 var fs = require('fs');
-
-//var users = require('./routes/users');
+var reg = require('./routes/reg')
+var users = require('./models/users');
 
 
 app.use('/template',function(req, res, next){
   console.log(req,url);
   next();
 } );
+
+app.use(app.router);
+reg.initialize(app);
+
+app.use(app.router);
+user.initialize(app);
+
+//app.use('/reg', reg);
+
+//app.use('/users', users);
 
 
 //lets css work
@@ -30,7 +40,6 @@ app.get('/normal',function(req, res){
 app.get('/vendor',function(req, res){
   res.sendFile(__dirname + '/template/businesspage/vendor.html');
 });
-
 
 app.get('/signup',function(req, res){
   res.sendFile(__dirname + '/template/signup/signup.html');
@@ -93,7 +102,7 @@ app.get('/test', function(req, res, next){
 //method
 var router = express.Router();
 app.use(bodyPraser.urlencoded({extended:true}));
-
+/*
 app.post('/file_server', function(req, res){
   console.log('Form (from querystring): ' + req.query.form);
   console.log('Name (from visible form field): ' + req.body.name);
@@ -101,10 +110,7 @@ app.post('/file_server', function(req, res){
   res.redirect(303, '/');
 });
 
-app.get('/process/submit', function(req, res, next){
-  res.render('list',{output: req.params.user});
-  
-});
+app.get('/process/submit', function(req, res, next){});
 
 app.post('/process/submit', function(req, res, next){
   var user = req.body.user
@@ -114,5 +120,5 @@ app.post('/process/submit', function(req, res, next){
   res.render('list',{output: req.body.user});
 });
 
-
+*/
 module.exports = router;

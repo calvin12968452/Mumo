@@ -6,23 +6,47 @@ var routes = require('routes');
 var bodyPraser = require('body-parser');
 var fs = require('fs');
 var reg = require('./routes/reg')
-var users = require('./models/users');
 
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+//method
+var router = express.Router();
+app.use(bodyPraser.urlencoded({extended:true}));
 
 app.use('/template',function(req, res, next){
   console.log(req,url);
   next();
 } );
 
-app.use(app.router);
-reg.initialize(app);
 
-app.use(app.router);
-user.initialize(app);
+//config for db
+var con = mysql.createConnection({
+  host: "localhost",
+  user:"root",
+  password:"",
+  server:"localhost\\SQLEXPRESS",   //這邊要注意一下!!
+  database:"mumo"
+});
 
-//app.use('/reg', reg);
+//DB 
+//coonect to db
+con.connect(function(err){
+  if(err) {
+    console.log("connecting error");
+    return ;
+  }
+  console.log ("connecting success");
+});
 
-//app.use('/users', users);
+//db state
+app.use(function(req, res, next){
+  req.con = con;
+  next();
+});
+
+app.use('/', reg);
 
 
 //lets css work
@@ -45,9 +69,6 @@ app.get('/signup',function(req, res){
   res.sendFile(__dirname + '/template/signup/signup.html');
 });
 
-
-
-
 //let manager konws that server is working
 app.listen(8080, function(){
   console.log("伺服器已經啟動在 http://localhost:8080/");
@@ -55,37 +76,14 @@ app.listen(8080, function(){
 
 
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
 
 
 
-//DB 
 
-//db state
-app.use(function(req, res, next){
-  req.config = config;
-  next();
-})
 
-//config for db
-var config = mysql.createConnection({
-  host: "localhost",
-  user:"root",
-  password:"",
-  server:"localhost\\SQLEXPRESS",   //這邊要注意一下!!
-  database:"mumo"
-});
 
-//coonect to db
-config.connect(function(err){
-  if(err) {
-    console.log("connecting error");
-    return ;
-  }
-  console.log ("connecting success");
-});
+
+
 
 app.get('/test', function(req, res, next){
   var db = req.config;
@@ -99,9 +97,7 @@ app.get('/test', function(req, res, next){
   });
 });
 
-//method
-var router = express.Router();
-app.use(bodyPraser.urlencoded({extended:true}));
+
 /*
 app.post('/file_server', function(req, res){
   console.log('Form (from querystring): ' + req.query.form);

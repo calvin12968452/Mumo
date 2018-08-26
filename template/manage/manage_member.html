@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<title>管理會員介面</title>
+<link rel="stylesheet" href="manage_member.css">
+</head>
+<body>
+  <div class="top">
+      <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+          <button class="w3-bar-item w3-button w3-large"
+          onclick="w3_close()">關閉 &times;</button>
+          <a href="#" class="w3-bar-item w3-button">商品管理</a>
+          <a href="#" class="w3-bar-item w3-button">會員管理</a>
+          <a href="#" class="w3-bar-item w3-button">活動管理</a>
+          <a href="#" class="w3-bar-item w3-button">新聞設定</a>
+          <a href="#" class="w3-bar-item w3-button">版面設定</a>
+          <a href="#" class="w3-bar-item w3-button">系統設定</a>
+          <a href="#" class="w3-bar-item w3-button">登出</a>
+        </div>
+        <div id="main">
+        <div class="w3-teal">
+          <h1>管理員(***)你好</h1>
+          <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+        </div>
+        </div>
+        <script>
+        function w3_open() {
+          document.getElementById("main").style.marginLeft = "25%";
+          document.getElementById("mySidebar").style.width = "25%";
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("openNav").style.display = "inline-block";
+        }
+        </script>
+  </div>
+  <div class="all">
+    <div class="table">
+      <table style="width:100%">
+        <tr>
+          <th>ID</th>
+          <th>用戶名</th> 
+          <th>註冊時間</th>
+          <th>最近登錄</th>
+          <th>操作</th>
+        </tr>
+        <tr>
+          <td>513</td>
+          <td>阿貓</td>
+          <td>2018-05-28</td> 
+          <td>2018-07-31</td>
+          <td>
+            <form>
+              <select id="operate" name="operate">
+                <option value="檢視資訊">檢視資訊</option>
+                <option value="設定群組">設定群組</option>
+                <option value="封鎖用戶">封鎖用戶</option>
+              </select>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>666</td>
+          <td>阿狗</td>
+          <td>2017-06-01</td> 
+          <td>2018-08-03</td>
+          <td>
+            <form>
+              <select id="operate" name="operate">
+                <option value="檢視資訊">檢視資訊</option>
+                <option value="設定群組">設定群組</option>
+                <option value="封鎖用戶">封鎖用戶</option>
+              </select>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>666</td>
+          <td>阿狗</td>
+          <td>2017-06-01</td> 
+          <td>2018-08-03</td>
+          <td>
+            <form>
+              <select id="operate" name="operate">
+                <option value="檢視資訊">檢視資訊</option>
+                <option value="設定群組">設定群組</option>
+                <option value="封鎖用戶">封鎖用戶</option>
+              </select>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>666</td>
+          <td>阿狗</td>
+          <td>2017-06-01</td> 
+          <td>2018-08-03</td>
+          <td>
+            <form>
+              <select id="operate" name="operate">
+                <option value="檢視資訊">檢視資訊</option>
+                <option value="設定群組">設定群組</option>
+                <option value="封鎖用戶">封鎖用戶</option>
+              </select>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>666</td>
+          <td>阿狗</td>
+          <td>2017-06-01</td> 
+          <td>2018-08-03</td>
+          <td>
+            <form>
+              <select id="operate" name="operate">
+                <option value="檢視資訊">檢視資訊</option>
+                <option value="設定群組">設定群組</option>
+                <option value="封鎖用戶">封鎖用戶</option>
+              </select>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>666</td>
+          <td>阿狗</td>
+          <td>2017-06-01</td> 
+          <td>2018-08-03</td>
+          <td>
+            <form>
+              <select id="operate" name="operate">
+                <option value="檢視資訊">檢視資訊</option>
+                <option value="設定群組">設定群組</option>
+                <option value="封鎖用戶">封鎖用戶</option>
+              </select>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>666</td>
+          <td>阿狗</td>
+          <td>2017-06-01</td> 
+          <td>2018-08-03</td>
+          <td>
+            <form>
+              <select id="operate" name="operate">
+                <option value="檢視資訊">檢視資訊</option>
+                <option value="設定群組">設定群組</option>
+                <option value="封鎖用戶">封鎖用戶</option>
+              </select>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>666</td>
+          <td>阿狗</td>
+          <td>2017-06-01</td> 
+          <td>2018-08-03</td>
+          <td>
+            <form>
+              <select id="operate" name="operate">
+                <option value="檢視資訊">檢視資訊</option>
+                <option value="設定群組">設定群組</option>
+                <option value="封鎖用戶">封鎖用戶</option>
+              </select>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>666</td>
+          <td>阿狗</td>
+          <td>2017-06-01</td> 
+          <td>2018-08-03</td>
+          <td>
+            <form>
+              <select id="operate" name="operate">
+                <option value="檢視資訊">檢視資訊</option>
+                <option value="設定群組">設定群組</option>
+                <option value="封鎖用戶">封鎖用戶</option>
+              </select>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>666</td>
+          <td>阿狗</td>
+          <td>2017-06-01</td> 
+          <td>2018-08-03</td>
+          <td>
+            <form>
+              <select id="operate" name="operate">
+                <option value="檢視資訊">檢視資訊</option>
+                <option value="設定群組">設定群組</option>
+                <option value="封鎖用戶">封鎖用戶</option>
+              </select>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>666</td>
+          <td>阿狗</td>
+          <td>2017-06-01</td> 
+          <td>2018-08-03</td>
+          <td>
+            <form>
+              <select id="operate" name="operate">
+                <option value="檢視資訊">檢視資訊</option>
+                <option value="設定群組">設定群組</option>
+                <option value="封鎖用戶">封鎖用戶</option>
+              </select>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="center">
+      <div class="pagination">
+        <div class="search">
+          <form>
+            <input type="text" name="search" placeholder="Search..">
+          </form>
+        </div>
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -28,3 +28,36 @@ th {
     background-color: #cbc26d;
     color: rgb(255, 255, 255);
 }
+
+.center {
+    text-align: right;
+}
+
+.pagination {
+    display: inline-block;
+    width: 75%;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin-top:20px;
+}
+
+.pagination a.active {
+    background-color: #c9bc1f;
+    color: white;
+    border: 1px solid #c9bc1f;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.search {
+    width: 230px;
+	float: left;
+	margin-top:25px;
+}

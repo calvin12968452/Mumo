@@ -1,0 +1,68 @@
+<html>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+  <head>
+    <title> Login Testing </title>
+    <a href="/" class="btn btn-info"><span class="fa fa-sign-out"></span> SignOut</a>
+  </head>
+
+  <body>
+    <div class="jumbotron text-center">
+      <h1>Testing for Google Plus OAuth 2.0 with Node JS
+         to implement a login web page.</h1></br>
+      <p>Login successfully!</p>
+    </div>
+
+    <%if(google_user != null){ %>
+      <div class="well">
+        <h3 class="text-danger"><span class="fa fa-google-plus"></span> Google</h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>User Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>user id</strong></td>
+              <td><%= google_user.user_id %></td>
+            </tr>
+            <tr>
+              <td><strong>user name</strong></td>
+              <td><%= google_user.user_name %></td>
+            </tr>
+            <tr>
+              <td><strong>user email</strong></td>
+              <td><%= google_user.user_email %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <% }%>
+
+    <%if(fb_user != null){ %>
+      <div class="well">
+        <h3 class="text-primary"><span class="fa fa-facebook-square"></span> Facebook</h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>User Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>user id</strong></td>
+              <td><%= fb_user.user_id %></td>
+            </tr>
+            <tr>
+              <td><strong>user name</strong></td>
+              <td><%= fb_user.user_name %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <% }%>
+  </body>
+
+</html>

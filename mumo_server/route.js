@@ -28,7 +28,7 @@ module.exports = function(app, ls, passport){
   });
 
   app.get('/profile', function(req, res){   // <-- logined page
-    res.render('C:\\Users\\user\\Desktop\\Gcloud\\gcloud\\views\\component\\profile.ejs', { google_user: ls.get('google_user'), fb_user: ls.get('fb_user') });
+    res.render('./component/profile.ejs', { google_user: ls.get('google_user'), fb_user: ls.get('fb_user') });
   });
 
   // google login route

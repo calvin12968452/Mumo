@@ -35,6 +35,7 @@ module.exports = function(ls, passport){
     console.log(textFg.FgGreen, '\n[ user id ] : ', textStyle.Reset, profile.id);
     console.log(textFg.FgGreen, '\n[ user name ] : ', textStyle.Reset, profile.displayName);
     console.log(textFg.FgGreen, '\n[ user email ] : ', textStyle.Reset, profile.emails[0].value);
+    console.log(profile);
     console.log('');
     var user_id = profile.id;
     var user_name = profile.displayName;
@@ -57,6 +58,7 @@ module.exports = function(ls, passport){
     console.log(textFg.FgGreen, '\n[ user id ] : ', textStyle.Reset, profile.id);
     console.log(textFg.FgGreen, '\n[ user name ] : ', textStyle.Reset, profile.displayName);
     console.log(textFg.FgGreen, '\n[ user photo ] : ', textStyle.Reset, profile.photos[0].value);
+    console.log(profile);
     console.log('');
     var user_id = profile.id;
     var user_name = profile.displayName;

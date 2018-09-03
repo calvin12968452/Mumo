@@ -1,4 +1,4 @@
-var express = require('express')();
+var express = require('express');
 var app = express(); //產生 Express Application 物件
 var path = require('path');
 var mysql = require('mysql');
@@ -6,9 +6,8 @@ var routes = require('routes');
 var bodyPraser = require('body-parser');
 var fs = require('fs');
 var reg = require('./routes/reg');
-
-var server = require('http').Server(app);
-var io = require('socket.io')(server);
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -64,16 +63,16 @@ app.get('/normal',function(req, res){
   res.sendFile(__dirname + '/template/normal/normal.html');
 });
 
-app.get('/chatroom', function (req, res) {
-  res.sendFile(__dirname + '/index.html');
-});
-
 app.get('/vendor',function(req, res){
   res.sendFile(__dirname + '/template/businesspage/vendor.html');
 });
 
 app.get('/signup',function(req, res){
   res.sendFile(__dirname + '/template/signup/signup.html');
+});
+
+app.get('/chatroom',function(req, res){
+  res.sendFile(__dirname + '/chatroom.html');
 });
 
 //let manager konws that server is working

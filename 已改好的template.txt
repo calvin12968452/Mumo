@@ -1,4 +1,0 @@
-businesspage
-homepage
-normal
-signup

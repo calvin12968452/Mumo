@@ -28,5 +28,5 @@ Route(app, express, ls, passport);     // <-- implement the routing setting
 //   console.log(textFg.FgGreen, "\n[ Info ] ", textStyle.Reset, "Server is online!\n");
 // })
 http.listen(process.env.PORT || 3000, function(){
-    console.log(textFg.FgGreen, "\n[ Info ] ", textStyle.Reset, "Server is online!\n");
+    console.log(textFg.FgGreen, "\n[ Info ] ", textStyle.Reset, "Server is online!\n online at port 3000");
 });

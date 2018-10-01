@@ -25,28 +25,28 @@ module.exports = function(app, express, ls, passport){
   // set the route ======================
   // ====================================
   app.get('/', function(req, res) {  //當連線到跟目錄的時候跳出以下訊息
-    res.sendFile('D:/文件/Mumo/template/homepage/homepage.html');
+    res.sendFile(__dirname + '/template/homepage/homepage.html');
   });
 
   app.get('/profile',function(req, res){
-    res.sendFile('D:/文件/Mumo/template/userpages/userpage.html');
+    res.sendFile(__dirname + '/template/userpages/userpage.html');
   });
 
   //route
   app.get('/normal',function(req, res){
-    res.sendFile('D:/文件/Mumo/template/normal/normal.html');
+    res.sendFile(__dirname + '/template/normal/normal.html');
   });
 
   app.get('/vendor',function(req, res){
-    res.sendFile('D:/文件/Mumo/template/businesspage/vendor.html');
+    res.sendFile(__dirname + '/template/businesspage/vendor.html');
   });
 
   app.get('/signup',function(req, res){
-    res.sendFile('D:/文件/Mumo/template/signup/signup.html');
+    res.sendFile(__dirname + '/template/signup/signup.html');
   });
 
   app.get('/chat',function(req, res){
-    res.sendFile('D:/文件/Mumo/template/userpages/chatroom.html');
+    res.sendFile(__dirname + '/template/userpages/chatroom.html');
   });
 
   // google login route

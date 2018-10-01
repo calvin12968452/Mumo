@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jennie's home page</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="frpagestyle.css">
+    <link rel="stylesheet" href="ja.java">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="./audiojs/audiojs/audio.min.js"></script>
+    <script>
+            audiojs.events.ready(function() {
+              audiojs.createAll();
+            });
+    </script>
+     <script>
+            function onYouTubeIframeAPIReady(){var e=document.getElementById("youtube-audio"),
+                                               t=document.createElement("img");
+                                               t.setAttribute("id","youtube-icon"),
+                                               t.style.cssText="cursor:pointer;cursor:hand",
+                                               e.appendChild(t);var a=document.createElement("div");
+                                               a.setAttribute("id","youtube-player"),
+                                               e.appendChild(a);
+                                               var o=function(e){var a=e?"4.png":"3.png";
+                                               t.setAttribute("src"," "+a)};
+                                               e.onclick=function(){r.getPlayerState()===YT.PlayerState.PLAYING||r.getPlayerState()===YT.PlayerState.BUFFERING?(r.pauseVideo(),o(!1)):(r.playVideo(),o(!0))};
+                                               var r=new YT.Player("youtube-player",{height:"0",width:"0",videoId:e.dataset.video,
+                                               playerVars:{autoplay:e.dataset.autoplay,loop:e.dataset.loop},
+                                               events:{onReady:function(e){r.setPlaybackQuality("small"),
+                                               o(r.getPlayerState()!==YT.PlayerState.CUED)},
+                                               onStateChange:function(e){e.data===YT.PlayerState.ENDED&&o(!1)}}})}
+
+    </script> 
+</head>
+<body>
+    <div class="box1">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded" >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background:#Ffb85f"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+          <ul class="navbar-nav">
+            <a class="navbar-brand" href="#" style="font-size:200%; font-weight:bold; color:#01abaa; position:absolute;
+            left:20px;">MUMO</a>
+
+            <li>
+              <a class="nav-link" href="#" style="margin-top:25%; font-family:Microsoft JhengHei;">主頁<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:20%; font-family:Microsoft JhengHei;">交友</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown12">
+                <a class="dropdown-item" href="#" style="font-family:Microsoft JhengHei;">好友</a>
+                <a class="dropdown-item" href="#" style="font-family:Microsoft JhengHei;">搜尋新朋友</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:16%; font-family:Microsoft JhengHei;">聊天室</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown12">
+                <a class="dropdown-item" href="#" style="font-family:Microsoft JhengHei;">個人</a>
+                <a class="dropdown-item" href="#" style="font-family:Microsoft JhengHei;">群組</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:14%; font-family:Microsoft JhengHei;">贈送禮物</a>
+            </li>
+            <div id="top-tools">
+                <li>
+                    <input href="#" type="image" src="setting.png" alt="image" width="30%" height="30%" style="margin-top:5px;">
+                </li>
+                <li>
+                    <input href="#" type="image" src="qu.png" alt="image" width="30%" height="30%">
+                </li>
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    
+    <!--左邊欄位-->
+    <div class="container my-5"><!--和上面的間距-->
+        <div class="row">
+            <div class="col-lg-4" id="left"><!--left 是左邊欄位,占整個版面的3/12-->
+                <img class="rounded-circle" src="Jennie1.jpg" alt="image">
+                <div class="left_text">
+                    <dl class="row">
+                        <dt class="col-sm-12" style="font-size:40px; font-family: monospace;">Jennie</dt>
+                        <dt class="col-sm-12"><img src="girl.png" alt="image" width="13%" height="40%"></dt>
+                        </br>
+                        </br>
+                        </br>
+                        </br>
+                    </dl>
+                    <div class="row">
+                        <dt class="col-sm-4" style="font-size:18px;">生日</dt>
+                        <dd class="col-sm-7" style="font-size:18px;">11/18</dd>
+                        <dt class="col-sm-4" style="font-size:18px;">城市</dt>
+                        <dd class="col-sm-7" style="font-size:18px;">台灣</dd>
+                        <dt class="col-sm-4"> <img id="dia" src="dia.png" alt="image" width="50%" height="60%" style="margin-top:20px; margin-left:30px;"></dt>
+                        <p class="col-sm-7" style="font-size:18px;">123456</p>
+                    </div>    
+                    
+                    </br>
+                    <input type="image" class="rounded-circlelike" src="jennie1.jpg" alt="image" >
+                    <input type="image" class="rounded-circlelike" src="lisa.jpg" alt="image" >
+                    <input type="image" class="rounded-circlelike" src="rose3.jpg" alt="image" >
+                    
+                    <!--music-->
+                    <div>
+                        <audio src="./audiojs/123.mp3" preload="auto"></audio>      
+                    </div>
+
+                    <HR color="black" size="10" width="90%"  align="center">
+                    
+                    <dl class="row">
+                        <dt class="col-sm-12" style="font-family:comic sans ms; font-size:23px;"><img src="music.png" width= "13%" height="25%"> Favorite <img src="movie.png" width= "13%" height="27%"></dt>
+                        </br>
+                        </br>
+                        </br>
+                        </br>
+                        <dt class="col-sm-5" style="font-size:18px;">Movie</dt>
+                        <dd class="col-sm-7" style="font-size:18px;">動作片</dd>
+                        <dt class="col-sm-5" style="font-size:18px;">Music</dt>
+                        <dd class="col-sm-7" style="font-size:18px;">Kpop</dd>
+                        
+                        
+                    </dl>
+                </div>
+            </div>
+
+            <!--<div class="col-lg-8 mt-lg-0 mt-3">-->
+            <div class="col-lg-8 mt-lg-0 mt-3">
+                   
+                <div class="box2">
+                    <div class="mb-3">
+                        <h4 style="text-align:center">Weekly News</h4>
+                        <div class="box2_content">
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <h4 style="text-align:center">Jennie's Life</h4>
+                        <div class="box4_content">
+                            <div class="row">
+                                <input type="image" src="plus.png" alt="image" width="5%" height="5%" style="margin-top:0px;margin-bottom:20px; margin-left:700px; margin-right:30px;">
+                            </div>
+                            <div class="row">
+                                <img class="myImg" src="Jennie1.jpg" alt="image" >
+                                <img class="myImg" src="jen1.jpg" alt="image" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+    <script>
+    $('#link').click(function () {
+        var src = 'http://www.youtube.com/v/FSi2fJALDyQ&amp;autoplay=1';
+        $('#myModal').modal('show');
+        $('#myModal iframe').attr('src', src);
+    });
+
+    $('#myModal button').click(function () {
+        $('#myModal iframe').removeAttr('src');
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minsoo's manage page</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="manage.css">
+    <!-- Tocas UI：CSS 與元件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
+    <!-- Tocas JS：模塊與 JavaScript 函式 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"></script>
+</head>
+<body>
+  <div id="bt-sidebar">
+    <div class="ts static visible thin left sidebar inverted vertical menu" style="display:none" id="mySidebar">
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      <a href="javascript:void(0)" class="closebtn" onclick="w3_close()" style="font-size:200%; font-weight:bold;">&times;</a>
+      </br></br>&nbsp;&nbsp;&nbsp;
+      <img class="ts small fluid middle aligned image" src="min.jpg"></br></br>
+      &emsp;&emsp;&nbsp;
+      <a class="item">User Name</a></br></br></br>
+      <a class="item">商品管理</a></br>
+      <a class="item">會員管理</a></br>
+      <a class="item">活動管理</a></br>
+      <a class="item">新聞設定</a></br>
+      <a class="item">版面設定</a></br>
+      <a class="item">系統設定</a></br>
+      <a class="item">登出</a>
+    </div>
+  </div>
+    <!--navbar-->
+    <div class="box1">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light rounded" >
+        <div class="collapse navbar-collapse justify-content-md-left" id="navbarsExample10">
+          <nav class="navbar-nav">
+            <div class="w3-teal">
+              <button id="openNav" class="ts secondary button" onclick="w3_open()"><i class="sidebar icon"></i></button>
+            </div>
+            <script>
+              function w3_open() {
+                document.getElementById("bt-sidebar").style.marginLeft = "25%";
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("openNav").style.display = 'none';
+              }
+              function w3_close() {
+                document.getElementById("bt-sidebar").style.marginLeft = "0%";
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("openNav").style.display = "inline-block";
+              }
+            </script>
+          </nav>
+        </div>
+          <a class="navbar-brand" style="font-size:200%; font-weight:bold; color:#01abaa; position:absolute; left:100px;">
+            MUMO 管理員{XXX}你好
+          </a>
+          <div id="top-tools" style="left:560px;">
+            <li>
+              <input href="#" type="image" src="setting.png" alt="image" width="4%" height="4%" style="margin-top:5px;">
+            </li>
+            <li>
+              <input href="#" type="image" src="qu.png" alt="image" width="4%" height="4%" style="margin-top:5px;">
+            </li>
+          </div>
+        </nav>
+      </div>
+
+    <div class="all">
+      <div class="table">
+        <table style="width:100%">
+          <tr>
+            <th>ID</th>
+            <th>用戶名</th>
+            <th>註冊時間</th>
+            <th>最近登錄</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td>513</td>
+            <td>阿貓</td>
+            <td>2018-05-28</td>
+            <td>2018-07-31</td>
+            <td>
+              <form>
+                <select id="operate" name="operate">
+                  <option value="檢視資訊">檢視資訊</option>
+                  <option value="設定群組">設定群組</option>
+                  <option value="封鎖用戶">封鎖用戶</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>666</td>
+            <td>阿狗</td>
+            <td>2017-06-01</td>
+            <td>2018-08-03</td>
+            <td>
+              <form>
+                <select id="operate" name="operate">
+                  <option value="檢視資訊">檢視資訊</option>
+                  <option value="設定群組">設定群組</option>
+                  <option value="封鎖用戶">封鎖用戶</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>666</td>
+            <td>阿狗</td>
+            <td>2017-06-01</td>
+            <td>2018-08-03</td>
+            <td>
+              <form>
+                <select id="operate" name="operate">
+                  <option value="檢視資訊">檢視資訊</option>
+                  <option value="設定群組">設定群組</option>
+                  <option value="封鎖用戶">封鎖用戶</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>666</td>
+            <td>阿狗</td>
+            <td>2017-06-01</td>
+            <td>2018-08-03</td>
+            <td>
+              <form>
+                <select id="operate" name="operate">
+                  <option value="檢視資訊">檢視資訊</option>
+                  <option value="設定群組">設定群組</option>
+                  <option value="封鎖用戶">封鎖用戶</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>666</td>
+            <td>阿狗</td>
+            <td>2017-06-01</td>
+            <td>2018-08-03</td>
+            <td>
+              <form>
+                <select id="operate" name="operate">
+                  <option value="檢視資訊">檢視資訊</option>
+                  <option value="設定群組">設定群組</option>
+                  <option value="封鎖用戶">封鎖用戶</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>666</td>
+            <td>阿狗</td>
+            <td>2017-06-01</td>
+            <td>2018-08-03</td>
+            <td>
+              <form>
+                <select id="operate" name="operate">
+                  <option value="檢視資訊">檢視資訊</option>
+                  <option value="設定群組">設定群組</option>
+                  <option value="封鎖用戶">封鎖用戶</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>666</td>
+            <td>阿狗</td>
+            <td>2017-06-01</td>
+            <td>2018-08-03</td>
+            <td>
+              <form>
+                <select id="operate" name="operate">
+                  <option value="檢視資訊">檢視資訊</option>
+                  <option value="設定群組">設定群組</option>
+                  <option value="封鎖用戶">封鎖用戶</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>666</td>
+            <td>阿狗</td>
+            <td>2017-06-01</td>
+            <td>2018-08-03</td>
+            <td>
+              <form>
+                <select id="operate" name="operate">
+                  <option value="檢視資訊">檢視資訊</option>
+                  <option value="設定群組">設定群組</option>
+                  <option value="封鎖用戶">封鎖用戶</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="center">
+        <div class="pagination">
+          <div class="search">
+            <form>
+              <input type="text" name="search" placeholder="Search..">
+            </form>
+          </div>
+          <a href="#">&laquo;</a>
+          <a href="#">1</a>
+          <a href="#" class="active">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">6</a>
+          <a href="#">&raquo;</a>
+
+        </div>
+      </div>
+    </div>
+
+    <!--滑動推薦頁面-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+
+    <script type="text/javascript">
+    var personIn;
+    personIn = ["11/18", "台灣", 123456];
+
+    document.getElementById("demo2").innerHTML = personIn[0] + "<br/>" + personIn[1] + "<br/>";
+    document.getElementById("demo3").innerHTML = personIn[2];
+
+    </script>
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $('#link').click(function () {
+        var src = 'http://www.youtube.com/v/FSi2fJALDyQ&amp;autoplay=1';
+        $('#myModal').modal('show');
+        $('#myModal iframe').attr('src', src);
+    });
+
+    $('#myModal button').click(function () {
+        $('#myModal iframe').removeAttr('src');
+    });
+    </script>
+
+
+</body>
+</html>

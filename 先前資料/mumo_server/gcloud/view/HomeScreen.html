@@ -1,0 +1,44 @@
+<html>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+  <head>
+    <title> Login Testing </title>
+  </head>
+
+  <body>
+    <div class="jumbotron text-center">
+      <h1>Testing for Google Plus OAuth 2.0 with Node JS
+         to implement a login web page.</h1></br>
+      <p>Login or Register with:</p>
+      <a href="/oauth" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
+      <fb:login-button scope="public_profile, email" onlogin="checkLoginState()"></fb:login-button>
+      <a href="/fb" class="btn btn-primary"><span class="fa fa-facebook-square"></span> Facebook</a>
+    </div>
+  </body>
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+
+    FB.AppEvents.logPageView();
+
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+</html>

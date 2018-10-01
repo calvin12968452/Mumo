@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://www.youtube.com/iframe_api"></script>
+        
+        <meta charset="utf-8">
+        <script src="./audiojs/audio.min.js"></script>
+        <script>
+                audiojs.events.ready(function() {
+                  audiojs.createAll();
+                });
+        </script>
+        <script>
+                function onYouTubeIframeAPIReady(){var e=document.getElementById("youtube-audio"),
+                                                   t=document.createElement("img");
+                                                   t.setAttribute("id","youtube-icon"),
+                                                   t.style.cssText="cursor:pointer;cursor:hand",
+                                                   e.appendChild(t);var a=document.createElement("div");
+                                                   a.setAttribute("id","youtube-player"),
+                                                   e.appendChild(a);
+                                                   var o=function(e){var a=e?"2.png":"1.png";
+                                                   t.setAttribute("src"," "+a)};
+                                                   e.onclick=function(){r.getPlayerState()===YT.PlayerState.PLAYING||r.getPlayerState()===YT.PlayerState.BUFFERING?(r.pauseVideo(),o(!1)):(r.playVideo(),o(!0))};
+                                                   var r=new YT.Player("youtube-player",{height:"0",width:"0",videoId:e.dataset.video,
+                                                   playerVars:{autoplay:e.dataset.autoplay,loop:e.dataset.loop},
+                                                   events:{onReady:function(e){r.setPlaybackQuality("small"),
+                                                   o(r.getPlayerState()!==YT.PlayerState.CUED)},
+                                                   onStateChange:function(e){e.data===YT.PlayerState.ENDED&&o(!1)}}})}
+
+        </script> 
+    </head>
+    <body>
+        <h1>audio.js</h1>
+        <audio src="123.mp3" preload="auto"></audio>
+
+        <div data-video="G1ARRQipi8w"  
+            data-autoplay="1"         
+            data-loop="0"             
+            id="youtube-audio">
+        </div>
+
+    </body>
+</html>

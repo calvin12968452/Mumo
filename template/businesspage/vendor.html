@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<title>86 Cinema</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="css.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="/js/jquery.min.js" type="text/javascript"></script>  
+<script src="/js/ajaxupload.js" type="text/javascript"></script>
+<style>
+body{
+    background-color: #FDF4C9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;}
+</style>
+</head>
+
+<body>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+        <div class="w3-bar-item w3-button" style="font-size:200%;color:#01abaa;"><b>MUMO</b></div>
+    </div>
+</div>
+<!-- Page Container -->
+<div class="w3-content" style="margin-top: 100px; max-width:1000px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="vendor.jpg" style="width:100%" alt="Avatar">
+        </div>
+        <h2 class= "w3-text-black"><i class="w3-margin-right w3-large"></i>86影城</h2>
+        <div class="w3-container">
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large" style="color: #ff7a5a;"></i>地址: 苗栗縣頭份鎮中央路100號10樓</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large" style="color: #ff7a5a;"></i>電話: 012345678</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large" style="color: #ff7a5a;"></i>網站: 86cinema.com.tw</p>
+          <div class="w3-center">
+          <a class="w3-button w3-text-white" style="background-color: #ff7a5a;">編輯</a>
+          </div>
+          <hr>
+        </div>
+        <!-- User Rating System -->
+        <span class="heading"><i class="w3-margin-right"></i>用戶評分</span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <p><i class="w3-margin-right"></i>4.1平均來自254評論</p>
+        <hr>
+
+        <div class="row w3-margin-right w3-margin-left">
+          <div class="side">
+            <div>5 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-5"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>150</div>
+          </div>
+          <div class="side">
+            <div>4 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-4"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>63</div>
+          </div>
+          <div class="side">
+            <div>3 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-3"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>15</div>
+          </div>
+          <div class="side">
+            <div>2 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-2"></div>
+          </div>
+          </div>
+          <div class="side right">
+            <div>6</div>
+          </div>
+          <div class="side">
+            <div>1 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-1"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>20</div>
+          </div>
+        </div>
+        </br>
+      </div>
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-flag fa-fw w3-margin-right w3-xxlarge" style="color: #ff7a5a;"></i>優惠活動</i>
+        <!-- More button -->
+        <a onclick="document.getElementById('more').style.display='block'" class="w3-button w3-circle w3-large w3-bar-item w3-right" style="background-color: #ff7a5a;"><i class="fa fa-plus w3-right w3-text-white"></i></a></h2> 
+          <div id="more" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('more').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+                <form id="img-upload-form" method="post" accept-charset="utf-8" onsubmit="return submitImageForm(this)">
+                  <img id="logo-img" onclick="document.getElementById('add-new-logo').click();" src="img.png"/>
+                  <input type="file" style="display: none" id="add-new-logo" name="file" accept="image/*" onchange="addNewLogo(this)"/>
+                </form>
+              </div>
+              
+              <form class="w3-container" action="/action_page.php">
+                <div class="row">
+                  <div class="col-1">
+                    <label for="name">優惠名稱:</label>
+                  </div>
+                  <div class="col-2">
+                    <input type="text" id="name" name="couponname" placeholder="The Incredible Movie Offer">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-1">
+                    <label for="date">發布期間:</label>
+                  </div>
+                  <div class="col-2">
+                    <input style="width:30%" type="date" id="date" name="date"> 至 <input style="width:30%" type="date" id="date" name="date">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-1">
+                    <label for="discount">限量:</label>
+                  </div>
+                  <div class="col-2">
+                    <input style="width:30%"type="number" id="amount" name="amount" placeholder="30">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-1">
+                    <label for="discount">優惠說明:</label>
+                  </div>
+                  <div class="col-2">
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:80px"></textarea>
+                  </div>
+                </div>
+          
+          
+          
+          
+          
+          
+          
+                
+                <div class="row">
+                  <input type="submit" value="確認">
+                </div>
+              </form>
+            </div>
+        </div>
+        <p><i class="fa fa-circle fa-fw w3-margin-right w3-large" style="color: #c9f6d3;"></i> 可領取的優惠券</p>
+        <p><i class="fa fa-circle fa-fw w3-margin-right w3-large" style="color: #ffae9b;"></i> 已過期的優惠券</p>
+
+        <div class="w3-circle w3-large" style="background-color: #ff7a5a;">
+        </div>
+        <div class="w3-container w3-card w3-round w3-margin" style="background-color: #e3ffed;">
+          <h4>買三送一 TRAIN TO BUSAN/ 50 張</h4>
+          <span class="w3-right w3-opacity">發布期間: 2018/8/1 至 2018/8/20</span>
+          <hr>
+          <p>限量: 50 張</br>
+          優惠說明: </br> ● 使用期間 2018/8/1 到 2018/8/20。</br>
+        ● 週一至週五 早上9:00到12:00  </br>
+          請將 QR CODE 交付店家掃描，即可獲得優惠卷乙張。</p>
+        </div>
+        <div class="w3-container w3-card w3-round w3-margin" style="background-color: #ffd9d1;">
+          <h4>SPIDERMAN電影套票優惠/ 10 張</h4>
+          <span class="w3-right w3-opacity">發布日期: 2018/4/1 至 2018/4/5</span></br>
+          <span class="w3-right w3-opacity" style="color: red;font-weight: bold;">已領8張 尚有2張</span>
+          <hr>
+          <p>限量: 10 張</br>
+          優惠說明: </br> ● 使用期間 2018/4/1 至 2018/4/10。</br>
+        ● 週一至週四享優惠票價140元/張。</br>
+        ● 週一至週日享套餐票優惠價100元(含小爆米花及小杯飲料)。</br>
+        ● 3D影片須加價每張50元。</br>
+          請將 QR CODE 交付店家掃描，即可獲得優惠卷乙張。</p>
+        </div>
+        <div class="w3-container w3-card w3-round w3-margin" style="background-color: #ffd9d1;">
+          <h4>情人節 看鬼片 送爆米花/ 20 張</h4>
+          <span class="w3-right w3-opacity">發布日期: 2018/2/5 至 2018/2/14</span></br>
+          <span class="w3-right w3-opacity" style="color: red;font-weight: bold;">已領20張 尚有0張</span>
+          <hr>
+          <p>限量: 20 張</br>
+          優惠說明: </br> ● 使用期間 2018/2/8 至 2018/2/18。</br>
+        ● 本活動優惠僅適用現場購買全票/優待票/早場優惠票/愛心票。</br>
+        ● 贈送之套餐內容含小杯可樂和中杯爆米花，不得要求更改品項或折抵現金。</br>
+          請將 QR CODE 交付店家掃描，即可獲得優惠卷乙張。</p>
+        </div>
+        <div class="center">
+          <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+          </div>
+        </div>
+      </div>
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+<script type="text/javascript">
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+var addNewLogo = function(input){
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            //Hiển thị ảnh vừa mới upload lên
+            $('#logo-img').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+        //submit form để upload ảnh
+        $('#img-upload-form').submit();
+    }
+}
+var submitImageForm = function(form){
+    toggleLoading(); //show loading mask
+    $.ajax({
+        url: "/admin/upload", //api upload phía server
+        type: "POST",
+        data: new FileReader(form),
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function (data)
+        {
+            toggleLoading();            
+            alert('Success');
+        },
+        error: function (data) {
+           toggleLoading();
+        }
+    });
+    return false;
+}
+public function postUpload()
+{
+    $folderPath = 'downloads/photo/image';
+    if (!File::isDirectory($folderPath)) {
+        File::makeDirectory($folderPath, 0755, true); 
+    }
+    $file = Input::file('file');
+    $filename = '';
+    if(null != $file){
+        $filename = $file->getClientOriginalName();
+        $upload_success = Input::file('file')->move($folderPath, $filename);
+    } 
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<title>First Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" href="css/w3.css">
+<body>
+  <!-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.1&appId=717021385300886&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> -->
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+        <a href="#home" class="w3-bar-item w3-button" style="font-size:200%;color:#01abaa;"><b>MUMO</b></a>
+        <!-- Right-sided navbar links. Hide them on small screens -->
+        <div class="center">
+            <div class="w3-right w3-hide-small" style="font-size:105%; position:relative;">
+                <a href="#intro" class="w3-bar-item w3-button">關於我們</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container">
+        <div id="login" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+                <div class="w3-center"><br>
+                        <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+
+                <form class="w3-container">
+                    <div class="w3-section">
+                        <div class="w3-col">
+                            <a href="/fb" class="fb btn">
+                                <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                            </a>
+                            <!-- <div class="fb-login-button" data-max-rows="1" data-size="large"
+                              data-button-type="continue_with" data-show-faces="true"
+                              data-auto-logout-link="true" data-use-continue-as="false"></div> -->
+
+                            <a href="/oauth" class="google btn"><i class="fa fa-google fa-fw">
+                                </i> Login with Google
+                            </a>
+                        </div>
+
+                        <p class="w3-center">用MUMO帳號登入:</p>
+                        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required>
+                        <input class="w3-input w3-border" type="text" placeholder="Enter Password" name="psw" required>
+                        <button class="w3-button w3-block w3-section w3-padding" style="background-color:#ffe869" type="submit">LOGIN</button>
+                    </div>
+                </form>
+                <div class="bottom-container">
+                    <div class="w3-row">
+                        <div class="w3-col">
+                            <a href="signup.html" class="btn">註冊</a>
+                        </div>
+                        <div class="w3-col">
+                            <a href="#" class="btn">忘記密碼?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="css/cover.png" alt="Cover" width="1600" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+      <button onclick="document.getElementById('login').style.display='block'" style="font-size:20px; background-color: #01abaa;">登入</button>
+      <a href="/signup" class="button" style="font-size:20px; background-color: #01abaa;">註冊</a>
+  </div>
+  </header>
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="intro">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="css/bout.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="400" height="400">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">關於我們</h1>
+      <p class="w3-large" style="line-height: 2.5">1. 提供一個讓喜歡音樂、電影的人交流互動的專屬平台。我們的特色是為使用者量身打造，透過興趣去創造更多的話題空間，提供大家更快速、容易尋找到同好知音。</p>
+      <p class="w3-large" style="line-height: 2.5">2. 結合電子商務，由店家提供優惠卷作為獎勵，讓使用者在交友平台上的社交行為更加活絡，同時也增加店家行銷的機會。</p>
+    </div>
+  </div>
+  <hr>
+
+<!-- End page content -->
+</div>
+</body>
+</html>

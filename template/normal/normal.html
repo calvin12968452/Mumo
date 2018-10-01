@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css.css">
+<link rel="stylesheet" href="w3.css">
+<style>
+body{
+    background-image: url("cover.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;}
+}
+</style>
+</head>
+<body>
+<div class="box">
+    <div class="w3-margin-top w3-center">
+        <h1 style="font-family: italic; font-size:60px; color:#3b9a9c;">設定個人檔案</h1>
+    </div>
+    <form action="/action_page.php">
+<!-- birthday -->
+        <div class="row">
+            <div class="col-25">
+                <label for="bday"><b style="color:#3b9a9c;">生日</b></label>
+            </div>
+            <div class="col-75">
+                <input type="date" name="bday" required></br>
+            </div>
+        </div>
+<!-- gender -->    
+        <div class="row">
+            <div class="col-25">
+                <label for="gender"><b style="color:#3b9a9c;">性別</b></label>
+            </div>
+            <div class="col-75">
+                <form>
+                    <div class="radio-toolbar">
+                        <input type="radio" id="radio1" name="radios" value="all" checked>
+                        <label for="radio1">男生</label>
+
+                        <input type="radio" id="radio2" name="radios" value="false">
+                        <label for="radio2">女生</label>
+
+                        <input type="radio" id="radio3" name="radios" value="true">
+                        <label for="radio3">其他</label>
+                    </div>
+                </form> 
+            </div>
+        </div>
+<!-- country -->    
+        <div class="row">
+            <div class="col-25">
+                <label for="country"><b style="color:#3b9a9c;">地區</b></label>
+            </div>
+            <div class="col-75">
+                <select id="country" name="country" required></select>
+                <select id="city" name="city" required></select>
+            </div>
+        </div>
+<!-- music type -->
+    <div class="row">
+        <div class="col-25">
+            <label for="subject"><b style="color:#3b9a9c;">音樂</b></label>
+        </div>
+        <div class="col-75">
+            <select id="music" name="music">
+                <option value="0">Select music type:</option>
+                <option value="1">Alternative</option>
+                <option value="2">Anime</option>
+                <option value="3">Blues</option>
+                <option value="4">Children's Music</option>
+                <option value="5">Classical</option>
+                <option value="6">Comedy</option>
+                <option value="7">Country</option>
+                <option value="8">EDM</option>
+                <option value="9">Electronic</option>
+                <option value="10">Hiphop/rap</option>
+                <option value="11">Instrumental</option>
+                <option value="12">J-pop</option>
+                <option value="13">Jazz</option>
+                <option value="14">K-pop</option>
+                <option value="15">Latin</option>
+                <option value="16">Opera</option>
+                <option value="17">Pop</option>
+                <option value="18">R&B/Soul</option>
+                <option value="19">Rock</option>
+                <option value="20">Soundtrack</option>
+            </select>
+            <select id="music" name="music">
+                <option value="0">Select music type:</option>
+                <option value="1">Alternative</option>
+                <option value="2">Anime</option>
+                <option value="3">Blues</option>
+                <option value="4">Children's Music</option>
+                <option value="5">Classical</option>
+                <option value="6">Comedy</option>
+                <option value="7">Country</option>
+                <option value="8">EDM</option>
+                <option value="9">Electronic</option>
+                <option value="10">Hiphop/rap</option>
+                <option value="11">Instrumental</option>
+                <option value="12">J-pop</option>
+                <option value="13">Jazz</option>
+                <option value="14">K-pop</option>
+                <option value="15">Latin</option>
+                <option value="16">Opera</option>
+                <option value="17">Pop</option>
+                <option value="18">R&B/Soul</option>
+                <option value="19">Rock</option>
+                <option value="20">Soundtrack</option>
+            </select>
+        </div>
+    </div>
+<!-- movie type -->
+    <div class="row">
+        <div class="col-25">
+            <label for="subject"><b style="color:#3b9a9c;">電影</b></label>
+        </div>
+        <div class="col-75">
+            <select id="music" name="music">
+                <option value="0">Select movie type:</option>
+                <option value="1">Action</option>
+                <option value="2">Animation</option>
+                <option value="3">Adventure</option>
+                <option value="4">Comedies</option>
+                <option value="5">Crime and Gangster film</option>
+                <option value="6">Drama</option>
+                <option value="7">Historical film</option>
+                <option value="8">Horror</option>
+                <option value="9">Musical films</option>
+                <option value="10">Thrillers</option>
+                <option value="11">Sci-fi</option>
+                <option value="12">Instrumental</option>
+            </select>
+            <select id="music" name="music">
+                <option value="0">Select movie type:</option>
+                <option value="1">Action</option>
+                <option value="2">Animation</option>
+                <option value="3">Adventure</option>
+                <option value="4">Comedies</option>
+                <option value="5">Crime and Gangster film</option>
+                <option value="6">Drama</option>
+                <option value="7">Historical film</option>
+                <option value="8">Horror</option>
+                <option value="9">Musical films</option>
+                <option value="10">Thrillers</option>
+                <option value="11">Sci-fi</option>
+                <option value="12">Instrumental</option>
+            </select>
+        </div>  
+    </div>
+    </br>
+    </br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<script type="text/javascript">
+var arrCountry=new Array();
+arrCountry["Taiwan"]=new Array("Changhua","Chiayi","Douliu","Hsinchu","Hualien","Kaohsiung","Keelung","Magong","Miaoli","Nantou","New Taipei","Pingtung","Puzi","Taibao","Taichung","Tainan","Taipei","Taitung","Tainan","Taoyuan","Toufen","Yilan","Tuanlin","Zhubei");
+arrCountry["Malaysia"]=new Array("Kuala Lumpur","Kota Bharu","Kota Kinabalu","Shah Alam","Georgetown","Tanah Merah","Johor Bahru","Ipor","Seremban","Kuantan");
+arrCountry["Hong Kong"]=new Array("Hong Kong","Kowloon", "Tsuen Wan","Yuen Long Kau Hui","Tung Chung","Shatin","Tuen Mun","Tai Po","Sai Kung","Yung Shue Wan");
+arrCountry["Macau"];
+window.onload=function() {
+    var country = document.getElementById("country");
+    for (var ctr in arrCountry) {
+        var opt =new Option();
+        opt.text = ctr;
+        country.add(opt);
+    }
+    for (var ctr in arrCountry) {
+        var city =document.getElementById("city");
+        for (var i=0; i<arrCountry[ctr].length; i++){
+            var opt= new Option();
+            opt.text=arrCountry[ctr][i];
+            city.add(opt);
+        }
+        break;
+    }
+};
+</script>
+</body>
+</html>

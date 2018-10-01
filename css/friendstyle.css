@@ -44,43 +44,27 @@ body {
     margin-left: 21%;
 
 }
-.rounded-circle1{
+
+.rounded-circlefriend{
     border-radius: 50%;
-    vertical-align: 200%;
-    width: 115%; 
+    vertical-align: 130%;
+    width: 85%; 
     height: 60%;
     margin-top: 10%;
-
+    vertical-align:center;
+}
+.rounded-circlefriendcard{
+    border-radius: 50%;
+    vertical-align: 70%;
+    width: 80%; 
+    height: 70%;
+    vertical-align:center;
 }
 .rounded-circlelike{
     border-radius: 50%;
     width: 12%; 
     height: 12%;
     text-align:left;
-}
-.rounded-circlefriend{
-    border-radius: 50%;
-    vertical-align: 200%;
-    width: 90%; 
-    height: 50%;
-    margin-top: 10%;
-    vertical-align:center;
-}
-/*messageperson*/
-.rounded-circle2{
-    border-radius: 50%;
-    vertical-align: 200%;
-    width: 7%; 
-    height: 7%;
-    vertical-align:middle;
-}
-/*lifeperson*/
-.rounded-circle3{
-    border-radius: 50%;
-    vertical-align: 200%;
-    width: 13%; 
-    height: 13%;
-    vertical-align:middle;
 }
 .left_text {
     text-align: center;
@@ -99,6 +83,32 @@ body {
     width: 50%;
     height: 300px;
 }
+/*rgba(230, 230, 250, 0.25)*/
+.box2 {
+    margin-top: 0px;
+    background: #fffdf8;
+    border: 1px solid #ccc;
+    padding: 20px;
+    height:1100px;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+}
+
+
+.boxfriend_content {
+    border: 1px solid #999;
+    padding: 20px;
+    background: #fdebd0;
+    margin: auto;
+    height: auto;
+    max-height: 1015px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius:10px;
+
+}
+
 
 /*music*/
 .audiojs audio { 
@@ -253,124 +263,6 @@ body {
 
 
 
-/*rgba(230, 230, 250, 0.25)*/
-.box2 {
-    margin-top: 0px;
-    background: #fffdf8;
-    border: 1px solid #ccc;
-    padding: 20px;
-    height:1100px;
-    border-radius:10px;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-}
-
-.box2_content {
-    padding: 20px;
-    background: #ecd6c7;
-    height: 220px;
-    max-height: 220px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    border-radius:10px;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-
-}
-/*life content*/
-.box3_content {
-    padding: 20px;
-    background: #ecd6c7;
-    height: auto;
-    max-height: 320px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    border-radius:10px;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-
-}
-
-/*好友生活*/
-.box4_content {
-    padding: 20px;
-    background: #ecd6c7;
-    height: 1000px;
-    max-height: 730px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    border-radius:10px;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-
-}
-
-/*新消息頁面*/
-.boxnew_content {
-    border: 1px solid #999;
-    padding: 20px;
-    background: #fdebd0;
-    font-family: MingLiU;
-    margin: auto;
-    height: auto;
-    max-height: 725px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    border-radius:10px;
-
-}
-
-.boxfriend_content {
-    border: 1px solid #999;
-    padding: 20px;
-    background: #fdebd0;
-    margin: auto;
-    height: auto;
-    max-height: 1015px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    border-radius:10px;
-
-}
-.boxgroup_content {
-    border: 1px solid #999;
-    padding: 20px;
-    background: #fdebd0;
-    margin: auto;
-    height: 300px;
-    overflow-x: auto;
-    overflow-y: auto;
-    border-radius:10px;
-
-}
-.boxgroup1_content {
-    border: 1px solid #999;
-    padding: 20px;
-    background: #fdebd0;
-    margin: auto;
-    height: auto;
-    max-height: 600px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    border-radius:10px;
-    
-
-}
-
-.boxlife_content {
-    padding: 20px;
-    background: #ecd6c7;
-    height: 400px;
-    width: 200px;
-    max-height: 500px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    border-radius:10px;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-
-}
-
 /*life 功能鍵*/
 .modal-open {
   overflow: hidden;
@@ -524,19 +416,108 @@ button.close {
 /*個人心情*/
 
 .mwt_border{
-width: 220px;
+width: auto;
 height: auto;
 text-align: center;
-color: #333333;
-background: #ecd6c7;
+color: #fff;
+background: #252525;
 position: relative;
-border: solid 1px #ecd6c7;
-margin-left: 60px;
+border: solid 1px #252525;
+margin-left: 80px;
 top: -50px;
 padding: 0px;
 }
+/*箭頭右*/
+.signature .mwt_border .arrow_r_int{
+    width:0px;
+    height:0px;
+    border-width:15px;
+    border-style:solid;
+    border-color:transparent transparent transparent #252525;
+    position:absolute;
+    top:20%;
+    right:-30px;
+}
+/*箭頭右-邊框*/
+.signature .mwt_border .arrow_r_out{
+    width:0px;
+    height:0px;
+    border-width:15px;
+    border-style:solid;
+    border-color:transparent transparent transparent #252525;
+    position:absolute;
+    top:20%;
+    right:-29px;
+}
 
+/*箭頭左*/
+.signature .mwt_border .arrow_l_int{
+    width:0px;
+    height:0px;
+    border-width:15px;
+    border-style:solid;
+    border-color:transparent #252525 transparent  transparent ;
+    position:absolute;
+    top:20%;
+    left:-30px;
+}
+/*箭頭左-邊框*/
+.signature .mwt_border .arrow_l_out{
+    width:0px;
+    height:0px;
+    border-width:15px;
+    border-style:solid;
+    border-color:transparent #252525 transparent transparent ;
+    position:absolute;
+    top:20%;
+    left:-29px;
+}
 
+/*箭頭上*/
+.signature .mwt_border .arrow_t_int{
+    width:0px;
+    height:0px;
+    border-width:15px;
+    border-style:solid;
+    border-color:transparent transparent #252525 transparent ;
+    position:absolute;
+    top:-30px;
+    left:40px;
+}
+/*箭頭上-邊框*/
+.signature .mwt_border .arrow_t_out{
+    width:0px;
+    height:0px;
+    border-width:15px;
+    border-style:solid;
+    border-color:transparent transparent #252525 transparent ;
+    position:absolute;
+    top:-29px;
+    left:40px;
+}
+
+/*箭頭下*/
+.signature .mwt_border .arrow_b_int{
+    width:0px;
+    height:0px;
+    border-width:15px;
+    border-style:solid;
+    border-color:#252525 transparent transparent transparent ;
+    position:absolute;
+    bottom:-30px;
+    right:50px;
+}
+/*箭頭下-邊框*/
+.signature .mwt_border .arrow_b_out{
+    width:0px;
+    height:0px;
+    border-width:15px;
+    border-style:solid;
+    border-color:#252525 transparent transparent transparent ;
+    position:absolute;
+    bottom:-29px;
+    right:50px;
+}
 .signature .signature-profile{
     width: 60px; 
     height: 60px;
@@ -544,71 +525,24 @@ padding: 0px;
 
 
 
-/*Message*/
-/*.container {
-    border: 2px solid #dedede;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-.darker {
-    border-color: #ccc;
-    background-color: #ddd;
-}
-
-.container::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.container img {
-    float: left;
-    max-width: 60px;
-    width: 100%;
-    margin-right: 20px;
-    border-radius: 50%;
-}
-
-.container img.right {
-    float: right;
-    margin-left: 20px;
-    margin-right:0;
-}
-
-.time-right {
-    float: right;
-    color: #aaa;
-}
-
-.time-left {
-    float: left;
-    color: #999;
-}*/
-
-
-
 .box2 h4 {
     display: inline-block;
-    background-image: linear-gradient(-20deg, #f7b75d 0%, #fdd6bd 100%);
+    background-image: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
     padding-top: 5px;
     padding-left: 7px;
     padding-right: 7px;
     height: 35px;
     border-radius: 15px 10px 10px 15px / 50%;
-    font-family: Microsoft JhengHei;
-    font-size: 20px;
-    color:  #444444;
+    font-family: monospace;
+    font-size: 22px;
 
 }
 .box2 h2{
     display: inline-block; 
-    /*font-family: Microsoft Tai Le;*/
-    font-family: comic sans ms;
+    font-family: monospace;
     font-size: 28px;
-    color:  #444444;
+    font-weight: bold;
+    color:#333333;
     text-align:center;
 
 }
@@ -617,5 +551,5 @@ padding: 0px;
     text-align: left;
     padding: 0px;
     width: 100%;
-    font-family: comic sans ms;
+    font-family: monospace;
 }

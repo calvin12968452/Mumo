@@ -28,6 +28,10 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/homepage/homepage.html');
   });
 
+  app.get('/ac',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/ac.html');
+  });
+
   app.get('/profile',function(req, res){
     res.sendFile(__dirname + '/template/userpages/userpage.html');
   });

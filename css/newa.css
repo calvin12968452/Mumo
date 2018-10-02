@@ -525,22 +525,23 @@ padding: 15px;
 
 .box2 h4 {
     display: inline-block;
-    background-image: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+    background-image: linear-gradient(-20deg, #f7b75d 0%, #fdd6bd 100%);
     padding-top: 5px;
     padding-left: 7px;
     padding-right: 7px;
     height: 35px;
     border-radius: 15px 10px 10px 15px / 50%;
-    font-family: comic sans ms;
-    font-size: 22px;
+    font-family: Microsoft JhengHei;
+    font-size: 20px;
+    color:  #444444;
 
 }
 .box2 h2{
     display: inline-block; 
     /*font-family: Microsoft Tai Le;*/
-    font-family: comic sans ms;
+    font-family: Gill Sans, sans-serif;
     font-size: 28px;
-    color:#333333;
+    color:  #444444;
     text-align:center;
 
 }

@@ -357,14 +357,12 @@ body {
 
 }
 
-.boxlife_content {
-    padding: 20px;
+.boxself_content {
+    padding: 10px;
+    margin-left: 7%;
     background: #ecd6c7;
-    height: 400px;
-    width: 200px;
-    max-height: 500px;
-    overflow-x: hidden;
-    overflow-y: auto;
+    height: 100px;
+    width: 300px;
     border-radius:10px;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
@@ -606,7 +604,7 @@ padding: 0px;
 .box2 h2{
     display: inline-block; 
     /*font-family: Microsoft Tai Le;*/
-    font-family: comic sans ms;
+    font-family: Gill Sans, sans-serif;
     font-size: 28px;
     color:  #444444;
     text-align:center;

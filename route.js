@@ -32,6 +32,34 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/ac.html');
   });
 
+  app.get('/friend',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/Friends.html');
+  });
+
+  app.get('/group',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/group.html');
+  });
+
+  app.get('/Jennie',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/Jennie.html');
+  });
+
+  app.get('/message',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/message.html');
+  });
+
+  app.get('/message0',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/message0.html');
+  });
+
+  app.get('/news',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/news.html');
+  });
+
+  app.get('/question',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/question.html');
+  });
+
   app.get('/profile',function(req, res){
     res.sendFile(__dirname + '/template/userpages/userpage.html');
   });

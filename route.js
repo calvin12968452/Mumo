@@ -28,6 +28,10 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/homepage/homepage.html');
   });
 
+  app.get('/shop', function(req, res) {  //當連線到跟目錄的時候跳出以下訊息
+    res.sendFile(__dirname + '/template/userpages/shop.html');
+  });
+
   app.get('/ac',function(req, res){
     res.sendFile(__dirname + '/template/userpages/ac.html');
   });
@@ -79,6 +83,10 @@ module.exports = function(app, express, ls, passport){
 
   app.get('/chat',function(req, res){
     res.sendFile(__dirname + '/template/userpages/chatroom.html');
+  });
+
+  app.get('/friends',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/friends.html');
   });
 
   // google login route

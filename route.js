@@ -61,6 +61,13 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/friends.html');
   });
 
+  app.get('/user_vendor',function(req, res){
+    res.sendFile(__dirname + '/template/businesspage/user_vendor.html');
+  });
+
+  app.get('/normal',function(req, res){
+    res.sendFile(__dirname + '/template/normal/normal.html');
+  });
   // google login route
   app.get('/oauth', passport.authenticate('google_token', {scope : ['profile', 'email']}));
 

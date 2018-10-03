@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css.css">
-<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="css/normal.css">
+<link rel="stylesheet" href="css/w3.css">
 <style>
 body{
-    background-image: url("cover.png");
+    background-image: url("css/cover.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;}
@@ -14,24 +14,33 @@ body{
 </style>
 </head>
 <body>
-<div class="box">
-    <div class="w3-margin-top w3-center">
-        <h1 style="font-family: italic; font-size:60px; color:#3b9a9c;">設定個人檔案</h1>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+        <div class="w3-bar-item w3-button" style="font-size:200%;color:#01abaa;"><b>MUMO</b></div>
     </div>
+</div>
+
+
+
+  <div class="w3-main w3-content w3-padding" style="max-width:1000px;margin-top:80px">
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h1 style="font-family: italic; font-size:60px; color:#3b9a9c; text-align: center;">設定個人檔案</h1>
+
     <form action="/action_page.php">
 <!-- birthday -->
         <div class="row">
             <div class="col-25">
-                <label for="bday"><b style="color:#3b9a9c;">生日</b></label>
+                <label for="bday"><b style="font-size: 20px; color:#3b9a9c;">生日</b></label>
             </div>
             <div class="col-75">
                 <input type="date" name="bday" required></br>
             </div>
         </div>
-<!-- gender -->    
+<!-- gender -->
         <div class="row">
             <div class="col-25">
-                <label for="gender"><b style="color:#3b9a9c;">性別</b></label>
+                <label for="gender"><b style="font-size: 20px; color:#3b9a9c;">性別</b></label>
             </div>
             <div class="col-75">
                 <form>
@@ -45,13 +54,13 @@ body{
                         <input type="radio" id="radio3" name="radios" value="true">
                         <label for="radio3">其他</label>
                     </div>
-                </form> 
+                </form>
             </div>
         </div>
-<!-- country -->    
+<!-- country -->
         <div class="row">
             <div class="col-25">
-                <label for="country"><b style="color:#3b9a9c;">地區</b></label>
+                <label for="country"><b style="font-size: 20px; color:#3b9a9c;">地區</b></label>
             </div>
             <div class="col-75">
                 <select id="country" name="country" required></select>
@@ -61,7 +70,7 @@ body{
 <!-- music type -->
     <div class="row">
         <div class="col-25">
-            <label for="subject"><b style="color:#3b9a9c;">音樂</b></label>
+            <label for="subject"><b style="font-size: 20px; color:#3b9a9c;">音樂</b></label>
         </div>
         <div class="col-75">
             <select id="music" name="music">
@@ -115,7 +124,7 @@ body{
 <!-- movie type -->
     <div class="row">
         <div class="col-25">
-            <label for="subject"><b style="color:#3b9a9c;">電影</b></label>
+            <label for="subject"><b style="font-size: 20px; color:#3b9a9c;">電影</b></label>
         </div>
         <div class="col-75">
             <select id="music" name="music">
@@ -148,19 +157,30 @@ body{
                 <option value="11">Sci-fi</option>
                 <option value="12">Instrumental</option>
             </select>
-        </div>  
+        </div>
     </div>
+    <!-- about me -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="me"><b style="font-size: 20px; color:#3b9a9c;">自我介紹</b></label>
+                </div>
+                <div class="col-75">
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:80px"></textarea>
+                </div>
+            </div>
     </br>
     </br>
-    <input type="submit" value="Submit">
+     <button class="w3-button w3-block w3-section w3-padding" style="background-color:#ffe869" type="submit">完成!!!</button>
   </form>
+</div>
 </div>
 <script type="text/javascript">
 var arrCountry=new Array();
-arrCountry["Taiwan"]=new Array("Changhua","Chiayi","Douliu","Hsinchu","Hualien","Kaohsiung","Keelung","Magong","Miaoli","Nantou","New Taipei","Pingtung","Puzi","Taibao","Taichung","Tainan","Taipei","Taitung","Tainan","Taoyuan","Toufen","Yilan","Tuanlin","Zhubei");
-arrCountry["Malaysia"]=new Array("Kuala Lumpur","Kota Bharu","Kota Kinabalu","Shah Alam","Georgetown","Tanah Merah","Johor Bahru","Ipor","Seremban","Kuantan");
-arrCountry["Hong Kong"]=new Array("Hong Kong","Kowloon", "Tsuen Wan","Yuen Long Kau Hui","Tung Chung","Shatin","Tuen Mun","Tai Po","Sai Kung","Yung Shue Wan");
-arrCountry["Macau"];
+arrCountry["台灣"]=new Array("臺北","新北","桃園","臺中","臺南","基隆","新竹","嘉義","新竹","苗栗","彰化",
+"南投","雲林","嘉義","屏東","宜蘭","花蓮","臺東","澎湖","金門","連江");
+arrCountry["馬來西亞"]=new Array("Kuala Lumpur","Kota Bharu","Kota Kinabalu","Shah Alam","Georgetown","Tanah Merah","Johor Bahru","Ipor","Seremban","Kuantan");
+arrCountry["香港"]=new Array("Hong Kong","Kowloon", "Tsuen Wan","Yuen Long Kau Hui","Tung Chung","Shatin","Tuen Mun","Tai Po","Sai Kung","Yung Shue Wan");
+arrCountry["澳門"];
 window.onload=function() {
     var country = document.getElementById("country");
     for (var ctr in arrCountry) {

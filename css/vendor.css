@@ -74,27 +74,13 @@ input[type=submit]:hover {
   float: right;
 }
 
-/*Like button in vendor*/
-.button-like1 {
-  border: 2px solid #cc4b37;
-  background-color: #cc4b37;
-  text-decoration: none;
-  padding: 10px;
-  position: relative;
-  vertical-align: middle;
-  text-align: center;
-  display: inline-block;
-  border-radius: 30px;
-  color:  #fefefe;
-  transition: all ease 0.4s;
-}
-
 /*Like button in user_vendor*/
 .button-like {
   border: 2px solid #8a8a8a;
   background-color: transparent;
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
+  font-size: 12px;
   position: relative;
   vertical-align: middle;
   text-align: center;
@@ -138,7 +124,7 @@ input[type=submit]:hover {
 }
 
 .liked .fa,
-.liked span {
+.liked {
   color: #fefefe;
 }
 

@@ -15,9 +15,9 @@ body {
     height: 1100px;
     border: 1px solid #999;
     background: #ecd6c7;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 
@@ -260,9 +260,9 @@ body {
     border: 1px solid #ccc;
     padding: 20px;
     height:1100px;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 }
 
 .box2_content {
@@ -272,9 +272,9 @@ body {
     max-height: 220px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 /*life content*/
@@ -285,9 +285,9 @@ body {
     max-height: 320px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 
@@ -299,9 +299,9 @@ body {
     max-height: 730px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 
@@ -316,7 +316,7 @@ body {
     max-height: 725px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;*/
 
 }
 
@@ -329,7 +329,9 @@ body {
     max-height: 1015px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 .boxgroup_content {
@@ -340,7 +342,9 @@ body {
     height: 300px;
     overflow-x: auto;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 .boxgroup1_content {
@@ -352,7 +356,9 @@ body {
     max-height: 600px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;*/
     
 
 }
@@ -363,9 +369,9 @@ body {
     background: #ecd6c7;
     height: 100px;
     width: 300px;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 

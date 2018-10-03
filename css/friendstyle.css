@@ -15,9 +15,9 @@ body {
     height: 1100px;
     border: 1px solid #999;
     background: #ecd6c7;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 
@@ -90,9 +90,9 @@ body {
     border: 1px solid #ccc;
     padding: 20px;
     height:1100px;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 }
 
 
@@ -105,7 +105,9 @@ body {
     max-height: 1015px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 

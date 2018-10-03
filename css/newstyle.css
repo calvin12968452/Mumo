@@ -15,9 +15,9 @@ body {
     height: 1100px;
     border: 1px solid #999;
     background: #ecd6c7;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 
@@ -76,9 +76,9 @@ body {
     border: 1px solid #ccc;
     padding: 20px;
     height:1100px;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 }
 
 .box2_content {
@@ -88,9 +88,9 @@ body {
     max-height: 220px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 
@@ -105,7 +105,9 @@ body {
     max-height: 725px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 

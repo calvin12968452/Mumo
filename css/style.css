@@ -15,9 +15,9 @@ body {
     height: 1100px;
     border: 1px solid #999;
     background: #ecd6c7;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 
@@ -77,9 +77,8 @@ body {
 /*lifeperson*/
 .rounded-circle3{
     border-radius: 50%;
-    vertical-align: 200%;
-    width: 13%; 
-    height: 13%;
+    width: 50px; 
+    height: 50px;
     vertical-align:middle;
 }
 .left_text {
@@ -260,9 +259,9 @@ body {
     border: 1px solid #ccc;
     padding: 20px;
     height:1100px;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 }
 
 .box2_content {
@@ -272,9 +271,9 @@ body {
     max-height: 220px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 /*life content*/
@@ -285,9 +284,9 @@ body {
     max-height: 320px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 
@@ -299,9 +298,9 @@ body {
     max-height: 730px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 
@@ -316,7 +315,7 @@ body {
     max-height: 725px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;*/
 
 }
 
@@ -329,7 +328,9 @@ body {
     max-height: 1015px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 .boxgroup_content {
@@ -340,7 +341,9 @@ body {
     height: 300px;
     overflow-x: auto;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 .boxgroup1_content {
@@ -352,22 +355,22 @@ body {
     max-height: 600px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius:10px;
+    /*border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;*/
     
 
 }
 
-.boxlife_content {
-    padding: 20px;
+.boxself_content {
+    padding: 10px;
+    margin-left: 7%;
     background: #ecd6c7;
-    height: 400px;
-    width: 200px;
-    max-height: 500px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    border-radius:10px;
+    height: 100px;
+    width: 300px;
+    /*border-radius:10px;
     -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:10px;*/
 
 }
 
@@ -524,13 +527,14 @@ button.close {
 /*個人心情*/
 
 .mwt_border{
-width: 220px;
+width: 230px;
 height: auto;
 text-align: center;
-color: #333333;
+color: #696969;
 background: #ecd6c7;
 position: relative;
-border: solid 1px #ecd6c7;
+border: solid 1px #999;
+
 margin-left: 60px;
 top: -50px;
 padding: 0px;
@@ -606,7 +610,7 @@ padding: 0px;
 .box2 h2{
     display: inline-block; 
     /*font-family: Microsoft Tai Le;*/
-    font-family: comic sans ms;
+    font-family: Gill Sans, sans-serif;
     font-size: 28px;
     color:  #444444;
     text-align:center;

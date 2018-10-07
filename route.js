@@ -28,11 +28,43 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/homepage/homepage.html');
   });
 
+  app.get('/shop', function(req, res) {  //當連線到跟目錄的時候跳出以下訊息
+    res.sendFile(__dirname + '/template/userpages/shop.html');
+  });
+
   app.get('/ac',function(req, res){
     res.sendFile(__dirname + '/template/userpages/ac.html');
   });
 
-  app.get('/profile',function(req, res){
+  app.get('/friend',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/Friends.html');
+  });
+
+  app.get('/group',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/group.html');
+  });
+
+  app.get('/Jennie',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/Jennie.html');
+  });
+
+  app.get('/message',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/message.html');
+  });
+
+  app.get('/message0',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/message0.html');
+  });
+
+  app.get('/news',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/news.html');
+  });
+
+  app.get('/question',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/question.html');
+  });
+
+  app.get('/userpage',function(req, res){
     res.sendFile(__dirname + '/template/userpages/userpage.html');
   });
 
@@ -53,6 +85,17 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/chatroom.html');
   });
 
+  app.get('/friends',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/friends.html');
+  });
+
+  app.get('/user_vendor',function(req, res){
+    res.sendFile(__dirname + '/template/businesspage/user_vendor.html');
+  });
+
+  app.get('/normal',function(req, res){
+    res.sendFile(__dirname + '/template/normal/normal.html');
+  });
   // google login route
   app.get('/oauth', passport.authenticate('google_token', {scope : ['profile', 'email']}));
 

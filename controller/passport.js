@@ -10,7 +10,7 @@ const {
   textBg
 } = require('../module/color.js');
 
-module.exports = function(ls, passport){
+module.exports = function(ls, passport, db){
 
   // ====================================
   // initialize passport ================

@@ -94,6 +94,13 @@ function go_to_page(page_num){
 }
 //]]>
 </script>
+<style>
+body{
+    background: url("css/cover.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;}
+</style>
 <body>
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -101,68 +108,69 @@ function go_to_page(page_num){
         <a href="#home" class="w3-bar-item w3-button" style="font-size:200%;color:#01abaa;"><b>MUMO</b></a>
     </div>
 </div>
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+<!-- Page content-->
+<div class="w3-main w3-content w3-padding" style="max-width:1000px;margin-top:80px">
+    <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <!-- First Photo Grid-->
+        <div class="w3-row-padding w3-padding-16 w3-center" id="shop">
+            <div class="w3-quarter">
+                <img src="css/s1.jpg" alt="watch" style="width:100%">
+                <h3>手錶</h3>
+                <p>價格：5元;  人氣：10</p>
+            </div>
+            <div class="w3-quarter">
+                <img src="css/s2.jpg" alt="camera" style="width:100%">
+                <h3>相機</h3>
+                <p>價格：5元;  人氣：10</p>
+            </div>
+            <div class="w3-quarter">
+                <img src="css/s3.jpg" alt="flower" style="width:100%">
+                <h3>花</h3>
+                <p>價格：5元;  人氣：10</p>
+            </div>
+            <div class="w3-quarter">
+                <img src="css/s4.jpg" alt="popcorn" style="width:100%">
+                <h3>爆米花</h3>
+                <p>價格：5元;  人氣：10</p>
+            </div>
+        </div>
 
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    <div class="w3-quarter">
-      <img src="css/s1.jpg" alt="watch" style="width:100%">
-      <h3>手錶</h3>
-      <p>價格：5元;  人氣：10</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="css/s2.jpg" alt="camera" style="width:100%">
-      <h3>相機</h3>
-      <p>價格：5元;  人氣：10</p>
-      </div>
-    <div class="w3-quarter">
-      <img src="css/s3.jpg" alt="flower" style="width:100%">
-      <h3>花</h3>
-      <p>價格：5元;  人氣：10</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="css/s4.jpg" alt="popcorn" style="width:100%">
-      <h3>爆米花</h3>
-      <p>價格：5元;  人氣：10</p>
-    </div>
-  </div>
+          <!-- Second Photo Grid-->
+        <div class="w3-row-padding w3-padding-16 w3-center">
+            <div class="w3-quarter">
+                <img src="css/s5.jpg" alt="bike" style="width:100%">
+                <h3>腳踏車</h3>
+                <p>價格：5元;  人氣：10</p>
+            </div>
+            <div class="w3-quarter">
+                <img src="css/s6.jpg" alt="shoes" style="width:100%">
+                <h3>布鞋</h3>
+                <p>價格：5元;  人氣：10</p>
+            </div>
+            <div class="w3-quarter">
+                <img src="css/s7.jpg" alt="sunglasses" style="width:100%">
+                <h3>墨鏡</h3>
+                <p>價格：5元;  人氣：10</p>
+            </div>
+            <div class="w3-quarter">
+                <img src="css/s8.jpg" alt="choco" style="width:100%">
+                <h3>巧克力</h3>
+                <p>價格：5元;  人氣：10</p>
+            </div>
+        </div>
 
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-quarter">
-      <img src="css/s5.jpg" alt="bike" style="width:100%">
-      <h3>腳踏車</h3>
-      <p>價格：5元;  人氣：10</p>
+          <!-- Pagination -->
+          <div class="center">
+              <div class="pagination">
+                  <a href="#">&laquo;</a>
+                  <a href="#">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">&raquo;</a>
+              </div>
+          </div>
     </div>
-    <div class="w3-quarter">
-      <img src="css/s6.jpg" alt="shoes" style="width:100%">
-      <h3>布鞋</h3>
-      <p>價格：5元;  人氣：10</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="css/s7.jpg" alt="sunglasses" style="width:100%">
-      <h3>墨鏡</h3>
-      <p>價格：5元;  人氣：10</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="css/s8.jpg" alt="choco" style="width:100%">
-      <h3>巧克力</h3>
-      <p>價格：5元;  人氣：10</p>
-    </div>
-  </div>
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">&laquo;</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">&raquo;</a>
-    </div>
-  </div>
 
 </body>
 </html>

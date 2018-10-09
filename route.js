@@ -64,6 +64,10 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/question.html');
   });
 
+  app.get('/coupon',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/coupon.html');
+  });
+
   app.get('/userpage',function(req, res){
     res.sendFile(__dirname + '/template/userpages/userpage.html');
   });

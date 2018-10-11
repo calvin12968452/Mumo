@@ -1,8 +1,8 @@
 
 
-module.exports = function(db){
+module.exports = function(con){
 
-  db.connect((error)=>{
+  con.connect((error)=>{
     if (error) throw error;
     console.log("dbconnect\n");
 

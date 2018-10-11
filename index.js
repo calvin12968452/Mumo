@@ -22,21 +22,23 @@ const {
 var imp_passport = require('./controller/passport.js');
 var Route = require('./route.js');
 var chat = require('./controller/chatroom.js');
-var db_connect = require('./sql/dbMYSQL.js');
+//var db_connect = require('./sql/dbMYSQL.js');
+/*
 var db = mysql.creatConnection ({
   host:"localhost",
   user:"root",
-  password:""
+  password:"",
+  database:"mumo"
 });
 
-db_connect(db);
-
+db_connect(con);
+*/
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 chat(io);
-imp_passport(ls, passport, db);   // <-- implement the passport method
+imp_passport(ls, passport, con);   // <-- implement the passport method
 Route(app, express, ls, passport);     // <-- implement the routing setting
 
 

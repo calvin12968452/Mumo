@@ -11,7 +11,7 @@
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "ejs": "^2.6.1",
-    "express": "^4.16.3",
+    "express": "^4.16.4",
     "local-storage": "^1.4.2",
     "materialize-css": "^1.0.0-rc.2",
     "mysql": "^2.16.0",

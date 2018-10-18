@@ -24,7 +24,7 @@ module.exports = function(app, express, ls, passport){
   // ====================================
   // set the route ======================
   // ====================================
-  app.get('/', function(req, res) {  //當連線到跟目錄的時候跳出以下訊息
+  app.get('/homepage', function(req, res) {  //當連線到跟目錄的時候跳出以下訊息
     res.sendFile(__dirname + '/template/homepage/homepage.html');
   });
 

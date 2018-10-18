@@ -147,6 +147,146 @@ input[type=submit]:hover {
   color: #fefefe;
 }
 
+.button-like1 {
+  border: 2px solid #8a8a8a;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 12px;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  border-radius: 30px;
+  color: #8a8a8a;
+  transition: all ease 0.4s;
+}
+
+.button-like1 span {
+  margin-left: 10px;
+}
+
+.button-like1 .fa,
+.button-like1 span {
+  transition: all ease 0.4s;
+}
+
+.button-like1:focus {
+  background-color: transparent;
+}
+.button-like1:focus .fa,
+.button-like1:focus span {
+  color: #8a8a8a;
+}
+
+.button-like1:hover {
+  border-color: #cc4b37;
+  background-color: transparent;
+}
+
+.button-like1:hover .fa,
+.button-like1:hover span {
+  color: #cc4b37;
+}
+.liked {
+  background-color: #cc4b37;
+  border-color: #cc4b37;
+}
+
+.liked .fa,
+.liked {
+  color: #fefefe;
+}
+
+.liked:focus {
+  background-color: #cc4b37;
+}
+
+.liked:focus .fa,
+.liked:focus span {
+  color: #fefefe;
+}
+
+.liked:hover {
+  background-color: #cc4b37;
+  border-color: #cc4b37;
+}
+
+.liked:hover .fa,
+.liked:hover span {
+  color: #fefefe;
+}
+
+.button-like2 {
+  border: 2px solid #8a8a8a;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 12px;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  border-radius: 30px;
+  color: #8a8a8a;
+  transition: all ease 0.4s;
+}
+
+.button-like2 span {
+  margin-left: 10px;
+}
+
+.button-like2 .fa,
+.button-like2 span {
+  transition: all ease 0.4s;
+}
+
+.button-like2:focus {
+  background-color: transparent;
+}
+.button-like2:focus .fa,
+.button-like2:focus span {
+  color: #8a8a8a;
+}
+
+.button-like2:hover {
+  border-color: #cc4b37;
+  background-color: transparent;
+}
+
+.button-like2:hover .fa,
+.button-like2:hover span {
+  color: #cc4b37;
+}
+.liked {
+  background-color: #cc4b37;
+  border-color: #cc4b37;
+}
+
+.liked .fa,
+.liked {
+  color: #fefefe;
+}
+
+.liked:focus {
+  background-color: #cc4b37;
+}
+
+.liked:focus .fa,
+.liked:focus span {
+  color: #fefefe;
+}
+
+.liked:hover {
+  background-color: #cc4b37;
+  border-color: #cc4b37;
+}
+
+.liked:hover .fa,
+.liked:hover span {
+  color: #fefefe;
+}
+
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {

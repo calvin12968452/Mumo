@@ -24,11 +24,11 @@ module.exports = function(app, express, ls, passport){
   // ====================================
   // set the route ======================
   // ====================================
-  app.get('/', function(req, res) {  //當連線到跟目錄的時候跳出以下訊息
+  app.get('/', function(req, res) {  //當連線到  "根"   目錄的時候跳出以下訊息  不要隨意亂修改已經改好的東西
     res.sendFile(__dirname + '/template/homepage/homepage.html');
   });
 
-  app.get('/shop', function(req, res) {  //當連線到跟目錄的時候跳出以下訊息
+  app.get('/shop', function(req, res) {  
     res.sendFile(__dirname + '/template/userpages/shop.html');
   });
 

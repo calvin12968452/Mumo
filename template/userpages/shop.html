@@ -1,99 +1,14 @@
 <!DOCTYPE html>
 <html>
 <title>MUMO SHOP</title>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" href="css/shop.css">
+<link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script src='jquery.js' type='text/javascript'/></script>
-<script type='text/javascript'>
-//<![CDATA[
-    $(document).ready(function(){
-
-    //how much items per page to show
-    var show_per_page = 8;
-    //getting the amount of elements inside content div
-    var number_of_items = $('#content').children().size();
-    //calculate the number of pages we are going to have
-    var number_of_pages = Math.ceil(number_of_items/show_per_page);
-
-    //set the value of our hidden input fields
-    $('#current_page').val(0);
-    $('#show_per_page').val(show_per_page);
-
-    //now when we got all we need for the navigation let's make it '
-
-    /*
-    what are we going to have in the navigation?
-        - link to previous page
-        - links to specific pages
-        - link to next page
-    */
-    var navigation_html = '<a class="previous_link" href="javascript:previous();">«</a>';
-
-    var current_link = 0;
-    while (number_of_pages > current_link){
-        navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link +')" longdesc="' + current_link +'">'+ (current_link + 1) +'</a>';
-        current_link++;
-    }
-
-    navigation_html += '<a class="next_link" href="javascript:next();">»</a>';
-
-    $('#page_navigation').html(navigation_html);
-
-    //add active_page class to the first page link
-    $('#page_navigation .page_link:first').addClass('active_page');
-
-    //hide all the elements inside content div
-    $('#content').children().css('display', 'none');
-
-    //and show the first n (show_per_page) elements
-    $('#content').children().slice(0, show_per_page).css('display', 'block');
-
-});
-
-function previous(){
-
-    new_page = parseInt($('#current_page').val()) - 1;
-    //if there is an item before the current active link run the function
-    if($('.active_page').prev('.page_link').length==true){
-        go_to_page(new_page);
-    }
-
-}
-
-function next(){
-    new_page = parseInt($('#current_page').val()) + 1;
-    //if there is an item after the current active link run the function
-    if($('.active_page').next('.page_link').length==true){
-        go_to_page(new_page);
-    }
-
-}
-function go_to_page(page_num){
-    //get the number of items shown per page
-    var show_per_page = parseInt($('#show_per_page').val());
-
-    //get the element number where to start the slice from
-    start_from = page_num * show_per_page;
-
-    //get the element number where to end the slice
-    end_on = start_from + show_per_page;
-
-    //hide all children elements of content div, get specific items and show them
-    $('#content').children().css('display', 'none').slice(start_from, end_on).css('display', 'block');
-
-    /*get the page link that has longdesc attribute of the current page and add active_page class to it
-    and remove that class from previously active page link*/
-    $('.page_link[longdesc=' + page_num +']').addClass('active_page').siblings('.active_page').removeClass('active_page');
-
-    //update the current page input field
-    $('#current_page').val(page_num);
-}
-//]]>
-</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body{
     background: url("css/cover.png");
@@ -101,76 +16,292 @@ body{
     background-size: cover;
     background-attachment: fixed;}
 </style>
+</head>
+
 <body>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+</script>
+
+
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-        <a href="#home" class="w3-bar-item w3-button" style="font-size:200%;color:#01abaa;"><b>MUMO</b></a>
-    </div>
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="ac" class="w3-bar-item w3-button" style="font-size:200%;color:#01abaa;"><b>MUMO</b></a>
+  </div>
 </div>
+
 <!-- Page content-->
 <div class="w3-main w3-content w3-padding" style="max-width:1000px;margin-top:80px">
-    <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <!-- First Photo Grid-->
-        <div class="w3-row-padding w3-padding-16 w3-center" id="shop">
-            <div class="w3-quarter">
-                <img src="css/s1.jpg" alt="watch" style="width:100%">
-                <h3>手錶</h3>
-                <p>價格：5元;  人氣：10</p>
-            </div>
-            <div class="w3-quarter">
-                <img src="css/s2.jpg" alt="camera" style="width:100%">
-                <h3>相機</h3>
-                <p>價格：5元;  人氣：10</p>
-            </div>
-            <div class="w3-quarter">
-                <img src="css/s3.jpg" alt="flower" style="width:100%">
-                <h3>花</h3>
-                <p>價格：5元;  人氣：10</p>
-            </div>
-            <div class="w3-quarter">
-                <img src="css/s4.jpg" alt="popcorn" style="width:100%">
-                <h3>爆米花</h3>
-                <p>價格：5元;  人氣：10</p>
-            </div>
-        </div>
+  <div class="w3-container w3-card w3-white w3-margin-bottom">
 
-          <!-- Second Photo Grid-->
-        <div class="w3-row-padding w3-padding-16 w3-center">
-            <div class="w3-quarter">
-                <img src="css/s5.jpg" alt="bike" style="width:100%">
-                <h3>腳踏車</h3>
-                <p>價格：5元;  人氣：10</p>
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center" id="shop">
+      <div class="w3-quarter">
+        <img src="css/s1.jpg" alt="watch" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
+        <h3>手錶</h3>
+        <p>價格：5元;  人氣：10</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="css/s2.jpg" alt="camera" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
+        <h3>相機</h3>
+        <p>價格：5元;  人氣：10</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="css/s3.jpg" alt="flower" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
+        <h3>花</h3>
+        <p>價格：5元;  人氣：10</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="css/s4.jpg" alt="popcorn" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
+        <h3>爆米花</h3>
+        <p>價格：5元;  人氣：10</p>
+      </div>
+    </div>
+
+    <!-- Second Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center">
+      <div class="w3-quarter">
+        <img src="css/s5.jpg" alt="bike" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
+        <h3>腳踏車</h3>
+        <p>價格：5元;  人氣：10</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="css/s6.jpg" alt="shoes" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
+        <h3>布鞋</h3>
+        <p>價格：5元;  人氣：10</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="css/s7.jpg" alt="glasses" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
+        <h3>墨鏡</h3>
+        <p>價格：5元;  人氣：10</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="css/s8.jpg" alt="choco" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
+        <h3>巧克力</h3>
+        <p>價格：5元;  人氣：10</p>
+      </div>
+    </div>
+
+
+
+    <div id="giveto" class="w3-modal">
+      <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="margin-top: -50px; margin-bottom: 50px;max-width:700px">
+        <div class="boxfriend_content">
+          <div class="w3-center"><br>
+            <span onclick="document.getElementById('giveto').style.display='none'" class="close" title="Close Modal">&times;</span>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <h1 style="color: #ff7a5a">請選擇好友...</h1>
             </div>
-            <div class="w3-quarter">
-                <img src="css/s6.jpg" alt="shoes" style="width:100%">
-                <h3>布鞋</h3>
-                <p>價格：5元;  人氣：10</p>
+            <div class="col-5">
+            <div class="topnav">
+              <div class="search-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
             </div>
-            <div class="w3-quarter">
-                <img src="css/s7.jpg" alt="sunglasses" style="width:100%">
-                <h3>墨鏡</h3>
-                <p>價格：5元;  人氣：10</p>
+          </div>
+        </div><hr class="new"></br>
+
+          <div class="row" style="text-align: center">
+            <div class="col-1">
+              <img src="css/tino.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content').style.display='block'"></br>
+              <h2 style="font-size: 25px;">Tino</h2>
             </div>
-            <div class="w3-quarter">
-                <img src="css/s8.jpg" alt="choco" style="width:100%">
-                <h3>巧克力</h3>
-                <p>價格：5元;  人氣：10</p>
+            <div class="col-2">
+              <img src="css/kt.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content1').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">Kaiting</h2>
             </div>
-        </div>
+            <div class="col-3">
+              <img src="css/given.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content2').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">Given</h2>
+            </div>
+          </div>
+
+          <div class="row" style="text-align: center">
+            <div class="col-1">
+              <img src="css/yp.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content3').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">Yaping</h2>
+            </div>
+            <div class="col-2">
+              <img src="css/tonton.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content4').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">Tonton</h2>
+            </div>
+            <div class="col-3">
+              <img src="css/yee.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content5').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">Yee</h2>
+            </div>
+          </div>
+
+          <div class="row" style="text-align: center">
+            <div class="col-1">
+              <img src="css/lsg.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content6').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">Seunggi</h2>
+            </div>
+            <div class="col-2">
+              <img src="css/jennie1.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content7').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">Jennie</h2>
+            </div>
+            <div class="col-3">
+              <img src="css/rosenb.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content8').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">Rose</h2>
+            </div>
+          </div>
+
+          <div class="row" style="text-align: center">
+            <div class="col-1">
+              <img src="css/loco.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content9').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">Loco</h2>
+            </div>
+            <div class="col-2">
+              <img src="css/mt.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content10').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">Mati</h2>
+            </div>
+            <div class="col-3">
+              <img src="css/ilhoon.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content11').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">Ilhoon</h2>
+            </div>
+          </div>
 
           <!-- Pagination -->
           <div class="center">
-              <div class="pagination">
-                  <a href="#">&laquo;</a>
-                  <a href="#">1</a>
-                  <a href="#">2</a>
-                  <a href="#">3</a>
-                  <a href="#">4</a>
-                  <a href="#">&raquo;</a>
-              </div>
+            <div class="pagination">
+              <a href="#">&laquo;</a>
+              <a href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">&raquo;</a>
+            </div>
           </div>
+        </div>
+      </div>
     </div>
 
+
+
+
+    <div class="w3-modal" id="modal-content">
+      <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="margin-top: -50px; margin-bottom: 50px;max-width:500px">
+        <span onclick="document.getElementById('modal-content').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <div class="modal-header">
+          <h2>Tino</h2>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-40">
+              <img class="w3-circle" src="css/tino.jpg" width="100%">
+            </div>
+            <div class="col-60">
+              <img src="css/boy.png" width="10%">&nbsp;Tino<br/><br/>
+              <img src="css/birthday.png" width="10%">
+              1996/10/21<br/><br/>
+              <img src="css/music.png" width= "10%">
+              Favorite
+              <img src="css/movie.png" width= "10%"><br/><br/>
+              <a style="margin-left:10%">Movie:&nbsp;西部片</a>
+              <a style="margin-left:10%">Music:&nbsp;靈魂樂</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <input style="width:30%" type="number" id="amount" name="amount" placeholder="請選擇數量">
+          <button class="button">送禮</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-modal" id="modal-content1">
+      <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="margin-top: -50px; margin-bottom: 50px;max-width:500px">
+        <span onclick="document.getElementById('modal-content1').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        <div class="modal-header">
+          <h2>Kaiting</h2>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-40">
+              <img class="w3-circle" src="css/kt.jpg" width="100%">
+            </div>
+            <div class="col-60">
+              <img src="css/girl.png" width="10%">&nbsp;Tino<br/><br/>
+              <img src="css/birthday.png" width="10%">
+              1996/11/18<br/><br/>
+              <img src="css/music.png" width= "10%">
+              Favorite
+              <img src="css/movie.png" width= "10%"><br/><br/>
+              <a style="margin-left:10%">Movie:&nbsp;喜劇片</a>
+              <a style="margin-left:10%">Music:&nbsp;KPOP</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <input style="width:40%;" type="number" id="amount" name="amount" placeholder="請選擇數量">
+          <button class="button">送禮</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-modal" id="modal-content2">
+      <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="margin-top: -50px; margin-bottom: 50px;max-width:500px">
+        <span onclick="document.getElementById('modal-content2').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        <div class="modal-header">
+          <h2>Given</h2>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-40">
+              <img class="w3-circle" src="css/given.jpg" width="100%">
+            </div>
+            <div class="col-60">
+              <img src="css/girl.png" width="10%">&nbsp;Given<br/><br/>
+              <img src="css/birthday.png" width="10%">
+              1997/08/09<br/><br/>
+              <img src="css/music.png" width= "10%">
+              Favorite
+              <img src="css/movie.png" width= "10%"><br/><br/>
+              <a style="margin-left:10%">Movie:&nbsp;>愛情片</a>
+              <a style="margin-left:10%">Music:&nbsp;KPOP</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <input style="width:40%" type="number" id="amount" name="amount" placeholder="請選擇數量">
+          <button class="button">送禮</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Pagination -->
+    <div class="center">
+      <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">&raquo;</a>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

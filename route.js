@@ -36,9 +36,9 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/ac.html');
   });
 
-  app.get('/friend',function(req, res){
+  /*app.get('/friend',function(req, res){
     res.sendFile(__dirname + '/template/userpages/Friends.html');
-  });
+  });*/
 
   app.get('/group',function(req, res){
     res.sendFile(__dirname + '/template/userpages/group.html');
@@ -85,12 +85,20 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/signup/signup.html');
   });
 
+  app.get('/date',function(req, res){
+    res.sendFile(__dirname + '/template/date/date.html');
+  });
+
+  app.get('/date_user',function(req, res){
+    res.sendFile(__dirname + '/template/date/date_user.html');
+  });
+
   app.get('/chat',function(req, res){
     res.sendFile(__dirname + '/template/userpages/chatroom.html');
   });
 
   app.get('/friends',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/friends.html');
+    res.sendFile(__dirname + '/template/userpages/Friends.html');
   });
 
   app.get('/user_vendor',function(req, res){

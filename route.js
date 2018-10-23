@@ -85,6 +85,10 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/signup/signup.html');
   });
 
+  app.get('/date',function(req, res){
+    res.sendFile(__dirname + '/template/date/date.html');
+  });
+
   app.get('/chat',function(req, res){
     res.sendFile(__dirname + '/template/userpages/chatroom.html');
   });

@@ -94,7 +94,7 @@ module.exports = function(app, express, ls, passport){
   });
 
   app.get('/friends',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/friends.html');
+    res.sendFile(__dirname + '/template/userpages/Friends.html');
   });
 
   app.get('/user_vendor',function(req, res){

@@ -34,59 +34,16 @@
   <div><p></p></div>
 
   <div style="margin-left:10px">
-        <div style="margin-bottom:10px">
-            <button type="button" onclick="start()" class="btn btn-outline-secondary" data-toggle="modal" data-target="#testModal">test</button>
-            <button type="button" class="btn btn-outline-success">start</button>
-            <button type="button" class="btn btn-outline-warning">pause</button>
-            <button type="button" class="btn btn-outline-danger">stop</button>
-        </div>
-
-        <!--Modal-->
-        <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="testModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="testModalLabel">device test</h5>
-                        <button type="button" onclick="stream.getTracks().forEach(track => track.stop());" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="select">
-                            <label for="audioSource">Audio input source: </label>
-                            <select id="audioSource"></select>
-                        </div>
-
-                        <div class="select">
-                            <label for="audioOutput">Audio output destination: </label>
-                            <select id="audioOutput"></select>
-                        </div>
-
-                        <div class="select">
-                            <label for="videoSource">Video source: </label>
-                            <select id="videoSource"></select>
-                        </div>
-
-                        <video id="video" playsinline autoplay></video>
-
-                        <p class="small"><b>Note:</b> If you hear a reverb sound your microphone is picking up the output of your
-        speakers/headset, lower the volume and/or move the microphone further away from your speakers/headset.</p>
-                        <script src="css/date/test.js" async></script>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div style="margin-left:10px">
         <div class="col-lg-7 live-video-stream">
             here is live-stream area
 
   <section class="make-center">
+    <div id="videos-container" style="margin: 10px 0;"></div>
     <input type="text" id="room-id" value="abcdef" autocorrect=off autocapitalize=off size=20>
-    <button id="open-room">Open Room</button>
-    <button id="join-room" hidden="hidden">Join Room</button>
+    <button id="open-room" hidden="hidden">Open Room</button>
+    <button id="join-room">Join Room</button>
     <button id="open-or-join-room" hidden="hidden">Auto Open Or Join Room</button>
 
     <div id="videos-container" style="margin: 10px 0;"></div>

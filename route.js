@@ -36,9 +36,9 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/ac.html');
   });
 
-  app.get('/friend',function(req, res){
+  /*app.get('/friend',function(req, res){
     res.sendFile(__dirname + '/template/userpages/Friends.html');
-  });
+  });*/
 
   app.get('/group',function(req, res){
     res.sendFile(__dirname + '/template/userpages/group.html');

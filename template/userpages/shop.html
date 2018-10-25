@@ -6,19 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/shop.css">
 <link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/friendstyle.css">
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body{
-    background: url("css/cover.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;}
-</style>
 </head>
 
 <body>
@@ -40,57 +30,32 @@ span.onclick = function() {
 
 
 <!-- Navbar (sit on top) -->
-<<<<<<< HEAD
-<div class="box1">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded" >
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" style="background:#Ffb85f"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
-      <ul class="navbar-nav">
-        <a class="navbar-brand" href="#" style="font-size:200%; font-weight:bold; color:#01abaa; position:absolute;left:20px;">MUMO</a>
-
-        <li>
-          <a class="nav-link" href="#" style="margin-top:25%; font-family:Microsoft JhengHei;">主頁<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:23%; font-family:Microsoft JhengHei;">交友</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:16%; font-family:Microsoft JhengHei;">聊天室</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown12">
-            <a class="dropdown-item" href="#" style="font-family:Microsoft JhengHei;">個人</a>
-            <a class="dropdown-item" href="#" style="font-family:Microsoft JhengHei;">群組</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:14%; font-family:Microsoft JhengHei;">最新動態</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:14%; font-family:Microsoft JhengHei;">好康優惠</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:14%; font-family:Microsoft JhengHei;">贈送禮物</a>
-        </li>
-        <div id="top-tools">
-          <li>
-            <input href="#" type="image" src="css/setting.png" alt="image" width="30%" height="30%" style="margin-top:5px;">
-          </li>
-          <li>
-            <input href="#" type="image" src="css/qu.png" alt="image" width="30%" height="30%">
-          </li>
-      </ul>
-    </div>
-  </nav>
-=======
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <a href="ac" class="w3-bar-item w3-button" style="font-size:200%;color:#01abaa;"><b>MUMO</b></a>
-  </div>
->>>>>>> 68efffcf399fb11b568f5af8b910440479ae818a
-</div>
+  <div class="w3-bar w3-white w3-padding w3-card">
+    <div class="w3-bar-item" style="font-size:180%;color:#01abaa;"><b>MUMO</b></div>
 
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="menucenter" style="font-family:Microsoft JhengHei;">
+      <button onclick="window.location.href='/userpage'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">我的主頁<span class="sr-only">(current)</span></button>
+      <button onclick="window.location.href='/friends'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">交友</button>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-button" title="Notifications">聊天室<i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+          <button onclick="window.location.href='/chat'" class="w3-bar-item w3-button">個人</button>
+          <button onclick="window.location.href='/chat'" class="w3-bar-item w3-button">群組</button>
+        </div>
+      </div>
+      <button onclick="window.location.href='/ac'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">最新動態</button>
+      <button onclick="window.location.href='/coupon'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">好康優惠</button>
+      <button onclick="window.location.href='/shop'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">配送禮物</button>
+      <button onclick="window.location.href='/contact'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">公主/王子的約會</button>
+    </div>
+    <div id="top-tools" style="margin-top:10px;margin-bottom:10px;">
+            <input href="#" type="image" src="css/setting.png" alt="image" width="30%" height="30%"></br>
+            <input href="#" type="image" src="css/qu.png" alt="image" width="30%" height="30%">
+    </div>
+  </div>
+</div>
 
 <!-- Page content-->
 <div class="w3-main w3-content w3-padding" style="max-width:1000px;margin-top:80px">
@@ -174,19 +139,19 @@ span.onclick = function() {
               <h2 style="font-size: 25px;">Tino</h2>
             </div>
             <div class="col-2">
-              <img src="css/kt.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content1').style.display='block'"><br/>
-              <h2 style="font-size: 25px;">Kaiting</h2>
+              <img src="css/fish.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content1').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">高碩輿</h2>
             </div>
             <div class="col-3">
-              <img src="css/given.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content2').style.display='block'"><br/>
-              <h2 style="font-size: 25px;">Given</h2>
+              <img src="css/yp.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content2').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">Yaping</h2>
             </div>
           </div>
 
           <div class="row" style="text-align: center">
             <div class="col-1">
-              <img src="css/yp.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content3').style.display='block'"><br/>
-              <h2 style="font-size: 25px;">Yaping</h2>
+              <img src="css/june.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content3').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">阿君</h2>
             </div>
             <div class="col-2">
               <img src="css/tonton.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content4').style.display='block'"><br/>
@@ -200,8 +165,8 @@ span.onclick = function() {
 
           <div class="row" style="text-align: center">
             <div class="col-1">
-              <img src="css/lsg.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content6').style.display='block'"><br/>
-              <h2 style="font-size: 25px;">Seunggi</h2>
+              <img src="css/kt.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content6').style.display='block'"><br/>
+              <h2 style="font-size: 25px;">Kaiting</h2>
             </div>
             <div class="col-2">
               <img src="css/jennie1.jpg" class="w3-circle" style="width: 75%" onclick="document.getElementById('modal-content7').style.display='block'"><br/>

@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="css/coupon.css">
+<link rel="stylesheet" href="css/friendstyle.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="/js/jquery.min.js" type="text/javascript"></script>
 <script src="/js/ajaxupload.js" type="text/javascript"></script>
@@ -24,19 +25,31 @@
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-        <a href="ac" class="w3-bar-item w3-button" style="font-size:200%;color:#01abaa;"><b>MUMO</b></a>
-        <div class="topnav">
-            <div class="search-container">
-                <form action="/action_page.php">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+  <div class="w3-bar w3-white w3-padding w3-card">
+    <div class="w3-bar-item" style="font-size:180%;color:#01abaa;"><b>MUMO</b></div>
 
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="menucenter" style="font-family:Microsoft JhengHei;">
+      <button onclick="window.location.href='/userpage'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">我的主頁<span class="sr-only">(current)</span></button>
+      <button onclick="window.location.href='/friends'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">交友</button>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-button" title="Notifications">聊天室<i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+          <button onclick="window.location.href='/chat'" class="w3-bar-item w3-button">個人</button>
+          <button onclick="window.location.href='/chat'" class="w3-bar-item w3-button">群組</button>
+        </div>
+      </div>
+      <button onclick="window.location.href='/ac'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">最新動態</button>
+      <button onclick="window.location.href='/coupon'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">好康優惠</button>
+      <button onclick="window.location.href='/shop'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">配送禮物</button>
+      <button onclick="window.location.href='/contact'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">公主/王子的約會</button>
+    </div>
+    <div id="top-tools" style="margin-top:10px;margin-bottom:10px;">
+            <input href="#" type="image" src="css/setting.png" alt="image" width="30%" height="30%"></br>
+            <input href="#" type="image" src="css/qu.png" alt="image" width="30%" height="30%">
+    </div>
+  </div>
+</div>
 <!-- page content-->
 <div class="w3-main w3-content w3-padding" style="max-width:1000px;margin-top:80px">
     <div class="w3-container w3-card w3-white w3-margin-bottom">

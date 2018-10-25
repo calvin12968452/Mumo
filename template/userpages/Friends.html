@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friends</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/friendstyle.css">
     <link rel="stylesheet" href="css/ja.java">
@@ -34,56 +36,41 @@
 
     </script>
     <title>Document</title>
-    
+
 </head>
 <body>
-    <div class="box1">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded" >
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" style="background:#Ffb85f"></span>
-        </button>
 
-        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
-            <ul class="navbar-nav">
-                <a class="navbar-brand" href="#" style="font-size:200%; font-weight:bold; color:#01abaa; position:absolute;left:20px;">MUMO</a>
+  <!-- Navbar (sit on top) -->
+  <link rel="stylesheet" href="css/w3.css">
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card">
+      <div class="w3-bar-item" style="font-size:180%;color:#01abaa;"><b>MUMO</b></div>
 
-            <li>
-              <a href="userpage" class="nav-link"  style="margin-top:25%; font-family:Microsoft JhengHei;">主頁<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="friends" class="nav-link"  style="margin-top:23%; font-family:Microsoft JhengHei;">交友</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:16%; font-family:Microsoft JhengHei;">聊天室</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown12">
-                <a href="chat" class="dropdown-item"  style="font-family:Microsoft JhengHei;">個人</a>
-                <a href="chat" class="dropdown-item"  style="font-family:Microsoft JhengHei;">群組</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="ac" class="nav-link" id="dropdown12" style="margin-top:14%; font-family:Microsoft JhengHei;">最新動態</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="coupon" class="nav-link" id="dropdown12" style="margin-top:14%; font-family:Microsoft JhengHei;">好康優惠</a>
-            </li><!--<a href="ac" class="nav-link" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:14%; font-family:Microsoft JhengHei;">最新動態</a>-->
-            <li class="nav-item dropdown">
-                <a href="shop" class="nav-link" style="margin-top:14%; font-family:Microsoft JhengHei;">贈送禮物</a>
-            </li>
-            <div id="top-tools">
-                <li>
-                    <input href="#" type="image" src="css/setting.png" alt="image" width="30%" height="30%" style="margin-top:5px;">
-                </li>
-                <li>
-                    <input href="#" type="image" src="css/qu.png" alt="image" width="30%" height="30%">
-                </li>
-            </div>
-          </ul>
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="menucenter" style="font-family:Microsoft JhengHei;">
+        <button onclick="window.location.href='/userpage'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">我的主頁<span class="sr-only">(current)</span></button>
+        <button onclick="window.location.href='/friends'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">交友</button>
+        <div class="w3-dropdown-hover w3-hide-small">
+          <button class="w3-button" title="Notifications">聊天室<i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+            <button onclick="window.location.href='/chat'" class="w3-bar-item w3-button">個人</button>
+            <button onclick="window.location.href='/chat'" class="w3-bar-item w3-button">群組</button>
+          </div>
         </div>
-      </nav>
+        <button onclick="window.location.href='/ac'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">最新動態</button>
+        <button onclick="window.location.href='/coupon'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">好康優惠</button>
+        <button onclick="window.location.href='/shop'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">配送禮物</button>
+        <button onclick="window.location.href='/contact'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">公主/王子的約會</button>
+      </div>
+      <div id="top-tools" style="margin-top:10px;margin-bottom:10px;">
+              <input href="#" type="image" src="css/setting.png" alt="image" width="30%" height="30%"></br>
+              <input href="#" type="image" src="css/qu.png" alt="image" width="30%" height="30%">
+      </div>
     </div>
+  </div>
 
     <!--左邊欄位-->
-    <div class="container my-5"><!--和上面的間距-->
+    <div class="container" style="margin-bottom:50px; margin-top:100px"><!--和上面的間距-->
         <div class="row">
             <div class="col-lg-4" id="left"><!--left 是左邊欄位,占整個版面的3/12-->
                 <img class="rounded-circle" src="css/hua1.jpg" alt="image">
@@ -137,7 +124,7 @@
 
 
             <!--<div class="col-lg-8 mt-lg-0 mt-3">-->
-            <div class="col-lg-8 mt-lg-0 mt-3">
+            <div class="col-lg-8 mt-lg-0 mt-3" >
 
                 <div class="box2">
                     <h4>
@@ -413,7 +400,7 @@
                                     <div>1則新影片</div>
                                     <h2>至秦</h2>
                                 </a>
-                                
+
                                 <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
@@ -458,7 +445,7 @@
                                     <div>3則新影片</div>
                                     <h2>Wang JJ</h2>
                                 </a>
-                                
+
                             </div>
                         </div>
                         <div class="row">
@@ -468,7 +455,7 @@
                                     <div>0則新影片</div>
                                     <h2>雅琳</h2>
                                 </a>
-                                
+
                             </div>
                             <div class="col-lg-4 text-center">
                                 <input  type="image"  class="rounded-circlefriend"  img  src="css/tonton.jpg" data-toggle="modal" data-target="#myModal2"></br>
@@ -476,7 +463,7 @@
                                     <div>0則新影片</div>
                                     <h2>DonDon</h2>
                                 </a>
-                                
+
                             </div>
                             <div class="col-lg-4 text-center">
                                 <input  type="image"  class="rounded-circlefriend"  img  src="css/tino.jpg" data-toggle="modal" data-target="#myModal2"></br>
@@ -484,7 +471,7 @@
                                     <div>3則新影片</div>
                                     <h2>Tino</h2>
                                 </a>
-                                
+
                             </div>
                         </div>
 
@@ -496,7 +483,7 @@
                                     <div>4則新影片</div>
                                     <h2>旻珈</h2>
                                 </a>
-                                
+
                             </div>
                             <div class="col-lg-4 text-center">
                                 <input  type="image"  class="rounded-circlefriend"  img  src="css/wan.jpg" data-toggle="modal" data-target="#myModal2"></br>
@@ -504,7 +491,7 @@
                                     <div>1則新影片</div>
                                     <h2>婉綾</h2>
                                 </a>
-                                
+
 
                             </div>
                             <div class="col-lg-4 text-center">
@@ -513,7 +500,7 @@
                                     <div>0則新影片</div>
                                     <h2>鍾蓉蓉</h2>
                                 </a>
-                                
+
 
                             </div>
                         </div>
@@ -524,7 +511,7 @@
                                     <div>2則新影片</div>
                                     <h2>Yaping</h2>
                                 </a>
-                                
+
                             </div>
                             <div class="col-lg-4 text-center">
                                 <input  type="image"  class="rounded-circlefriend"  img  src="css/beauty.jpg" data-toggle="modal" data-target="#myModal2"></br>
@@ -532,7 +519,7 @@
                                     <div>1則新影片</div>
                                     <h2>P 醬</h2>
                                 </a>
-                                
+
                             </div>
                             <div class="col-lg-4 text-center">
                                 <input  type="image"  class="rounded-circlefriend"  img  src="css/yee.jpg" data-toggle="modal" data-target="#myModal2"></br>

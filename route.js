@@ -20,6 +20,7 @@ module.exports = function(app, express, ls, passport){
   app.use(passport.session());
 
   app.use('/css',express.static('css'));
+  app.use('/js',express.static('js'));
 
   // ====================================
   // set the route ======================
@@ -86,6 +87,10 @@ module.exports = function(app, express, ls, passport){
   });
 
   app.get('/chat',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/chat.html');
+  });
+
+  app.get('/multichat',function(req, res){
     res.sendFile(__dirname + '/template/userpages/chatroom.html');
   });
 
@@ -104,11 +109,65 @@ module.exports = function(app, express, ls, passport){
   app.get('/oauth', passport.authenticate('google_token', {scope : ['profile', 'email']}));
 
   // google login successfully then callback to the route
-  app.get('/oauth/callback', passport.authenticate('google_token', {successRedirect: '/profile', failureRedirect: '/'}));
-
+  app.get('/oauth/callback', passport.authenticate('google_token', {successRedirect: '/ac', failureRedirect: '/'}));
+  // successRedirect route should be /chat?userName=userName and the userName should come from passport.js
   // fb login route
   app.get('/fb', passport.authenticate('fb_token', { authType: 'rerequest', scope: ['user_friends', 'manage_pages'] }));
 
   // fb login successfully then callback to the route
-  app.get('/fb/callback', passport.authenticate('fb_token', {successRedirect: '/profile', failureRedirect: '/'}));
+  app.get('/fb/callback', passport.authenticate('fb_token', {successRedirect: '/ac', failureRedirect: '/'}));
+  // so as to google login
+
+  app.get('/sql_login', function(req, res, next){
+    var usrname = req.query.name,
+        psw = req.query.pw;
+    // console.log("usrname : " + usrname);
+    // console.log("psw : " + psw);
+
+    let sql = "SELECT * FROM user WHERE userName=? AND password=?";
+    req.con.query(sql, [usrname, psw], function(err, result){
+      if (err) {console.log(err);}
+      console.log(result);
+
+      var info = JSON.parse(result[0].info);
+      var id = result[0].account;
+      var gender = result[0].gender;
+      var birth = info.info[0].birth;
+      var constellation = info.info[0].constellation;
+      var country = info.info[0].country;
+      var city = info.info[0].city;
+
+      // console.log("id : " + res.query.id);
+      // console.log("name : " + res.query.name);
+      // console.log("pw : " + res.query.pw);
+      // console.log("gender : " + res.query.gender);
+      // console.log("birth : " + res.query.birth);
+      // console.log("constellation : " + res.query.constellation);
+      // console.log("country : " + res.query.country);
+      // console.log("city : " + res.query.city);
+
+      // console.log(res.query);
+
+      // res.set({
+      //   "query":{
+      //     "id":result[0].account,
+      //     "gender":result[0].gender,
+      //     "birth":info.info[0].birth,
+      //     "constellation":info.info[0].constellation,
+      //     "country":info.info[0].country,
+      //     "city":info.info[0].city
+      //   }
+      // });
+
+      if(result.length != 0){
+        // res.sendFile('/template/userpages/ac.html', {root : __dirname});
+        const query_string = "?name="+usrname+"&id="+id+"&pw="+psw+"&gender="+gender+
+          "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
+        res.redirect('/ac'+query_string);
+      }else{
+        res.send("You haven't signed up yet. Please sign up first!");
+      }
+    });
+  });
+
 }

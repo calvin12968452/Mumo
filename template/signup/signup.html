@@ -132,7 +132,7 @@ function checkvendor(){
 <!-- Normal Section -->
 <div id="normal" class="modal">
     <span onclick="document.getElementById('normal').style.display='none'" class="close" title="Close Modal">&times;</span>
-    <form class="modal-content" action="/process/submit" name="normal">
+    <form class="modal-content" action="/submit" name="normal">
         <div class="container">
             <h1 style="text-align:center; color: #01abaa; font-weight:bold;">一般會員註冊</h1>
 
@@ -141,6 +141,41 @@ function checkvendor(){
 
             <label for="name"><b>使用者名稱 (Nick Name)</b></label>
             <input type="text" placeholder="Nickname" name="name" required>
+
+            <label for="gender"><b>使用者性別 (Gender)</b></label>
+            <div class="custom-control custom-radio">
+                <select name="gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+
+            <label for="constellation"><b>使用者星座 (Constellation)</b></label>
+            <div class="custom-control custom-radio">
+                <select name="constellation">
+                    <option>水瓶座 (Aquarius)</option>
+                    <option>雙魚座 (Pisces)</option>
+                    <option>牡羊座 (Aries)</option>
+                    <option>金牛座 (Taurus)</option>
+                    <option>雙子座 (Gemini)</option>
+                    <option>巨蟹座 (Cancer)</option>
+                    <option>獅子座 (Leo)</option>
+                    <option>處女座 (Virgo)</option>
+                    <option>天秤座 (Libra)</option>
+                    <option>天蠍座 (Scorpio)</option>
+                    <option>射手座 (Sagittarius)</option>
+                    <option>摩羯座 (Capricorn)</option>
+                </select>
+            </div>
+
+            <label for="birth"><b>使用者生日 (Birth)</b></label>
+            <input type="date" placeholder="Birth" name="birth" required>
+
+            <label for="country"><b>使用者國家 (Country)</b></label>
+            <input type="country" placeholder="Country" name="country" required>
+
+            <label for="city"><b>使用者城市 (City)</b></label>
+            <input type="country" placeholder="City" name="city" required>
 
             <label for="email"><b>信箱 (Email)</b></label>
             <input type="email" placeholder="Email" name="email" required>
@@ -152,9 +187,9 @@ function checkvendor(){
                 <td>
                     <table width="300" border="1" bordercolor="#cccccc" height="23">
                         <tr bgcolor="#eeeeee">
-                                <td width="100" id="strength_L">弱</td>
-                                <td width="100" id="strength_M">中</td>
-                                <td width="100" id="strength_H">強</td>
+                            <td width="100" id="strength_L">弱</td>
+                            <td width="100" id="strength_M">中</td>
+                            <td width="100" id="strength_H">強</td>
                         </tr>
                     </table>
                 </td>

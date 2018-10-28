@@ -21,33 +21,8 @@ const {
 
 var imp_passport = require('./controller/passport.js');
 var Route = require('./route.js');
-var chat = require('./controller/chatroom.js');
+var chat = require('./controller/socket.js');
 //var db_connect = require('./sql/dbMYSQL.js');
-/*
-var db = mysql.creatConnection ({
-  host:"localhost",
-  user:"root",
-  password:"",
-  database:"mumo"
-});
-
-db_connect(con);
-*/
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-chat(io);
-imp_passport(ls, passport, con);   // <-- implement the passport method
-Route(app, express, ls, passport);     // <-- implement the routing setting
-
-
-// var server = app.listen(3000, function(){
-//   console.log(textFg.FgGreen, "\n[ Info ] ", textStyle.Reset, "Server is online!\n");
-// })
-http.listen(process.env.PORT || 3000, function(){
-    console.log(textFg.FgGreen, "\n[ Info ] ", textStyle.Reset, "Server is online!\n           online at port 3000");
-});
 
 //config for db
 var con = mysql.createConnection({
@@ -75,3 +50,18 @@ app.use(function(req, res, next){
 });
 
 app.use('/', reg);
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+chat(io, __dirname);
+imp_passport(ls, passport, con);   // <-- implement the passport method
+Route(app, express, ls, passport);     // <-- implement the routing setting
+
+
+// var server = app.listen(3000, function(){
+//   console.log(textFg.FgGreen, "\n[ Info ] ", textStyle.Reset, "Server is online!\n");
+// })
+http.listen(process.env.PORT || 3000, function(){
+    console.log(textFg.FgGreen, "\n[ Info ] ", textStyle.Reset, "Server is online!\n           online at port 3000");
+});

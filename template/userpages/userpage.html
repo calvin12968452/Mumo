@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Minsoo's home page</title>
+    <title>home page</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/ja.java">
@@ -34,6 +34,54 @@
 
     </script>
 
+    <script type="text/javascript">
+        // #personal_chatroom
+        var urlParams = new URLSearchParams(window.location.search);
+        var userName = urlParams.get('name');
+        var userEmail = urlParams.get('email');
+        var userPwd = urlParams.get('pw');
+        var id = urlParams.get('id');
+        var gender = urlParams.get('gender');
+        var constellation = urlParams.get('constellation');
+        var birth = urlParams.get('birth');
+        var country = urlParams.get('country');
+        var city = urlParams.get('city');
+
+        console.log("userName : " + userName);
+        console.log("userEmail : " + userEmail);
+        console.log("userPwd : " + userPwd);
+        console.log("id : " + id);
+        console.log("gender : " + gender);
+        console.log("constellation : " + constellation);
+        console.log("birth : " + birth);
+        console.log("country : " + country);
+        console.log("city : " + city);
+
+        function home_url(){
+            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
+                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
+            document.getElementById("home").href = "/userpage" + query_string;
+        }
+        function chat_url(){
+            document.getElementById("personal_chatroom").href = "/chat?userName=" + userName;
+        }
+        function friend_url(){
+            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
+                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
+            document.getElementById("friend").href = "/friends" + query_string;
+        }
+        function news_url(){
+            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
+                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
+            document.getElementById("news").href = "/ac" + query_string;
+        }
+        function shop_url(){
+            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
+                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
+            document.getElementById("shop").href = "/shop" + query_string;
+        }
+    </script>
+
 </head>
 <body>
 
@@ -49,26 +97,29 @@
                 <a class="navbar-brand" href="#" style="font-size:200%; font-weight:bold; color:#01abaa; position:absolute;left:20px;">MUMO</a>
 
             <li>
-              <a href="userpage" class="nav-link"  style="margin-top:25%; font-family:Microsoft JhengHei;">主頁<span class="sr-only">(current)</span></a>
+              <a id="home" onclick="home_url()" href="userpage" class="nav-link"  style="margin-top:25%; font-family:Microsoft JhengHei;">主頁<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item dropdown">
-              <a href="friends" class="nav-link"  style="margin-top:23%; font-family:Microsoft JhengHei;">交友</a>
+
+            <li>
+              <a id="friend" class="nav-link" href="#" onclick="friend_url()" style="margin-top:23%; font-family:Microsoft JhengHei;">交友</a>
+
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:16%; font-family:Microsoft JhengHei;">聊天室</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown12">
-                <a href="chat" class="dropdown-item"  style="font-family:Microsoft JhengHei;">個人</a>
-                <a href="chat" class="dropdown-item"  style="font-family:Microsoft JhengHei;">群組</a>
+              <div id="chatroom" class="dropdown-menu" aria-labelledby="dropdown12">
+                <a id="personal_chatroom" onclick="chat_url()" href="#" class="dropdown-item"  style="font-family:Microsoft JhengHei;">個人</a>
+                <a href="multichat" class="dropdown-item"  style="font-family:Microsoft JhengHei;">群組</a>
               </div>
             </li>
-            <li class="nav-item dropdown">
-                <a href="ac" class="nav-link" id="dropdown12" style="margin-top:14%; font-family:Microsoft JhengHei;">最新動態</a>
+
+            <li>
+                <a class="nav-link" id="news" onclick="news_url()" href="#" style="margin-top:14%; font-family:Microsoft JhengHei;">最新動態</a>
             </li>
-            <li class="nav-item dropdown">
-                <a href="coupon" class="nav-link" id="dropdown12" style="margin-top:14%; font-family:Microsoft JhengHei;">好康優惠</a>
-            </li><!--<a href="ac" class="nav-link" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:14%; font-family:Microsoft JhengHei;">最新動態</a>-->
-            <li class="nav-item dropdown">
-                <a href="shop" class="nav-link" style="margin-top:14%; font-family:Microsoft JhengHei;">贈送禮物</a>
+            <li>
+                <a class="nav-link" href="coupon" style="margin-top:14%; font-family:Microsoft JhengHei;">好康優惠</a>
+            </li>
+            <li>
+                <a class="nav-link" id="shop" onclick="shop_url()" href="#" style="margin-top:14%; font-family:Microsoft JhengHei;">贈送禮物</a>
             </li>
             <div id="top-tools">
                 <li>
@@ -91,11 +142,14 @@
     <div class="container my-5"><!--和上面的間距-->
         <div class="row">
             <div class="col-lg-4" id="left"><!--left 是左邊欄位,占整個版面的3/12-->
-                <img class="rounded-circle" src="css/hua1.jpg" alt="image">
+                <img class="profile-pic rounded-circle border border-secondary" src="css/img.png" alt="image">
+                <div class="p-image">
+                    <input class="file-upload" type="file" accept="image/*" style="display: none;">
+                </div>
                 <div class="left_text">
                     <dl class="row">
-                        <dt class="col-sm-12" style="font-size:40px; font-family:Microsoft JhengHei; color: #444444;">Hua</dt>
-                        <dt class="col-sm-12"><img src="css/boy.png" alt="image" width="10%" height="40%"></dt>
+                        <dt class="col-sm-12" style="font-size:40px; font-family:Microsoft JhengHei;"><div id="username">username</div></dt>
+                        <dt class="col-sm-12"><img id="gender" src="css/boy.png" alt="image" width="10%" height="40%"></dt>
                         </br>
                         </br>
                         </br>
@@ -105,25 +159,28 @@
 
                     <div class="row">
                         <dt class="col-sm-5" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">生日</dt>
-                        <dd class="col-sm-7" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">03/18</dd>
+                        <dd id="birth" class="col-sm-7" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">03/18</dd>
                         <dt class="col-sm-5" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">城市</dt>
-                        <dd class="col-sm-7" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">台灣-屏東</dd>
+                        <dd id="country city" class="col-sm-7" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">
+                            country - city
+                        </dd>
                         <dt class="col-sm-5"> <img id="dia" src="css/dia2.png" alt="image" width="30%" height="80%"></dt>
                         <p class="col-sm-7" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">123456</p>
-                    </div>
-
+                    </div>    
+                    
                     </br>
                     <input type="image" class="rounded-circlelike" src="css/jennie1.jpg" alt="image" >
                     <input type="image" class="rounded-circlelike" src="css/lisa.jpg" alt="image" >
                     <input type="image" class="rounded-circlelike" src="css/rose3.jpg" alt="image" >
-
+                    
                     <!--music-->
+
                     <div>
-                        <audio src="css/audiojs/123.mp3" preload="auto"></audio>
+                        <audio src="css/audiojs/123.mp3" preload="auto"></audio>      
                     </div>
 
                     <HR color="black" size="10" width="90%"  align="center">
-
+                    
                     <dl class="row">
                         <dt class="col-sm-12" style="font-family:comic sans ms; font-size:23px; color:  #444444;"><img src="css/music.png" width= "13%" height="25%"> Favorite <img src="css/movie.png" width= "13%" height="27%"></dt>
                         </br>
@@ -136,7 +193,7 @@
                         <dd class="col-sm-7" style="font-size:18px; color: #444444;">Kpop</dd>
                     </dl>
                     <div class="boxself_content">
-                        <a style="font-family: Microsoft JhengHei; font-size:20px;">浪漫雙魚男</a>
+                        <a id="constellation" style="font-family: Microsoft JhengHei; font-size:20px;">浪漫雙魚男</a>
 
                     </div>
                 </div>
@@ -464,13 +521,6 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
-
-
-
-
-
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
@@ -485,6 +535,44 @@
         $('#myModal iframe').removeAttr('src');
     });
     </script>
+    <script type="text/javascript">
+        document.getElementById("username").innerHTML = userName;
+        document.getElementById("birth").innerHTML = birth;
+        document.getElementById("country city").innerHTML = country + " - " + city;
+        if(gender == "Male"){
+            $('#gender').attr('src', 'css/boy.png');
+            var adj = "浪漫", whichGender = "男";
+        }else if(gender == "Female"){
+            $('#gender').attr('src', 'css/girl.png');
+            var adj = "可愛", whichGender = "女";
+        }
+        document.getElementById("constellation").innerHTML = adj + whichGender + "  - " + constellation;
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var readURL = function(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('.profile-pic').attr('src', e.target.result);
+                    var photo_link =  e.target.result;
+                    console.log("photo link : " + photo_link);
+                    // The link is a text baed on base64.
+                    // The link can be save to database
+                    // When user is online, check the text if existed at server and then send to client with query
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $(".file-upload").on('change', function(){
+            readURL(this);
+        });
+        $(".profile-pic").on('click', function() {
+           $(".file-upload").click();
+        });
+    });
+</script>
 
 
 </body>

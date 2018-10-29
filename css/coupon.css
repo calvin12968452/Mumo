@@ -1,4 +1,5 @@
-body {font-family: "Times New Roman", Georgia, Serif;
+body {
+    /*font-family: "Times New Roman", Georgia, Serif;*/
     background: url(cover.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,7 +85,8 @@ input[type=submit]:hover {
     margin: auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-}
+} 
+
 h3{
     color: #01abaa; 
     font-weight: bold;

@@ -144,24 +144,26 @@ CREATE TABLE `report` (
 
 CREATE TABLE `user` (
   `uid` int(11) NOT NULL,
-  `account` varchar(14) NOT NULL,
-  `password` varchar(14) NOT NULL,
-  `repassword` varchar(14) NOT NULL,
-  `gender` varchar(4) NOT NULL,
-  `info` text NOT NULL,
-  `popval` int(5) NOT NULL,
-  `money` int(8) NOT NULL
+  `account` varchar(255) CHARACTER SET latin7 COLLATE latin7_general_cs NOT NULL,
+  `userName` varchar(255) CHARACTER SET big5 NOT NULL,
+  `userEmail` varchar(255) CHARACTER SET latin7 COLLATE latin7_general_cs NOT NULL,
+  `password` varchar(255) CHARACTER SET latin7 COLLATE latin7_general_cs NOT NULL,
+  `repassword` varchar(255) CHARACTER SET latin7 COLLATE latin7_general_cs NOT NULL,
+  `gender` varchar(255) CHARACTER SET latin7 COLLATE latin7_general_cs NOT NULL,
+  `info` varchar(255) CHARACTER SET latin7 COLLATE latin7_general_cs NOT NULL,
+  `popval` int(11) NOT NULL,
+  `money` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- 資料表的匯出資料 `user`
 --
 
-INSERT INTO `user` (`uid`, `account`, `password`, `repassword`, `gender`, `info`, `popval`, `money`) VALUES
-(1, 'duke5566', '123456', '', 'Male', 'test test', 0, 5000),
-(2, '456', '45646546@54664', '465', '0', '0', 0, 0),
-(3, 'tino', 'tino@454646', 'asdasd', '0', '0', 0, 0),
-(4, 'gogopower', '45646546@fjfjf', 'adfadf', '0', '0', 0, 0);
+INSERT INTO `user` (`uid`, `account`, `userName`, `userEmail`, `password`, `repassword`, `gender`, `info`, `popval`, `money`) VALUES
+(1, 'duke5566', '', '', '123456', '', 'Male', 'test test', 0, 5000),
+(2, '456', '', '', '45646546@54664', '465', '0', '0', 0, 0),
+(3, 'tino', '', '', 'tino@454646', 'asdasd', '0', '0', 0, 0),
+(4, 'gogopower', '', '', '45646546@fjfjf', 'adfadf', '0', '0', 0, 0);
 
 -- --------------------------------------------------------
 

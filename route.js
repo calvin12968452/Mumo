@@ -45,6 +45,10 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/group.html');
   });
 
+  app.get('/group1',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/group1.html');
+  });
+
   app.get('/Jennie',function(req, res){
     res.sendFile(__dirname + '/template/userpages/Jennie.html');
   });
@@ -89,6 +93,11 @@ module.exports = function(app, express, ls, passport){
   app.get('/chat',function(req, res){
     res.sendFile(__dirname + '/template/userpages/chat.html');
   });
+
+  app.get('/chatroom',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/chatroom.html');
+  });
+
 
   app.get('/multichat',function(req, res){
     res.sendFile(__dirname + '/template/userpages/chatroom.html');

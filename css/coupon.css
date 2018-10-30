@@ -1,17 +1,17 @@
-<<<<<<< HEAD
-body {font-family: "Verdana,sans-serif;"
-=======
-body {
-    /*font-family: "Times New Roman", Georgia, Serif;*/
->>>>>>> 575a65e771647ed725e155f2b78861534f69dbb4
+body {font-family: "Times New Roman", Georgia, Serif;
     background: url(cover.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 2px;
+}
 * {
     box-sizing: border-box;
 }
+
 .topnav .search-container {
   float: right;
 }
@@ -84,8 +84,7 @@ input[type=submit]:hover {
     margin: auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-} 
-
+}
 h3{
     color: #01abaa;
     font-weight: bold;
@@ -247,4 +246,19 @@ h3{
         width: 100%;
         margin-top: 0;
     }
+}
+#top-tools {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    margin: 5px;
+}
+.menucenter {
+    width: 700px;
+	  margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:10px;
 }

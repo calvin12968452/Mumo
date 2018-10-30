@@ -37,7 +37,7 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/ac.html');
   });
 
-  app.get('/friend',function(req, res){
+  app.get('/friends',function(req, res){
     res.sendFile(__dirname + '/template/userpages/Friends.html');
   });
 
@@ -103,9 +103,9 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/chatroom.html');
   });
 
-  app.get('/friends',function(req, res){
+  /*app.get('/friends',function(req, res){
     res.sendFile(__dirname + '/template/userpages/friends.html');
-  });
+  });*/
 
   app.get('/user_vendor',function(req, res){
     res.sendFile(__dirname + '/template/businesspage/user_vendor.html');

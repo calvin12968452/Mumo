@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 body {font-family: "Verdana,sans-serif;"
+=======
+body {
+    /*font-family: "Times New Roman", Georgia, Serif;*/
+>>>>>>> 575a65e771647ed725e155f2b78861534f69dbb4
     background: url(cover.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -79,7 +84,8 @@ input[type=submit]:hover {
     margin: auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-}
+} 
+
 h3{
     color: #01abaa;
     font-weight: bold;

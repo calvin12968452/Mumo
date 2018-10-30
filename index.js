@@ -21,33 +21,10 @@ const {
 
 var imp_passport = require('./controller/passport.js');
 var Route = require('./route.js');
-var chat = require('./controller/chatroom.js');
+var chat = require('./controller/socket.js');
 //var db_connect = require('./sql/dbMYSQL.js');
-/*
-var db = mysql.creatConnection ({
-  host:"localhost",
-  user:"root",
-  password:"",
-  database:"mumo"
-});
-
-db_connect(con);
-*/
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-chat(io);
-imp_passport(ls, passport, con);   // <-- implement the passport method
-Route(app, express, ls, passport);     // <-- implement the routing setting
 
 
-// var server = app.listen(3000, function(){
-//   console.log(textFg.FgGreen, "\n[ Info ] ", textStyle.Reset, "Server is online!\n");
-// })
-http.listen(process.env.PORT || 3000, function(){
-    console.log(textFg.FgGreen, "\n[ Info ] ", textStyle.Reset, "Server is online!\n           online at port 3000");
-});
 
 //config for db
 var con = mysql.createConnection({
@@ -74,4 +51,55 @@ app.use(function(req, res, next){
   next();
 });
 
+//tino's suck chatroom
+var io = require('socket.io').listen(http);
+
+io.sockets.on('connection', function(socket){
+  console.log("[ socket io ]: connected");
+  // listen on the event : new user
+  socket.on('new',function(msg){
+      socket.username = msg;
+      console.log("[ new user ]: " + msg);
+      io.sockets.emit('add',{
+        username: socket.username
+      });
+  });
+
+  //listen on the event : send messages
+  socket.on('sendMsg', function(msg){
+    console.log("[ message ]: " + msg + ", from " + socket.username);
+    // response with the event and the params
+    io.sockets.emit('getMsg', {
+      username:socket.username,
+      msg:msg
+    });
+  });
+
+  // listen on the event : user offline
+  socket.on('disconnect',function(){
+    console.log("[ offline ]: " + socket.username + " left. :(");
+    io.sockets.emit('left',{
+      username:socket.username
+    });
+  });
+});
+
+
+
+
 app.use('/', reg);
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+chat(io, __dirname);
+imp_passport(ls, passport, con);   // <-- implement the passport method
+Route(app, express, ls, passport);     // <-- implement the routing setting
+
+
+// var server = app.listen(3000, function(){
+//   console.log(textFg.FgGreen, "\n[ Info ] ", textStyle.Reset, "Server is online!\n");
+// })
+http.listen(process.env.PORT || 3000, function(){
+    console.log(textFg.FgGreen, "\n[ Info ] ", textStyle.Reset, "Server is online!\n           online at port 3000");
+});

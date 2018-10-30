@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	  <link rel="stylesheet" type="text/css" href="css/chat.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>chat</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+    <div class="container mt-2" style="height: 80%;">
+      <div class="row">
+        <div class="col-4">
+          <div class="shadow-sm p-2 bg-white rounded-top text-center border border-success">成員</div>
+        </div>
+        <div class="col-8 bg-info rounded-top shadow-sm ">
+          <div name="friend_name" id="friend_name" class="p-2 text-center ">聊天室窗</div>
+        </div>
+      </div>
+      <div class="row h-100">
+        <div class="col-4" style="overflow:hidden;">
+          <ul id="online-list" class="list-group bg-white border border-success pre-scrollable" style="min-height: 98%;overflow-y:auto;"> 
+
+            <!-- add online list here -->
+            <!-- <li id="user-1" class="online-user list-group-item text-success">:D</li>
+            <li id="user-2" class="online-user list-group-item text-success">:|</li>
+            <li id="user-3" class="online-user list-group-item text-success">:(</li>
+            <li id="user-4" class="online-user list-group-item text-danger">:]</li>
+            <li id="user-5" class="online-user list-group-item text-danger">:)</li>-->
+          </ul>
+        </div>
+        <div id="text" class="col-8 border border-info mb-3 pre-scrollable" style="min-height: 98%;">
+
+          <div id="message_content">
+
+          <!-- start col of received meessage -->
+          <!-- <div class="row">
+            <div class="col-1">
+               <img class="mt-1" src="./imgs/user.png" alt="Smiley face" height="36pt" width="36pt"> 
+            </div>
+            <div class="col-8">
+              <div class="card border-primary mt-1 mb-1 pl-2 pb-1 pr-2" style="height: auto; min-height: 30pt">鎧瑋大雞雞</div>
+            </div>
+          </div> -->
+          <!-- end col of received meessage -->
+
+          <!-- start col of transmitted meessage -->
+          <!-- <div class="row">
+            <div class="col-4"></div>
+            <div class="col-8">
+              <div class="card bg-primary text-white mt-1 mb-1 pl-2 pb-1 pr-2" style="height: auto; min-height: 30pt">O口O</div>
+            </div>
+          </div> -->
+          <!-- end col of transmitted meessage -->
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row" >
+        <div class="col-4"></div>
+        <div class="col-8">
+          <div class="input-group mb-3">
+            <!-- transmission input -->
+            <input id="text-transmitted" type="text" class="form-control" placeholder="Type a message..." aria-label="submit_message" aria-describedby="submit_message">
+            
+            <div class="input-group-append">
+              <!-- transmission button -->
+              <button id="btn-transmitted" class="btn btn-primary"><i class="material-icons" style="font-size:19px;">send</i></button>
+            
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="js/controller.js"></script>
+     <script src="js/presenter.js"></script>  
+    <!-- <script>
+      // ==== [TBD] ====
+      // 1.socket io
+      // 2.connect
+      // 3.online
+      // 4.msg
+      // 5.offline
+
+      var socket = io();
+      var urlParams = new URLSearchParams(window.location.search);
+      var name = urlParams.get('username');
+      var friend_name = "";
+      console.log(name);
+
+      function get_userID(id){
+        friend_name = id;
+        socket.emit('config', {'username' : name, 'friend_name' : friend_name});
+      }
+
+      function get_transmit_msg(msg){
+        socket.emit('msg', {'username' : name, 'friend_name' : friend_name, 'msg' : msg});
+      }
+
+      function empty_members(){
+          del_user();
+      }
+
+      function append_members(list){
+          list.forEach(function(item, index, array){
+            add_user(item);
+          });
+      }
+
+      socket.emit('online', {'username': name});
+
+      socket.on('chat_logger', function(data){
+        reset_chat();
+        var msg = JSON.parse(data);
+          console.log("chat log : " + msg);
+        var chat_length = msg.chat_log.length;
+        var i = 0;
+          console.log("chat_length : " + chat_length);
+        for(i = 0 ; i < chat_length ; i++){
+              if(msg.chat_log[i].user == name){
+                chat_logger(0, msg.chat_log[i].msg);
+              }else{
+                chat_logger(1, msg.chat_log[i].msg);
+              }
+          }
+      });
+
+      socket.on('msg', function(data){
+          var msg = JSON.parse(data);
+          console.log(msg.chat_log[0].user);
+          console.log(name);
+          if(msg.chat_log[0].user != name) { add_receive_html(msg.chat_log[0].msg); } 
+      });
+
+      socket.on('online',function(data){
+          var username = data.username, i = 0;
+          var online_members = data.onlineMembers;
+          var offline_members = data.offlineMembers;
+
+          console.log("Online : " + online_members.toString());
+          console.log("Offline : " + offline_members.toString());
+
+          empty_members();
+
+          append_members(online_members);
+          // append_members(offline_members);
+      });
+
+      socket.on('offline',function(data){
+          socket.emit("disconnect", name);
+      });
+    </script>  -->
+  </body>
+</html>

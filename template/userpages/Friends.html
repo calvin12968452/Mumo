@@ -36,6 +36,7 @@
 
     </script>
     <title>Document</title>
+<<<<<<< HEAD
 
 </head>
 <body>
@@ -56,6 +57,102 @@
             <button onclick="window.location.href='/chat'" class="w3-bar-item w3-button">個人</button>
             <button onclick="window.location.href='/chat'" class="w3-bar-item w3-button">群組</button>
           </div>
+=======
+    <script type="text/javascript">
+        // #personal_chatroom
+        var urlParams = new URLSearchParams(window.location.search);
+        var userName = urlParams.get('name');
+        var userEmail = urlParams.get('email');
+        var userPwd = urlParams.get('pw');
+        var id = urlParams.get('id');
+        var gender = urlParams.get('gender');
+        var constellation = urlParams.get('constellation');
+        var birth = urlParams.get('birth');
+        var country = urlParams.get('country');
+        var city = urlParams.get('city');
+
+        console.log("userName : " + userName);
+        console.log("userEmail : " + userEmail);
+        console.log("userPwd : " + userPwd);
+        console.log("id : " + id);
+        console.log("gender : " + gender);
+        console.log("constellation : " + constellation);
+        console.log("birth : " + birth);
+        console.log("country : " + country);
+        console.log("city : " + city);
+
+        function home_url(){
+            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
+                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
+            document.getElementById("home").href = "/userpage" + query_string;
+        }
+        function chat_url(){
+            document.getElementById("personal_chatroom").href = "/chat?userName=" + userName;
+        }
+        function friend_url(){
+            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
+                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
+            document.getElementById("friend").href = "/friends" + query_string;
+        }
+        function news_url(){
+            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
+                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
+            document.getElementById("news").href = "/ac" + query_string;
+        }
+        function shop_url(){
+            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
+                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
+            document.getElementById("shop").href = "/shop" + query_string;
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="box1">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded" >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background:#Ffb85f"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+            <ul class="navbar-nav">
+                <a class="navbar-brand" href="#" style="font-size:200%; font-weight:bold; color:#01abaa; position:absolute;left:20px;">MUMO</a>
+
+            <li>
+              <a href="userpage" class="nav-link"  style="margin-top:25%; font-family:Microsoft JhengHei;">主頁<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a id="friend" class="nav-link" href="#" onclick="friend_url()" style="margin-top:23%; font-family:Microsoft JhengHei;">交友</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:16%; font-family:Microsoft JhengHei;">聊天室</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown12">
+                <a id="personal_chatroom" onclick="chat_url()" href="chat" class="dropdown-item"  style="font-family:Microsoft JhengHei;">個人</a>
+                <a href="multichat" class="dropdown-item"  style="font-family:Microsoft JhengHei;">群組</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="ac" class="nav-link" id="news" onclick="news_url()" style="margin-top:14%; font-family:Microsoft JhengHei;">最新動態</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="coupon" class="nav-link" id="dropdown12" style="margin-top:14%; font-family:Microsoft JhengHei;">好康優惠</a>
+            </li><!--<a href="ac" class="nav-link" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:14%; font-family:Microsoft JhengHei;">最新動態</a>-->
+            <li class="nav-item dropdown">
+                <a id="shop" onclick="shop_url()" href="shop" class="nav-link" style="margin-top:14%; font-family:Microsoft JhengHei;">贈送禮物</a>
+            </li>
+            <li>
+                <a id="date_user" onclick="date_url()" href="date_user" class="nav-link" style="margin-top:14%; font-family:Microsoft JhengHei;">活動入口</a>
+            </li>
+            <div id="top-tools">
+                <li>
+                    <input href="#" type="image" src="css/setting.png" alt="image" width="30%" height="30%" style="margin-top:5px;">
+                </li>
+                <li>
+                    <input href="#" type="image" src="css/qu.png" alt="image" width="30%" height="30%">
+                </li>
+            </div>
+          </ul>
+>>>>>>> 575a65e771647ed725e155f2b78861534f69dbb4
         </div>
         <button onclick="window.location.href='/ac'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">最新動態</button>
         <button onclick="window.location.href='/coupon'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">好康優惠</button>

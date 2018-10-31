@@ -41,3 +41,10 @@ html, body{
 .bg-info {
     background-color: #ecd6c7 !important;
 }
+
+.list-group-item {
+  background-color: #ecd6c8 !important;
+}
+.border-success {
+    border-color: #ecd6c8!important;
+}

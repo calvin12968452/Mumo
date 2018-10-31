@@ -28,6 +28,16 @@ html, body{
 
 .bg-primary {
 
-  background-color: #00FF00 !important;
+  background-color: rgba(249, 200, 142, 0.7) !important;
 
+}
+.text-white {
+    color: #444444 !important;
+}
+
+.border-info {
+    border-color: #ecd6c7 !important;
+}
+.bg-info {
+    background-color: #ecd6c7 !important;
 }

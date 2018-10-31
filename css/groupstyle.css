@@ -429,8 +429,8 @@ button.close {
 }
 .box2 h2{
     display: inline-block; 
-    /*font-family: Microsoft Tai Le;*/
-    font-family: Gill Sans, sans-serif;
+    
+    font-family: Microsoft JhengHei;
     font-size: 28px;
     color:  #444444;
     text-align:center;
@@ -441,5 +441,6 @@ button.close {
     text-align: left;
     padding: 0px;
     width: 100%;
-    font-family: comic sans ms;
+    font-family: Microsoft JhengHei;
+    color: #444444;
 }

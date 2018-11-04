@@ -17,6 +17,15 @@ body {
     margin: 5px;
 }
 
+.menucenter {
+    width: 700px;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+
 .box2 {
     margin-top: 0px;
     background: #fbf2f2;
@@ -44,7 +53,7 @@ body {
 .box2 h2{
     display: inline-block; 
     /*font-family: Microsoft Tai Le;*/
-    font-family: Gill Sans, sans-serif;
+    font-family: Microsoft JhengHei;
     font-size: 28px;
     color:  #444444;
     text-align:center;
@@ -55,7 +64,7 @@ body {
     text-align: left;
     padding: 0px;
     width: 100%;
-    font-family: comic sans ms;
+    font-family: Microsoft JhengHei;
 }
 
 .box2_content {

@@ -4,6 +4,10 @@ MIT License   - www.WebRTC-Experiment.com/licence
 Documentation - github.com/muaz-khan/WebRTC-Experiment/tree/master/getMediaElement
 */
 
+#left {
+    height: 500px;
+}
+
 .media-container, .media-container * {
     margin: 0;
     padding: 0;

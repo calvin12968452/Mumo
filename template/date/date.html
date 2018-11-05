@@ -155,7 +155,7 @@
 	    <div class="row">
 	      <div class="col-sm-7">
 	        <div class="card bg-light">
-	          <div class="card-body">
+	          <div class="card-body" id="left">
 	    	    <h5 class="card-title">Broadcast area</h5>
 	    	    <p class="card-text"></p>
 
@@ -301,7 +301,7 @@
 	            function showRoomURL(roomid) {
 	                var roomHashURL = '#' + roomid;
 	                var roomQueryStringURL = '?roomid=' + roomid;
-	                var html = '<h2>Unique URL for your room:</h2><br>';
+	                var html = '<h5>Unique URL for your room:</h5><br>';
 	                html += 'Hash URL: <a href="' + roomHashURL + '" target="_blank">' + roomHashURL + '</a>';
 	                html += '<br>';
 	                html += 'QueryString URL: <a href="' + roomQueryStringURL + '" target="_blank">' + roomQueryStringURL + '</a>';
@@ -368,11 +368,31 @@
                   </div>
                 </div>
               </div>
+
+              <!-- date chat area -->
               <div class="col-sm-5">
                 <div class="card">
-                  <div class="card-body">
+                  <div class="card-body" id="right">
                     <h5 class="card-title">Chat here</h5>
-                    <p class="card-text"></p>
+                    <link rel="stylesheet" href="/css/date/dateChat.css">
+                    <ul class="pages">
+                      <li class="chat page">
+                        <div class="chatArea">
+                          <ul class="messages"></ul>
+                        </div>
+                        <input class="inputMessage" placeholder="Type here..."/>
+                      </li>
+                      <li class="login page">
+                        <div class="form">
+                          <p class="card-text">輸入你的名字吧</p>
+                          <input class="usernameInput" type="text" maxlength="14" />
+                        </div>
+                      </li>
+                    </ul>
+
+                    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+                    <script src="/socket.io/socket.io.js"></script>
+                    <script src="/js/date/dateChat.js"></script>
                   </div>
                 </div>
               </div>

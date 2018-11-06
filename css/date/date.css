@@ -1,0 +1,81 @@
+/* background */
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(../yaping.png);
+}
+
+/* top */
+#top-tools {
+    _background-color: #fee;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    margin: 5px;
+}
+
+.menucenter {
+    width: 700px;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+
+.box2 {
+    margin-top: 0px;
+    background: #fbf2f2;
+    border: 1px solid #ccc;
+    padding: 20px;
+    height: 750px;
+    /*border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;*/
+}
+
+.box2 h4 {
+    display: inline-block;
+    background-image: linear-gradient(-20deg, #f7b75d 0%, #fdd6bd 100%);
+    padding-top: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    height: 35px;
+    border-radius: 15px 10px 10px 15px / 50%;
+    font-family: Microsoft JhengHei;
+    font-size: 20px;
+    color:  #444444;
+
+}
+.box2 h2{
+    display: inline-block; 
+    /*font-family: Microsoft Tai Le;*/
+    font-family: Microsoft JhengHei;
+    font-size: 28px;
+    color:  #444444;
+    text-align:center;
+
+}
+.box2 h6 {
+    display: inline-block;
+    text-align: left;
+    padding: 0px;
+    width: 100%;
+    font-family: Microsoft JhengHei;
+}
+
+.box2_content {
+    padding: 20px;
+    background: #ecd6c7;
+    height: 220px;
+    max-height: 220px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;*/
+
+}

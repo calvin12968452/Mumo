@@ -37,6 +37,30 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/ac.html');
   });
 
+  app.get('/setting',function(req, res){
+    var usrname = req.query.name;
+    var id = req.query.id;
+    var psw = req.query.pw;
+    var gender = req.query.gender;
+    var birth = req.query.birth;
+    var constellation = req.query.constellation;
+    var country = req.query.country;
+    var city = req.query.city;
+    var photo = req.query.photo;
+
+    sql = "UPDATE user SET photo=? WHERE userName=?";
+    req.con.query(sql, [photo, usrname], function(err, result){
+      if (err) {console.log(err);}
+      console.log(result);
+
+
+      const query_string = "?name="+usrname+"&id="+id+"&pw="+psw+"&gender="+gender+
+        "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city+"&photo="+photo;
+      res.redirect('/ac'+query_string);
+    });
+
+  });
+
   app.get('/friends',function(req, res){
     res.sendFile(__dirname + '/template/userpages/Friends.html');
   });
@@ -153,7 +177,7 @@ module.exports = function(app, express, ls, passport){
       var constellation = info.info[0].constellation;
       var country = info.info[0].country;
       var city = info.info[0].city;
-
+      var photo = result[0].photo;
       // console.log("id : " + res.query.id);
       // console.log("name : " + res.query.name);
       // console.log("pw : " + res.query.pw);
@@ -179,7 +203,7 @@ module.exports = function(app, express, ls, passport){
       if(result.length != 0){
         // res.sendFile('/template/userpages/ac.html', {root : __dirname});
         const query_string = "?name="+usrname+"&id="+id+"&pw="+psw+"&gender="+gender+
-          "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
+          "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city+"&photo="+photo;
         res.redirect('/ac'+query_string);
       }else{
         res.send("You haven't signed up yet. Please sign up first!");

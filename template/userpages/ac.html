@@ -36,6 +36,28 @@
         var birth = urlParams.get('birth');
         var country = urlParams.get('country');
         var city = urlParams.get('city');
+        var photo = urlParams.get('photo');
+        if(photo == undefined){photo = "";}
+
+        photo = photo.split(' ').join('+');
+
+        if(userName == "" || userName == undefined){
+            var localData = localStorage.getItem('userData');
+            localData = JSON.parse(localData);
+
+            userName = localData.userName;
+            userEmail = localData.userEmail;
+            userPwd = localData.userPwd;
+            id = localData.id;
+            gender = localData.gender;
+            constellation = localData.constellation;
+            birth = localData.birth;
+            country = localData.country;
+            city = localData.city;
+            photo = localData.photo;
+
+            if(photo == undefined){photo = "";}
+            photo = photo.split(' ').join('+');
 
         console.log("userName : " + userName);
         console.log("userEmail : " + userEmail);
@@ -46,29 +68,32 @@
         console.log("birth : " + birth);
         console.log("country : " + country);
         console.log("city : " + city);
+        console.log("photo : " + photo);
+        }else{
+            console.log("userName : " + userName);
+            console.log("userEmail : " + userEmail);
+            console.log("userPwd : " + userPwd);
+            console.log("id : " + id);
+            console.log("gender : " + gender);
+            console.log("constellation : " + constellation);
+            console.log("birth : " + birth);
+            console.log("country : " + country);
+            console.log("city : " + city);
+            console.log("photo : " + photo);
 
-        function home_url(){
-            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
-                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
-            document.getElementById("home").href = "/userpage" + query_string;
-        }
-        function chat_url(){
-            document.getElementById("personal_chatroom").href = "/chat?userName=" + userName;
-        }
-        function friend_url(){
-            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
-                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
-            document.getElementById("friend").href = "/friends" + query_string;
-        }
-        function news_url(){
-            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
-                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
-            document.getElementById("news").href = "/ac" + query_string;
-        }
-        function shop_url(){
-            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
-                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
-            document.getElementById("shop").href = "/shop" + query_string;
+        var localData = {
+                "userName":userName,
+                "userEmail":userEmail,
+                "userPwd":userPwd,
+                "id":id,
+                "gender":gender,
+                "constellation":constellation,
+                "birth":birth,
+                "country":country,
+                "city":city,
+                "photo":photo
+            };
+            localStorage.setItem( 'userData', JSON.stringify(localData) );
         }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
@@ -1050,6 +1075,7 @@
             var adj = "可愛", whichGender = "女";
         }
         document.getElementById("constellation").innerHTML = adj + whichGender + "  - " + constellation;
+        if(photo != "" && photo != undefined){ $('.profile-pic').attr('src', "data:image/jpg;base64, " + photo); }
     </script>
 
 <!-- show less and show more -->
@@ -1072,6 +1098,21 @@ function myFunction() {
 </script>
 
 <script type="text/javascript">
+// p-image
+function save_photo(link){
+        console.log("typeof photo : " + typeof link);
+        console.log("photo : " +  link);
+        const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
+            "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city+"&photo="+link;
+        document.getElementById("save").href = "/setting" + query_string;
+        console.log("saved");
+    }
+    function show_savebtn(){
+        $(".p-image").append("\
+            \<div\>\
+                \<a id=\"save\" class=\"savebtn btn btn-dark\" value=\"更新資料\" \>確認\<\/a\>\
+            \<\/div\>");
+    }
     $(document).ready(function() {
         var readURL = function(input) {
             if (input.files && input.files[0]) {
@@ -1079,7 +1120,10 @@ function myFunction() {
                 reader.onload = function (e) {
                     $('.profile-pic').attr('src', e.target.result);
                     var photo_link =  e.target.result;
-                    console.log("photo link : " + photo_link);
+                    console.log("photo link : " + photo_link.replace("data:image/jpeg;base64,", ""));
+                    console.log("typeof link : " + typeof photo_link);
+                    show_savebtn();
+                    save_photo(photo_link.replace("data:image/jpeg;base64,", ""));
                     // The link is a text based on base64.
                     // The link can be save to database in the future.
                     // When user is online, check the text if existed at server and then send to client with query.

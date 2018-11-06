@@ -45,53 +45,7 @@
     alert("領取成功");
 }
 </script>
-<script type="text/javascript">
-    // #personal_chatroom
-    var urlParams = new URLSearchParams(window.location.search);
-    var userName = urlParams.get('name');
-    var userEmail = urlParams.get('email');
-    var userPwd = urlParams.get('pw');
-    var id = urlParams.get('id');
-    var gender = urlParams.get('gender');
-    var constellation = urlParams.get('constellation');
-    var birth = urlParams.get('birth');
-    var country = urlParams.get('country');
-    var city = urlParams.get('city');
 
-    console.log("userName : " + userName);
-    console.log("userEmail : " + userEmail);
-    console.log("userPwd : " + userPwd);
-    console.log("id : " + id);
-    console.log("gender : " + gender);
-    console.log("constellation : " + constellation);
-    console.log("birth : " + birth);
-    console.log("country : " + country);
-    console.log("city : " + city);
-
-    function home_url(){
-        const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
-            "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
-        document.getElementById("home").href = "/userpage" + query_string;
-    }
-    function chat_url(){
-        document.getElementById("personal_chatroom").href = "/chat?userName=" + userName;
-    }
-    function friend_url(){
-        const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
-            "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
-        document.getElementById("friend").href = "/friends" + query_string;
-    }
-    function news_url(){
-        const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
-            "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
-        document.getElementById("news").href = "/ac" + query_string;
-    }
-    function shop_url(){
-        const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
-            "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
-        document.getElementById("shop").href = "/shop" + query_string;
-    }
-</script>
 </head>
 <body>
 <div class="w3-top">

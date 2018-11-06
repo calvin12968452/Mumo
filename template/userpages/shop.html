@@ -26,6 +26,10 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 
+function myFunction() {
+  alert("成功!");
+}
+
 </script>
 
 <script type="text/javascript">
@@ -113,52 +117,50 @@ span.onclick = function() {
     <!-- First Photo Grid-->
     <div class="w3-row-padding w3-padding-16 w3-center" id="shop">
       <div class="w3-quarter">
-        <img src="css/s1.jpg" alt="watch" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
-        <h3>手錶</h3>
-        <p>價格：5元;  人氣：10</p>
-      </div>
-      <div class="w3-quarter">
-        <img src="css/s2.jpg" alt="camera" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
-        <h3>相機</h3>
-        <p>價格：5元;  人氣：10</p>
-      </div>
-      <div class="w3-quarter">
         <img src="css/s3.jpg" alt="flower" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
         <h3>花</h3>
-        <p>價格：5元;  人氣：10</p>
+        <p>價格：3元;  人氣：14</p>
       </div>
       <div class="w3-quarter">
         <img src="css/s4.jpg" alt="popcorn" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
         <h3>爆米花</h3>
-        <p>價格：5元;  人氣：10</p>
+        <p>價格：5元;  人氣：20</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="css/s8.jpg" alt="choco" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
+        <h3>巧克力</h3>
+        <p>價格：6元;  人氣：24</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="css/s7.jpg" alt="glasses" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
+        <h3>墨鏡</h3>
+        <p>價格：8元;  人氣：32</p>
       </div>
     </div>
 
     <!-- Second Photo Grid-->
     <div class="w3-row-padding w3-padding-16 w3-center">
       <div class="w3-quarter">
-        <img src="css/s5.jpg" alt="bike" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
-        <h3>腳踏車</h3>
-        <p>價格：5元;  人氣：10</p>
+        <img src="css/s1.jpg" alt="watch" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
+        <h3>手錶</h3>
+        <p>價格：10元;  人氣：40</p>
       </div>
       <div class="w3-quarter">
         <img src="css/s6.jpg" alt="shoes" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
         <h3>布鞋</h3>
-        <p>價格：5元;  人氣：10</p>
+        <p>價格：12元;  人氣：48</p>
       </div>
       <div class="w3-quarter">
-        <img src="css/s7.jpg" alt="glasses" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
-        <h3>墨鏡</h3>
-        <p>價格：5元;  人氣：10</p>
+        <img src="css/s2.jpg" alt="camera" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
+        <h3>相機</h3>
+        <p>價格：15元;  人氣：60</p>
       </div>
       <div class="w3-quarter">
-        <img src="css/s8.jpg" alt="choco" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
-        <h3>巧克力</h3>
-        <p>價格：5元;  人氣：10</p>
+        <img src="css/s5.jpg" alt="bike" style="width:100%" onclick="document.getElementById('giveto').style.display='block'">
+        <h3>腳踏車</h3>
+        <p>價格：20元;  人氣：80</p>
       </div>
     </div>
-
-
 
     <div id="giveto" class="w3-modal">
       <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="margin-top: -50px; margin-bottom: 50px;max-width:700px">
@@ -285,7 +287,7 @@ span.onclick = function() {
         </div>
         <div class="modal-footer">
           <input style="width:30%" type="number" id="amount" name="amount" placeholder="請選擇數量">
-          <button class="button">送禮</button>
+          <button class="button" onclick="myFunction()">送禮</button>
         </div>
       </div>
     </div>
@@ -316,7 +318,7 @@ span.onclick = function() {
         </div>
         <div class="modal-footer">
           <input style="width:40%;" type="number" id="amount" name="amount" placeholder="請選擇數量">
-          <button class="button">送禮</button>
+          <button class="button" onclick="myFunction()">送禮</button>
         </div>
       </div>
     </div>
@@ -347,7 +349,7 @@ span.onclick = function() {
         </div>
         <div class="modal-footer">
           <input style="width:40%" type="number" id="amount" name="amount" placeholder="請選擇數量">
-          <button class="button">送禮</button>
+          <button class="button" onclick="myFunction()">送禮</button>
         </div>
       </div>
     </div>

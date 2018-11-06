@@ -72,8 +72,13 @@
   <link rel="stylesheet" href="css/w3.css">
   <div class="w3-top">
     <div class="w3-bar w3-white w3-padding w3-card">
-      <div class="w3-bar-item" style="font-size:180%;color:#01abaa;"><b>MUMO</b></div>
-
+      <!--<div class="w3-bar-item" style="font-size:180%;color:#01abaa;"><b>MUMO</b></div>-->
+      <div class="w3-bar-item logo">
+          <b style="font-size:180%;color:#01abaa;">M</b>
+          <b style="font-size:180%;color:#f7b75d;">U</b>
+          <b style="font-size:180%;color:#01abaa;">M</b>
+          <b style="font-size:180%;color:#f07658;">O</b>
+      </div>
       <!-- Float links to the right. Hide them on small screens -->
       <div class="menucenter" style="font-family:Microsoft JhengHei;">
         <button onclick="window.location.href='/userpage'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">我的主頁<span class="sr-only">(current)</span></button>
@@ -107,10 +112,10 @@
             <!--broadcast-->
             <div style="margin-left:10px">
                 <div style="margin-bottom:10px">
-                    <button type="button" onclick="start()" class="btn btn-outline-secondary" data-toggle="modal" data-target="#testModal">test</button>
-                    <button type="button" class="btn btn-outline-success">start</button>
+                    <button type="button" onclick="start()" class="btn btn-outline-secondary" data-toggle="modal" data-target="#testModal">測試直播功能</button>
+                    <!--<button type="button" class="btn btn-outline-success">start</button>
                     <button type="button" class="btn btn-outline-warning">pause</button>
-                    <button type="button" class="btn btn-outline-danger">stop</button>
+                    <button type="button" class="btn btn-outline-danger">stop</button>-->
                 </div>
 
                 <!--Modal-->
@@ -156,14 +161,15 @@
 	      <div class="col-sm-7">
 	        <div class="card bg-light">
 	          <div class="card-body" id="left">
-	    	    <h5 class="card-title">Broadcast area</h5>
+	    	    <h5 class="card-title">公主/王子的約會直播區</h5>
 	    	    <p class="card-text"></p>
 
 
 	            <section class="make-center">
+                      <div class="alert alert-warning" role="alert">請輸入活動序號：</div>
 	              <input type="text" id="room-id" value="abcdef" autocorrect=off autocapitalize=off size=20>
-	              <button id="open-room">Start</button>
-	              <button id="join-room">Join</button>
+	              <button type="button" id="open-room" class="btn btn-success">開始正式直播</button>
+	              <button id="join-room" hidden="hidden">加入直播</button>
 	              <button id="open-or-join-room" hidden="hidden">Auto Open Or Join Room</button>
 
 	              <div id="videos-container" style="margin: 10px 0;"></div>
@@ -301,10 +307,10 @@
 	            function showRoomURL(roomid) {
 	                var roomHashURL = '#' + roomid;
 	                var roomQueryStringURL = '?roomid=' + roomid;
-	                var html = '<h5>Unique URL for your room:</h5><br>';
-	                html += 'Hash URL: <a href="' + roomHashURL + '" target="_blank">' + roomHashURL + '</a>';
-	                html += '<br>';
-	                html += 'QueryString URL: <a href="' + roomQueryStringURL + '" target="_blank">' + roomQueryStringURL + '</a>';
+	                var html = '<h5>直播已經開始啦，趕快把邀請碼發出去吧</h5>';
+	                //html += 'Hash URL: <a href="' + roomHashURL + '" target="_blank">' + roomHashURL + '</a>';
+	                //html += '<br>';
+	                //html += 'QueryString URL: <a href="' + roomQueryStringURL + '" target="_blank">' + roomQueryStringURL + '</a>';
 	                var roomURLsDiv = document.getElementById('room-urls');
 	                roomURLsDiv.innerHTML = html;
 	                roomURLsDiv.style.display = 'block';
@@ -373,7 +379,7 @@
               <div class="col-sm-5">
                 <div class="card">
                   <div class="card-body" id="right">
-                    <h5 class="card-title">Chat here</h5>
+                    <h5 class="card-title">公主/王子的約會聊天區</h5>
                     <link rel="stylesheet" href="/css/date/dateChat.css">
                     <ul class="pages">
                       <li class="chat page">
@@ -384,7 +390,7 @@
                       </li>
                       <li class="login page">
                         <div class="form">
-                          <p class="card-text">輸入你的名字吧</p>
+                          <p class="card-text">請輸入公主/王子的名字</p>
                           <input class="usernameInput" type="text" maxlength="14" />
                         </div>
                       </li>

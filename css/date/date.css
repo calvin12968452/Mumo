@@ -7,6 +7,10 @@ body {
 }
 
 /* top */
+.logo {
+    font-family: Verdana,sans-serif;
+}
+
 #top-tools {
     _background-color: #fee;
     width: 80px;

@@ -36,50 +36,37 @@
 
 </head>
 <body>
-    <div class="box1">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded" >
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" style="background:#Ffb85f"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
-            <ul class="navbar-nav">
-                <a class="navbar-brand" href="#" style="font-size:200%; font-weight:bold; color:#01abaa; position:absolute;left:20px;">MUMO</a>
-
-            <li>
-              <a href="userpage" class="nav-link"  style="margin-top:25%; font-family:Microsoft JhengHei;">主頁<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="friends" class="nav-link"  style="margin-top:23%; font-family:Microsoft JhengHei;">交友</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:16%; font-family:Microsoft JhengHei;">聊天室</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown12">
-                <a href="chat" class="dropdown-item"  style="font-family:Microsoft JhengHei;">個人</a>
-                <a href="chat" class="dropdown-item"  style="font-family:Microsoft JhengHei;">群組</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="ac" class="nav-link" id="dropdown12" style="margin-top:14%; font-family:Microsoft JhengHei;">最新動態</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="coupon" class="nav-link" id="dropdown12" style="margin-top:14%; font-family:Microsoft JhengHei;">好康優惠</a>
-            </li><!--<a href="ac" class="nav-link" id="dropdown12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:14%; font-family:Microsoft JhengHei;">最新動態</a>-->
-            <li class="nav-item dropdown">
-                <a href="shop" class="nav-link" style="margin-top:14%; font-family:Microsoft JhengHei;">贈送禮物</a>
-            </li>
-            <div id="top-tools">
-                <li>
-                    <input href="#" type="image" src="css/setting.png" alt="image" width="30%" height="30%" style="margin-top:5px;">
-                </li>
-                <li>
-                    <input href="#" type="image" src="css/qu.png" alt="image" width="30%" height="30%">
-                </li>
+    <link rel="stylesheet" href="css/w3.css">
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-padding w3-card">
+            <div class="w3-bar-item"><b style="font-size:180%;color:#01abaa;">M</b>
+                <b style="font-size:180%;color:#f7b75d;">U</b>
+                <b style="font-size:180%;color:#01abaa;">M</b>
+                <b style="font-size:180%;color:#f07658;">O</b>
             </div>
-          </ul>
+
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="menucenter" style="font-family:Microsoft JhengHei;">
+          <button onclick="window.location.href='/userpage'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">我的主頁<span class="sr-only">(current)</span></button>
+          <button onclick="window.location.href='/friends'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">交友</button>
+          <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-button" title="Notifications">聊天室<i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+              <button onclick="window.location.href='/message0'" class="w3-bar-item w3-button">個人</button>
+              <button onclick="window.location.href='/group'" class="w3-bar-item w3-button">群組</button>
+            </div>
         </div>
-      </nav>
+        <button onclick="window.location.href='/ac'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">最新動態</button>
+        <button onclick="window.location.href='/coupon'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">好康優惠</button>
+        <button onclick="window.location.href='/shop'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">配送禮物</button>
+        <button onclick="window.location.href='/contact'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">公主/王子的約會</button>
+      </div>
+      <div id="top-tools" style="margin-top:10px;margin-bottom:10px;">
+              <input href="#" type="image" src="css/setting.png" alt="image" width="30%" height="30%"></br>
+              <input href="#" type="image" src="css/qu.png" alt="image" width="30%" height="80%">
+      </div>
     </div>
+  </div>
 
 
 
@@ -92,7 +79,7 @@
                 <div class="left_text">
                     <dl class="row">
                         <dt class="col-sm-12" style="font-size:40px; font-family:Microsoft JhengHei; color: #444444;">Hua</dt>
-                        <dt class="col-sm-12"><img src="css/boy.png" alt="image" width="10%" height="40%"></dt>
+                        <dt class="col-sm-12"><img src="css/boy.png" alt="image" width="10%" height="80%"></dt>
                         </br>
                         </br>
                         </br>
@@ -122,7 +109,7 @@
                     <HR color="black" size="10" width="90%"  align="center">
 
                     <dl class="row">
-                        <dt class="col-sm-12" style="font-family:comic sans ms; font-size:23px;"><img src="css/music.png" width= "13%" height="25%"> Favorite <img src="css/movie.png" width= "13%" height="27%"></dt>
+                        <dt class="col-sm-12" style="font-family:comic sans ms; font-size:23px;"><img src="css/music.png" width= "13%" height="50%"> Favorite <img src="css/movie.png" width= "13%" height="50%"></dt>
                         </br>
                         </br>
                         </br>
@@ -272,74 +259,74 @@
                                     <h6>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item" style="background:none;">
-                                        <a href="file:///Users/chang/Desktop/%E5%B0%88%E9%A1%8C/ras%202/message.html"title="詳細全文" style="color:#444444">
+                                        <a href="message0"title="詳細全文" style="color:#444444">
                                             <img type="image" class="rounded-circle2" src="css/bp2.png" alt="image" >
                                             BP粉絲俱樂部~歡迎大家進來聊聊
                                         </a>
                                     </li>
 
                                     <li class="list-group-item" style="background:none;">
-                                        <a href="#" title="詳細全文" style="color:#444444">
+                                        <a href="message0" title="詳細全文" style="color:#444444">
                                             <img type="image" class="rounded-circle2" src="css/btob.png" alt="image">
                                             Born To Beat! Melody안녕~~~
                                         </a>
                                     </li>
                                     <li class="list-group-item" style="background:none;">
-                                        <a href="#" title="詳細全文" style="color:#444444">
+                                        <a href="message0" title="詳細全文" style="color:#444444">
                                             <input type="image" class="rounded-circle2" src="css/china.png" alt="image">
                                             延禧..奴才給神樹撓癢癢＾＾ 最新劇情分析
                                         </a>
                                     </li>
 
                                     <li class="list-group-item" style="background:none;">
-                                        <a href="#" title="詳細全文" style="color:#444444">
+                                        <a href="message0" title="詳細全文" style="color:#444444">
                                             <input type="image" class="rounded-circle2" src="css/bts.jpg" alt="image">
                                             防彈大發！！！歡迎快入坑“”“”“”“
                                         </a>
                                     </li>
 
                                     <li class="list-group-item" style="background:none;">
-                                        <a href="#" title="詳細全文" style="color:#444444">
+                                        <a href="message0" title="詳細全文" style="color:#444444">
                                             <input type="image" class="rounded-circle2" src="css/fast.png" alt="image">
                                         Fast&Furious歡迎戲迷進入～來聊聊吧！
                                         </a>
                                     </li>
                                     <li class="list-group-item" style="background:none;">
-                                        <a href="#" title="詳細全文" style="color:#444444">
+                                        <a href="message0" title="詳細全文" style="color:#444444">
                                             <input type="image" class="rounded-circle2" src="css/ghost1.png" alt="image">
                                             孔劉-粉絲聊天室～關於最新近況都在裡面喔～
                                         </a>
                                     </li>
 
                                     <li class="list-group-item" style="background:none;">
-                                        <a href="#" title="詳細全文" style="color:#444444">
+                                        <a href="message0" title="詳細全文" style="color:#444444">
                                             <input type="image" class="rounded-circle2" src="css/god1.png" alt="image">
                                             「世上並沒有很壞的人，只有很壞的狀況」佳句分享
                                         </a>
                                     </li>
 
                                     <li class="list-group-item" style="background:none;">
-                                        <a href="#" title="詳細全文" style="color:#444444">
+                                        <a href="message0" title="詳細全文" style="color:#444444">
                                             <input type="image" class="rounded-circle2" src="css/run.png" alt="image">
                                             running man 近期內容討論區＊歡迎大家來噢～
                                         </a>
                                     </li>
                                     <li class="list-group-item" style="background:none;">
-                                        <a href="#" title="詳細全文" style="color:#444444">
+                                        <a href="message0" title="詳細全文" style="color:#444444">
                                             <input type="image" class="rounded-circle2" src="css/summi.png" alt="image">
                                             JYP女王 性感Summi 快回歸
                                         </a>
                                     </li>
 
                                     <li class="list-group-item" style="background:none;">
-                                        <a href="#" title="詳細全文" style="color:#444444">
+                                        <a href="message0" title="詳細全文" style="color:#444444">
                                             <input type="image" class="rounded-circle2" src="css/redvelvet.png" alt="image">
                                             紅貝貝專屬粉絲聊天室，快來分享貝貝近況
                                         </a>
                                     </li>
 
                                     <li class="list-group-item" style="background:none;">
-                                        <a href="#" title="詳細全文" style="color:#444444">
+                                        <a href="message0" title="詳細全文" style="color:#444444">
                                             <input type="image" class="rounded-circle2" src="css/lin.png" alt="image">
                                             ＾行走CD林俊傑＾ 
                                         </a>

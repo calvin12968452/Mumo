@@ -6,8 +6,11 @@
 // 5.offline
 
 var socket = io();
-var urlParams = new URLSearchParams(window.location.search);
-var name = urlParams.get('userName');
+//var urlParams = new URLSearchParams(window.location.search);
+//var name = urlParams.get('userName');
+var localData = localStorage.getItem('userData');
+localData = JSON.parse(localData);
+var name = localData.userName;
 var friend_name = "";
 console.log(name);
 

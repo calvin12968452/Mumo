@@ -566,3 +566,11 @@ padding: 0px;
     width: 100%;
     font-family: comic sans ms;
 }
+
+.menucenter {
+    width: 700px !important;
+	margin: auto !important;
+    text-align: center !important;
+    margin-top: 10px !important;
+    margin-bottom:10px !important;
+}

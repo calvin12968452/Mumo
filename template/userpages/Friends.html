@@ -38,35 +38,35 @@
     <title>Friends</title>
     <script type="text/javascript">
         var localData = localStorage.getItem('userData');
-         localData = JSON.parse(localData);
-         console.log("localData : " + localData);
- 
-         var userName = localData.userName;
-         var userEmail = localData.userEmail;
-         var userPwd = localData.userPwd;
-         var id = localData.id;
-         var gender = localData.gender;
-         var constellation = localData.constellation;
-         var birth = localData.birth;
-         var country = localData.country;
-         var city = localData.city;
-         var photo = localData.photo;
- 
-         if(photo == undefined){photo = "";}
- 
-         photo = photo.split(' ').join('+');
- 
-         console.log("userName : " + userName);
-         console.log("userEmail : " + userEmail);
-         console.log("userPwd : " + userPwd);
-         console.log("id : " + id);
-         console.log("gender : " + gender);
-         console.log("constellation : " + constellation);
-         console.log("birth : " + birth);
-         console.log("country : " + country);
-         console.log("city : " + city);
-         console.log("photo : " + photo);
-     </script>
+        localData = JSON.parse(localData);
+        console.log("localData : " + localData);
+
+        var userName = localData.userName;
+        var userEmail = localData.userEmail;
+        var userPwd = localData.userPwd;
+        var id = localData.id;
+        var gender = localData.gender;
+        var constellation = localData.constellation;
+        var birth = localData.birth;
+        var country = localData.country;
+        var city = localData.city;
+        var photo = localData.photo;
+
+        if(photo == undefined){photo = "";}
+
+        photo = photo.split(' ').join('+');
+
+        console.log("userName : " + userName);
+        console.log("userEmail : " + userEmail);
+        console.log("userPwd : " + userPwd);
+        console.log("id : " + id);
+        console.log("gender : " + gender);
+        console.log("constellation : " + constellation);
+        console.log("birth : " + birth);
+        console.log("country : " + country);
+        console.log("city : " + city);
+        console.log("photo : " + photo);
+    </script>
 </head>
 <body>
 

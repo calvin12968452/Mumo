@@ -74,6 +74,21 @@ input[type=submit]:hover {
   float: right;
 }
 
+.button-1 {
+  float: right;
+  border: 2px solid #78cad3;
+  background-color: #78cad3;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 14px;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  border-radius: 30px;
+  color: white;
+  transition: all ease 0.4s;
+}
 /*Like button in user_vendor*/
 .button-like {
   border: 2px solid #8a8a8a;

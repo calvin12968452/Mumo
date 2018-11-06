@@ -35,17 +35,23 @@
     </script>
 
     <script type="text/javascript">
-        // #personal_chatroom
-        var urlParams = new URLSearchParams(window.location.search);
-        var userName = urlParams.get('name');
-        var userEmail = urlParams.get('email');
-        var userPwd = urlParams.get('pw');
-        var id = urlParams.get('id');
-        var gender = urlParams.get('gender');
-        var constellation = urlParams.get('constellation');
-        var birth = urlParams.get('birth');
-        var country = urlParams.get('country');
-        var city = urlParams.get('city');
+var localData = localStorage.getItem('userData');
+        localData = JSON.parse(localData);
+
+        var userName = localData.userName;
+        var userEmail = localData.userEmail;
+        var userPwd = localData.userPwd;
+        var id = localData.id;
+        var gender = localData.gender;
+        var constellation = localData.constellation;
+        var birth = localData.birth;
+        var country = localData.country;
+        var city = localData.city;
+        var photo = localData.photo;
+
+        if(photo == undefined){photo = "";}
+
+        photo = photo.split(' ').join('+');
 
         console.log("userName : " + userName);
         console.log("userEmail : " + userEmail);
@@ -56,30 +62,7 @@
         console.log("birth : " + birth);
         console.log("country : " + country);
         console.log("city : " + city);
-
-        function home_url(){
-            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
-                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
-            document.getElementById("home").href = "/userpage" + query_string;
-        }
-        function chat_url(){
-            document.getElementById("personal_chatroom").href = "/chat?userName=" + userName;
-        }
-        function friend_url(){
-            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
-                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
-            document.getElementById("friend").href = "/friends" + query_string;
-        }
-        function news_url(){
-            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
-                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
-            document.getElementById("news").href = "/ac" + query_string;
-        }
-        function shop_url(){
-            const query_string = "?name="+userName+"&id="+id+"&pw="+userPwd+"&gender="+gender+
-                "&birth="+birth+"&constellation="+constellation+"&country="+country+"&city="+city;
-            document.getElementById("shop").href = "/shop" + query_string;
-        }
+        console.log("photo : " + photo);
     </script>
 
 </head>
@@ -522,31 +505,8 @@
             var adj = "可愛", whichGender = "女";
         }
         document.getElementById("constellation").innerHTML = adj + whichGender + "  - " + constellation;
+        if(photo != "" && photo != undefined){ $('.profile-pic').attr('src', "data:image/jpg;base64, " + photo); }
     </script>
-
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var readURL = function(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('.profile-pic').attr('src', e.target.result);
-                    var photo_link =  e.target.result;
-                    console.log("photo link : " + photo_link);
-                    // The link is a text baed on base64.
-                    // The link can be save to database
-                    // When user is online, check the text if existed at server and then send to client with query
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-        $(".file-upload").on('change', function(){
-            readURL(this);
-        });
-        $(".profile-pic").on('click', function() {
-           $(".file-upload").click();
-        });
-    });
 </script>
 
 

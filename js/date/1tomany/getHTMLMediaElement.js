@@ -255,7 +255,8 @@ function getHTMLMediaElement(mediaElement, config) {
 
     if (!config.width) config.width = (innerWidth / 2) - 50;
 
-    mediaElementContainer.style.width = config.width + 'px';
+    //mediaElementContainer.style.width = config.width + 'px';
+    mediaElementContainer.style.width = config.width +220+ 'px'; // force force force force force
 
     if (config.height) {
         mediaBox.style.height = config.height + 'px';

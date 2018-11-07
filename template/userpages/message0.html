@@ -20,12 +20,41 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ 
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+
+    
+    
+    <!--cheat window-->
+    <script type="text/javascript">
+    var jsdom = require('jsdom');
+    const { JSDOM } = jsdom;
+    const { window } = new JSDOM();
+    const { document } = (new JSDOM('')).window;
+    global.document = document;
+
+    var $ = jQuery = require('jquery')(window);
+        $(function(){
+           $("#toggle").click(function() {
+               ($("#dialog-5").dialog("isOpen") == false) ? $("#dialog-5").dialog("open") : $("#dialog-5").dialog("close") ;
+           });
+           $("#dialog-5").dialog({autoOpen: false});
+        });
+     </script>
+    <!--end-->
+
     <script>
             
             audiojs.events.ready(function() {
               audiojs.createAll();
             });
     </script>
+
      <script>
             function onYouTubeIframeAPIReady(){var e=document.getElementById("youtube-audio"),
                                                t=document.createElement("img");
@@ -271,6 +300,13 @@
             </div>
         </div>
     </div>
+    
+    <button id="toggle">Toggle dialog!</button>
+    <div id="dialog-5" title="Dialog Title!">
+        Click on the Toggle button to open and cose this dialog box.          
+    </div>
+    
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -299,4 +335,8 @@
     <script src="js/controller.js"></script>
     <script src="js/presenter.js"></script> 
 </body>
+<footer>
+   
+</footer>
+
 </html>

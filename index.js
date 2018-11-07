@@ -10,6 +10,16 @@ var ls = require('local-storage');    // <-- local storage, can be changed to yo
 // useage：ls.get('ls-name')
 var mysql = require ('mysql');
 
+const jsdom = require("jsdom");
+ 
+function parseData(html){
+    const {JSDOM} = jsdom;
+    const dom = new JSDOM(html);
+    const $ = (require('jquery'))(dom.window);
+    //let's start extracting the data
+	//... start using jquery as $ like you would in a browser
+}
+
 // ====================================
 // colorful console in terminal =======
 // ====================================
@@ -23,8 +33,15 @@ var imp_passport = require('./controller/passport.js');
 var Route = require('./route.js');
 var chat = require('./controller/socket.js');
 //var db_connect = require('./sql/dbMYSQL.js');
+/*
+require("jsdom").env("", function(err, window) {
+  if (err) {
+      console.error(err);
+      return;
+  }
 
-
+  var $ = require("jquery")(window);
+});*/
 
 //config for db
 var con = mysql.createConnection({

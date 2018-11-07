@@ -56,8 +56,8 @@ body {
 .rounded-circlefriendcard{
     border-radius: 50%;
     vertical-align: 70%;
-    width: 80%;
-    height: 70%;
+    width: 85%;
+    height: 85%;
     vertical-align:center;
 }
 .rounded-circlelike{
@@ -101,7 +101,7 @@ body {
     padding: 20px;
     background: #fdebd0;
     margin: auto;
-    height: auto;
+    height: 1000px;
     max-height: 1015px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -559,7 +559,7 @@ padding: 0px;
 
 .menucenter {
     width: 700px;
-	  margin: auto;
+    margin: auto;
     text-align: center;
     margin-top: 10px;
     margin-bottom:10px;

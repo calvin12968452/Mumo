@@ -1,7 +1,6 @@
-body {font-family: "Times New Roman", Georgia, Serif;}
 h1,h2,h3,h4,h5,h6 {
     font-family: "Playfair Display";
-    letter-spacing: 5px;
+    letter-spacing: 2px;
 }
 .center{
 padding: 10px 0 10px 0;
@@ -52,7 +51,6 @@ input:hover,
 .btn:hover {
   opacity: 1;
 }
-
 /* add appropriate colors to fb, twitter and google buttons */
 .fb {
   background-color: #3B5998;
@@ -111,7 +109,6 @@ input:hover,
 /* bottom container */
 .bottom-container {
   text-align: center;
-  background-color: #57d1c9;
   font-weight: bold;
   color: white;
 }

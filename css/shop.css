@@ -1,8 +1,11 @@
 body {
+    background: url(cover.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url(yaping.png);
+}
+.logo{
+    font-family: "Times New Roman", Georgia, Serif;
 }
 .boxfriend_content {
     border: 1px solid #999;

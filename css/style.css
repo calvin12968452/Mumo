@@ -5,12 +5,16 @@ body {
 /*background-image: url(123.png);*/
 /*background-color: #fcf4d9;*/
 body {
+    font-family: "Times New Roman", Georgia, Serif;
+    background: url(cover.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url(yaping.png);
 }
-
+/*用在MUMO LOGO*/
+.logo {
+      font-family: "Times New Roman", Georgia, Serif;
+}
 #left {
     height: 1100px;
     border: 1px solid #999;
@@ -279,7 +283,7 @@ body {
 /*life content*/
 .box3_content {
     padding: 20px;
-    background: #ecd6c7;
+    background: #fdebd0;
     height: auto;
     max-height: 320px;
     overflow-x: hidden;

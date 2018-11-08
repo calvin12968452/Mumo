@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/friendstyle.css">
     <link rel="stylesheet" href="css/ja.java">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="css/audiojs/audiojs/audio.min.js"></script>
     <script>
@@ -17,7 +18,11 @@
               audiojs.createAll();
             });
     </script>
-   
+   <script>
+       function alert(){
+            swal("交友邀請已送出!", "請耐心等待對方回覆喔^0^!", "success");
+       }
+   </script>
 
 
 
@@ -429,8 +434,13 @@
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
+<<<<<<< HEAD
                                                 <button type="button" data-dismiss="modal" onclick="javascript:location.href='file:///Users/chang/Downloads/Mumo-master%202/fuckthisshit/ras%202/Jennie's.html'" class="btn btn-info">交友邀請</button>
                                                 <button type="button" class="btn btn-outline-danger">封鎖</button>
+=======
+                                                <button type="button" data-dismiss="modal" onclick="alert()">交友邀請</button>
+                                                <button type="button" data-dismiss="modal" class="btn btn-secondary">封鎖</button>
+>>>>>>> origin
                                             </div>
                                         </div>
                                     </div>

@@ -103,6 +103,36 @@ io.sockets.on('connection', function(socket){
 
 
 
+//tino's suck chatroom
+var io = require('socket.io').listen(http);
+io.sockets.on('connection', function(socket){
+  console.log("[ socket io ]: connected");
+  // listen on the event : new user
+  socket.on('new',function(msg){
+      socket.username = msg;
+      console.log("[ new user ]: " + msg);
+      io.sockets.emit('add',{
+        username: socket.username
+      });
+  });
+  //listen on the event : send messages
+  socket.on('sendMsg', function(msg){
+    console.log("[ message ]: " + msg + ", from " + socket.username);
+    // response with the event and the params
+    io.sockets.emit('getMsg', {
+      username:socket.username,
+      msg:msg
+    });
+  });
+  // listen on the event : user offline
+  socket.on('disconnect',function(){
+    console.log("[ offline ]: " + socket.username + " left. :(");
+    io.sockets.emit('left',{
+      username:socket.username
+    });
+  });
+});
+
 
 app.use('/', reg);
 // view engine setup

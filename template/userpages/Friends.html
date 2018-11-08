@@ -12,10 +12,32 @@
     <link rel="stylesheet" href="css/ja.java">
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="css/audiojs/audiojs/audio.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
-            audiojs.events.ready(function() {
-              audiojs.createAll();
-            });
+        audiojs.events.ready(function() {
+            audiojs.createAll();
+        });
+
+        function myalert() {
+            swal({
+                title: "確定要封鎖?",
+                text: "一旦封鎖將無法取消且本網站亦不負責後續任何責任",
+                icon: "warning",
+                buttons: ["取消", "確認"],
+                dangerMode: true,
+             })
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("封鎖成功", {
+                        icon: "success",
+                    });
+                } 
+                else {
+                    swal("再想清楚喔!");
+                }
+        });
+}
+
     </script>
 
 
@@ -433,7 +455,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" data-dismiss="modal" onclick="javascript:location.href='file:///Users/chang/Downloads/Mumo-master%202/fuckthisshit/ras%202/Jennie's.html'" class="btn btn-info">拜訪</button>
                                                 <button type="button" data-dismiss="modal" class="btn btn-info">聊天</button>
-                                                <button type="button" class="btn btn-outline-danger">封鎖</button>
+                                                <button onclick="myalert()" type="button" class="btn btn-outline-danger">封鎖</button>
                                             </div>
                                         </div>
                                     </div>
@@ -479,7 +501,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" data-dismiss="modal" onclick="javascript:location.href='file:///Users/chang/Downloads/Mumo-master%202/fuckthisshit/ras%202/Jennie's.html'" class="btn btn-info">拜訪</button>
                                                 <button type="button" data-dismiss="modal" class="btn btn-info">聊天</button>
-                                                <button type="button" class="btn btn-outline-danger">封鎖</button>
+                                                <button onclick="myalert()" type="button" class="btn btn-outline-danger">封鎖</button>
                                             </div>
                                         </div>
                                     </div>
@@ -524,7 +546,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" data-dismiss="modal" onclick="javascript:location.href='file:///Users/chang/Downloads/Mumo-master%202/fuckthisshit/ras%202/Jennie's.html'" class="btn btn-info">拜訪</button>
                                                 <button type="button" data-dismiss="modal" class="btn btn-info">聊天</button>
-                                                <button type="button" class="btn btn-outline-danger">封鎖</button>
+                                                <button onclick="myalert()" type="button" class="btn btn-outline-danger">封鎖</button>
                                             </div>
                                         </div>
                                     </div>

@@ -101,6 +101,11 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/userpage.html');
   });
 
+
+  app.get('/userpage_upload',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/makeFoolOfJudge/userpage_clone.html');
+  });
+
   app.get('/findfriend',function(req, res){
     res.sendFile(__dirname + '/template/userpages/findfriend.html');
   });

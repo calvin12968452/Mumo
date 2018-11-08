@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>home page</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ja.java">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="css/audiojs/audiojs/audio.min.js"></script>
+    <script>
+            audiojs.events.ready(function() {
+              audiojs.createAll();
+            });
+    </script>
+     <script>
+            function onYouTubeIframeAPIReady(){var e=document.getElementById("youtube-audio"),
+                                                t=document.createElement("img");
+                                                t.setAttribute("id","youtube-icon"),
+                                                t.style.cssText="cursor:pointer;cursor:hand",
+                                                e.appendChild(t);var a=document.createElement("div");
+                                                a.setAttribute("id","youtube-player"),
+                                                e.appendChild(a);
+                                                var o=function(e){var a=e?"css/4.png":"css/3.png";
+                                                t.setAttribute("src"," "+a)};
+                                                e.onclick=function(){r.getPlayerState()===YT.PlayerState.PLAYING||r.getPlayerState()===YT.PlayerState.BUFFERING?(r.pauseVideo(),o(!1)):(r.playVideo(),o(!0))};
+                                                var r=new YT.Player("youtube-player",{height:"0",width:"0",videoId:e.dataset.video,
+                                                playerVars:{autoplay:e.dataset.autoplay,loop:e.dataset.loop},
+                                                events:{onReady:function(e){r.setPlaybackQuality("small"),
+                                                o(r.getPlayerState()!==YT.PlayerState.CUED)},
+                                                onStateChange:function(e){e.data===YT.PlayerState.ENDED&&o(!1)}}})}
+
+    </script>
+
+    <script type="text/javascript">
+var localData = localStorage.getItem('userData');
+        localData = JSON.parse(localData);
+
+        var userName = localData.userName;
+        var userEmail = localData.userEmail;
+        var userPwd = localData.userPwd;
+        var id = localData.id;
+        var gender = localData.gender;
+        var constellation = localData.constellation;
+        var birth = localData.birth;
+        var country = localData.country;
+        var city = localData.city;
+        var photo = localData.photo;
+
+        if(photo == undefined){photo = "";}
+
+        photo = photo.split(' ').join('+');
+
+        console.log("userName : " + userName);
+        console.log("userEmail : " + userEmail);
+        console.log("userPwd : " + userPwd);
+        console.log("id : " + id);
+        console.log("gender : " + gender);
+        console.log("constellation : " + constellation);
+        console.log("birth : " + birth);
+        console.log("country : " + country);
+        console.log("city : " + city);
+        console.log("photo : " + photo);
+    </script>
+</head>
+<body>
+  <!-- Navbar (sit on top) -->
+<link rel="stylesheet" href="css/w3.css">
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card">
+            <div class="w3-bar-item logo"><b style="font-size:180%;color:#01abaa;">M</b>
+                <b style="font-size:180%;color:#f7b75d;">U</b>
+                <b style="font-size:180%;color:#01abaa;">M</b>
+                <b style="font-size:180%;color:#f07658;">O</b>
+            </div>
+
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="menucenter" style="font-family:Microsoft JhengHei;">
+        <button onclick="window.location.href='/userpage'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">我的主頁<span class="sr-only">(current)</span></button>
+        <button onclick="window.location.href='/friends'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">交友</button>
+        <div class="w3-dropdown-hover w3-hide-small">
+          <button class="w3-button" title="Notifications">聊天室<i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+            <button onclick="window.location.href='/message0'" class="w3-bar-item w3-button">個人</button>
+            <button onclick="window.location.href='/group'" class="w3-bar-item w3-button">群組</button>
+          </div>
+        </div>
+        <button onclick="window.location.href='/ac'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">最新動態</button>
+        <button onclick="window.location.href='/coupon'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">好康優惠</button>
+        <button onclick="window.location.href='/shop'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">配送禮物</button>
+        <button onclick="window.location.href='/date_user'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">公主/王子的約會</button>
+      </div>
+    </div>
+  </div>
+
+<!--左邊欄位-->
+    <div class="container" style="margin-bottom:50px; margin-top:100px"><!--和上面的間距-->
+        <div class="row">
+            <div class="col-lg-4" id="left"><!--left 是左邊欄位,占整個版面的3/12-->
+                <img class="profile-pic rounded-circle border border-secondary" src="css/img.png" alt="image">
+                <div class="p-image">
+                    <input class="file-upload" type="file" accept="image/*" style="display: none;">
+                </div>
+                <div class="left_text">
+                    <dl class="row">
+                        <dt class="col-sm-12" style="font-size:40px; font-family:Microsoft JhengHei;"><div id="username">username</div></dt>
+                        <dt class="col-sm-12"><img id="gender" src="css/boy.png" alt="image" width="10%"></dt>
+                        </br>
+                        </br>
+                        </br>
+                        </br>
+                    </dl>
+                    </br>
+
+                    <div class="row">
+                        <dt class="col-sm-5" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">生日</dt>
+                        <dd id="birth" class="col-sm-7" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">03/18</dd>
+                        <dt class="col-sm-5" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">城市</dt>
+                        <dd id="country city" class="col-sm-7" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">
+                            country - city
+                        </dd>
+                        <dt class="col-sm-5"> <img id="dia" src="css/dia2.png" alt="image" width="30%" height="80%"></dt>
+                        <p class="col-sm-7" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">123456</p>
+                    </div>
+
+                    </br>
+                    <input type="image" class="rounded-circlelike" src="css/jennie1.jpg" alt="image" >
+                    <input type="image" class="rounded-circlelike" src="css/lisa.jpg" alt="image" >
+                    <input type="image" class="rounded-circlelike" src="css/rose3.jpg" alt="image" >
+
+                    <!--music-->
+
+                    <div>
+                        <audio src="css/audiojs/123.mp3" preload="auto"></audio>
+                    </div>
+
+                    <HR color="black" size="10" width="90%"  align="center">
+
+                    <dl class="row">
+                        <dt class="col-sm-12" style="font-family:comic sans ms; font-size:23px; color:  #444444;"><img src="css/music.png" width= "13%" height="50%"> Favorite <img src="css/movie.png" width= "13%" height="50%"></dt>
+                        </br>
+                        </br>
+                        </br>
+                        </br>
+                        <dt class="col-sm-5" style="font-size:18px; font-family:comic sans ms; color: #444444;">Movie</dt>
+                        <dd class="col-sm-7" style="font-size:18px; color: #444444;">動作片</dd>
+                        <dt class="col-sm-5" style="font-size:18px; font-family:comic sans ms; color: #444444;">Music</dt>
+                        <dd class="col-sm-7" style="font-size:18px; color: #444444;">Kpop</dd>
+                    </dl>
+                    <div class="boxself_content">
+                        <a id="constellation" style="font-family: Microsoft JhengHei; font-size:20px;">浪漫雙魚男</a>
+                    </br>
+                        <a id="constellation" style="font-family: Microsoft JhengHei; font-size:20px;">
+                        🌸慢熟氣質美女🌸</br>
+                        遇到狗狗眼睛會變愛心😍</br>
+                        韓劇 & 美劇 & K-POP & POP</br>
+                        客的壞鬼到底是不是爺爺👻</br>
+                        誰趕快來跟我一起討論😖😖</br>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--右邊欄位-->
+
+            <div class="col-lg-8 mt-lg-0 mt-3">
+
+                <!--新消息-->
+                <div class="box2">
+                    <div class="mb-3">
+                        <h4 ><span style="color: #01abaa ;font-weight:bold;">MUMO</span>最新資訊</h4>
+                        <div class="box2_content">
+                            <h6>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item" style="background:none;"> <a href="file:///Users/chang/Desktop/%E5%B0%88%E9%A1%8C/ras%202/news.html#" style="color:#696969"title="詳細全文">180210 即將展開『王子的約會』，報名時間如下</a></li>
+
+                                    <li class="list-group-item" style="background:none;"> <a href="#" style="color:#696969" title="詳細全文">180129 恭喜<span style="font-family:標楷體; color: red ; ">Rosalie</span>獲得本週人氣最高美女獲得本週人氣最高美女獲得本週人氣最高美女獲得本週人氣最高美女獲得本週人氣最高美女</a></li>
+
+                                    <li class="list-group-item" style="background:none;"> <a href="#" style="color:#696969" title="詳細全文">180125 吃老王-兩人同行一人免費，先搶先贏！！！</a></li>
+
+                                    <li class="list-group-item" style="background:none;"> <a href="#"  style="color:#696969" title="詳細全文">180120 月八嗑-8折優惠卷，還在等什麼呢～</a></li>
+
+                                    <li class="list-group-item" style="background:none;"> <a href="#" style="color:#696969" title="詳細全文">180210 即將展開『王子的約會』，報名時間如下</a></li>
+
+                                    <li class="list-group-item" style="background:none;"> <a href="#"  style="color:#696969"title="詳細全文">180129 恭喜<span style="font-family:標楷體; color: red ; ">Rosalie</span>獲得本週人氣最高美女</a></li>
+
+                                    <li class="list-group-item" style="background:none;"> <a href="#"  style="color:#696969" title="詳細全文">180125 吃老王-兩人同行一人免費，先搶先贏！！！</a></li>
+                                </ul>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+
+                        <!--隨機好友推薦-->
+                        <h4>
+                            交個朋友吧～
+                        </h4>
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1" ></li>
+                                <li data-target="#myCarousel" data-slide-to="2" ></li>
+                                <li data-target="#myCarousel" data-slide-to="3" ></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="first-slide" src="css/pink.jpg" alt="First slide" style="width:1000px; height:350px;">
+                                    <div class="container">
+                                        <div class="carousel-caption">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <input  type="image"  class="rounded-circle1"  img  src="css/given.jpg" data-toggle="modal" data-target="#myModal4"></br>
+                                                    <h2>Given</h2>
+                                                    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                            <div class="modal-content">
+
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                    <h2 class="modal-title" id="myModalLabel" style="position:absolute;left:20px;">Minsoo 生活日誌</h2>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row">
+                                                                            <div class="col-md-7 ml-auto">
+                                                                            </div>
+                                                                            <div class="col-md-5 ml-auto">
+                                                                                <div class="signature">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" data-dismiss="modal">上傳</button>
+                                                                    <button type="button" data-dismiss="modal">取消</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <a href="#"><img class="rounded-circle1" src="css/kt.jpg" alt="image" >
+                                                    <h2>Kaiting</h2></a>
+                                                </div>
+                                                <div class="col-lg-4 ">
+                                                    <a href="#"><img class="rounded-circle1" src="css/june.jpg" alt="image" >
+                                                    <h2>阿郡</h2></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="second-slide" src="css/pink.jpg" alt="Second slide" style="width:1000px; height:350px;">
+                                    <div class="container">
+                                        <div class="carousel-caption">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <a href="#"><img class="rounded-circle1" src="css/hua.png" alt="image" >
+                                                    <h2>阿樺</h2></a>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <a href="#"><img class="rounded-circle1" src="css/tin.png" alt="image" >
+                                                    <h2>雯婷</h2></a>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <a href="#"><img class="rounded-circle1" src="css/chu.png" alt="image" >
+                                                    <h2>Huan Hua</h2></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="third-slide" src="css/pink.jpg" alt="Third slide" style="width:1000px; height:350px;">
+                                    <div class="container">
+                                        <div class="carousel-caption">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <a href="#"><img class="rounded-circle1" src="css/lsg.jpg" alt="image" >
+                                                    <h2>Sam</h2></a>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <a href="#"><img class="rounded-circle1" src="css/lisa.jpg" alt="image" >
+                                                    <h2>Lisa</h2></a>
+                                                </div>
+                                                <div class="col-lg-4 ">
+                                                    <a href="#"><img class="rounded-circle1" src="css/han.jpg" alt="image" >
+                                                    <h2>漢偉</h2></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="fourth-slide" src="css/pink.jpg" alt="Fourth slide" style="width:1000px; height:350px;">
+                                    <div class="container">
+                                        <div class="carousel-caption">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <a href="#"><img class="rounded-circle1" src="css/jennie1.jpg" alt="image" >
+                                                    <h2>Jennie</h2></a>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <a href="#"><img class="rounded-circle1" src="css/lisa.jpg" alt="image" >
+                                                    <h2>Lisa</h2></a>
+                                                </div>
+                                                <div class="col-lg-4 ">
+                                                    <a href="#"><img class="rounded-circle1" src="css/jisoo.png" alt="image" >
+                                                    <h2>Jisoo</h2></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--個人生活影片-->
+                    <div class="mb-3">
+                        <h4 style="text-align:center font-size: 30px;">我的生活日誌</h4>
+                        <div class="box3_content">
+                            <div class="row">
+                                <input type="image" src="css/plus.png" name="image" width="40" height="40" style="margin-bottom:3%; margin-left:90%;" data-toggle="modal" data-target="#myModal">
+
+
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h2 class="modal-title" id="myModalLabel" style="position:absolute;
+                                                left:20px;">我的生活日誌</h2>
+
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-7 ml-auto">
+                                                             <div class="embed-responsive embed-responsive-16by9">
+                                                                <iframe width="898" height="520" src="https://www.youtube.com/embed/Fz8bjQZOrNw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5 ml-auto">
+                                                            <div class="signature">
+                                                                <img type="image" class="rounded-circle3" src="css/hua1.jpg" alt="image">
+                                                                <div class="mwt_border">
+                                                                    <TEXTAREA NAME="TALK" COLS="19" ROWS="8" placeholder="想說什麼呢....">
+                                                                    </TEXTAREA>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" data-dismiss="modal">上傳</button>
+                                                <button type="button" data-dismiss="modal">取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!--<img class="myImg" src="css/solar.jpg" name="image" data-toggle="modal" data-target="#myModal1">-->
+
+                                <!-- Modal -->
+                                <div class="modal" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h2 class="modal-title" id="myModalLabel" style="position:absolute;
+                                                left:20px;">我的生活日誌</h2>
+
+                                            </div>
+                                            <!--<div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-7 ml-auto">
+                                                             <div class="embed-responsive embed-responsive-16by9">
+                                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KxgJdqfIk1s" frameborder="0"allowfullscreen></iframe>
+
+                                                            </div>
+                                                            <img src="css/eye.png" style="width:5%; height:6%;">
+                                                            <a style="font-size:15px;">123456 人次</a><br/>
+                                                            <i class="fa fa-heart" style="color:#cc4b37">
+                                                            <span style="font-family:Microsoft JhengHei; font-size:15px;"> &nbsp;118966 人次</span></i>
+                                                        </div>
+                                                        <div class="col-md-5 ml-auto">
+                                                            <div class="signature">
+                                                                <img type="image" class="rounded-circle3" src="css/hua1.jpg" alt="image">
+                                                                <div class="mwt_border">
+                                                                <span class="arrow_l_int"></span>
+                                                                <span class="arrow_l_out"></span>
+                                                                    迷路了 也是可能會發生的,<br/>
+                                                                    但不要跟隨別人的背後, <br/>
+                                                                    成為影子<br/>
+                                                                    請去尋找 迷失了的自我<br/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>-->
+                                            <div class="modal-footer">
+                                              <button type="button" data-dismiss="modal" class="btn btn-info">回應</button>
+                                              <button type="button" data-dismiss="modal" class="btn btn-info">關閉</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--<img class="myImg" src="css/whee.jpg" alt="image" data-toggle="modal" data-target="#myModal3">-->
+                                <!-- Modal -->
+                                <div class="modal" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h2 class="modal-title" id="myModalLabel" style="position:absolute;left:20px;">我的生活日誌</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-7 ml-auto">
+                                                            <div class="embed-responsive embed-responsive-16by9">
+                                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8rRXLUacMi8" frameborder="0"allowfullscreen></iframe>
+                                                            </div>
+                                                            <img src="css/eye.png" style="width:5%; height:6%;">
+                                                            <a style="font-size:15px;">19834 人次</a><br/>
+                                                            <i class="fa fa-heart" style="color:#cc4b37">
+                                                            <span style="font-family:Microsoft JhengHei; font-size:15px;"> &nbsp;16853 人次</span></i>
+                                                        </div>
+                                                        <div class="col-md-5 ml-auto">
+                                                            <div class="signature">
+                                                                <img type="image" class="rounded-circle3" src="css/hua1.jpg" alt="image">
+                                                                <div class="mwt_border">
+                                                                <span class="arrow_l_int"></span>
+                                                                <span class="arrow_l_out"></span>
+                                                                    너와 함께 한 시간 모두 눈부셨다<br/>
+                                                                    和你在一起的時間全部很耀眼
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" data-dismiss="modal" class="btn btn-info">回應</button>
+                                              <button type="button" data-dismiss="modal" class="btn btn-info">關閉</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--滑動推薦頁面-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $('#link').click(function () {
+        var src = 'http://www.youtube.com/v/FSi2fJALDyQ&amp;autoplay=1';
+        $('#myModal').modal('show');
+        $('#myModal iframe').attr('src', src);
+    });
+
+    $('#myModal button').click(function () {
+        $('#myModal iframe').removeAttr('src');
+    });
+    </script>
+    <script type="text/javascript">
+        document.getElementById("username").innerHTML = userName;
+        document.getElementById("birth").innerHTML = birth;
+        document.getElementById("country city").innerHTML = country + " - " + city;
+        if(gender == "Male"){
+            $('#gender').attr('src', 'css/boy.png');
+            var adj = "浪漫", whichGender = "男";
+        }else if(gender == "Female"){
+            $('#gender').attr('src', 'css/girl.png');
+            var adj = "可愛", whichGender = "女";
+        }
+        document.getElementById("constellation").innerHTML = adj + whichGender + "  - " + constellation;
+        if(photo != "" && photo != undefined){ $('.profile-pic').attr('src', "data:image/jpg;base64, " + photo); }
+    </script>
+</script>
+
+
+</body>
+</html>

@@ -78,7 +78,7 @@ var localData = localStorage.getItem('userData');
 
       <!-- Float links to the right. Hide them on small screens -->
       <div class="menucenter" style="font-family:Microsoft JhengHei;">
-        <button onclick="window.location.href='/userpage'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">我的主頁<span class="sr-only">(current)</span></button>
+        <button onclick="window.location.href='/userpage_upload'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">我的主頁<span class="sr-only">(current)</span></button>
         <button onclick="window.location.href='/friends'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">交友</button>
         <div class="w3-dropdown-hover w3-hide-small">
           <button class="w3-button" title="Notifications">聊天室<i class="fa fa-caret-down"></i></button>
@@ -336,10 +336,14 @@ var localData = localStorage.getItem('userData');
                                 <input type="image" src="css/plus.png" name="image" width="40" height="40" style="margin-bottom:3%; margin-left:90%;" data-toggle="modal" data-target="#myModal">
 
 
-
+<style>
+.centerMore {
+    min-height: calc(140% - (1.75rem * 2));
+}
+</style>
                                 <!-- Modal -->
                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg centerMore" role="document">
                                         <div class="modal-content">
 
                                             <div class="modal-header">
@@ -352,8 +356,24 @@ var localData = localStorage.getItem('userData');
                                                 <div class="container-fluid">
                                                     <div class="row">
                                                         <div class="col-md-7 ml-auto">
-                                                             <div class="embed-responsive embed-responsive-16by9">
+                                                             <!--<div class="embed-responsive embed-responsive-16by9">
                                                                 <iframe width="898" height="520" src="https://www.youtube.com/embed/Fz8bjQZOrNw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                                            </div>-->
+                                                            <label for="basic-url">生活日誌上傳</label>
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon3">影片網址</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                                            </div>
+                                                            <div class="input-group">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                                                    <label class="custom-file-label" for="inputGroupFile04">圖片選擇</label>
+                                                                </div>
+                                                                <div class="input-group-append">
+                                                                    <button class="btn btn-outline-secondary" type="button">確定</button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5 ml-auto">
@@ -369,8 +389,10 @@ var localData = localStorage.getItem('userData');
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" data-dismiss="modal">上傳</button>
-                                                <button type="button" data-dismiss="modal">取消</button>
+                                                <!--<button type="button" data-dismiss="modal">上傳</button>
+                                                <button type="button" data-dismiss="modal">取消</button>-->
+                                                <button type="button" onclick="window.location.href='/userpage#uploaded'" data-dismiss="modal" class="btn btn-info">上傳</button>
+                                                <button type="button" data-dismiss="modal" class="btn btn-info">取消</button>
                                             </div>
                                         </div>
                                     </div>

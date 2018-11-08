@@ -304,7 +304,7 @@ var localData = localStorage.getItem('userData');
 
                     <!--個人生活影片-->
                     <div class="mb-3">
-                        <h4 style="text-align:center font-size: 30px;">我的生活日誌</h4>
+                        <h4 style="text-align:center font-size: 30px;" id="uploaded">我的生活日誌</h4>
                         <div class="box3_content">
                             <div class="row">
                                 <input type="image" src="css/plus.png" name="image" width="40" height="40" style="margin-bottom:3%; margin-left:90%;" data-toggle="modal" data-target="#myModal">
@@ -312,7 +312,7 @@ var localData = localStorage.getItem('userData');
 
 
                                 <!-- Modal -->
-                                <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                         <div class="modal-content">
 
@@ -343,15 +343,15 @@ var localData = localStorage.getItem('userData');
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
-                                              <button type="button" data-dismiss="modal" class="btn btn-info">回應</button>
-                                              <button type="button" data-dismiss="modal" class="btn btn-info">關閉</button>
+                                              <button type="button" data-dismiss="modal" class="btn btn-info">上傳</button>
+                                              <button type="button" data-dismiss="modal" class="btn btn-info">取消</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <img class="myImg" src="css/solar.jpg" name="image" data-toggle="modal" data-target="#myModal1">
+                                <!--<img class="myImg" src="css/solar.jpg" name="image" data-toggle="modal" data-target="#myModal1">-->
 
                                 <!-- Modal -->
                                 <div class="modal" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

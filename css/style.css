@@ -56,6 +56,21 @@ body {
     margin-top: 10%;
 
 }
+.rounded-circlefriend{
+    border-radius: 50%;
+    vertical-align: 130%;
+    width: 65%;
+    height: 55%;
+    margin-top: 10%;
+    vertical-align:center;
+}
+.rounded-circlefriendcard{
+    border-radius: 50%;
+    vertical-align: 70%;
+    width: 85%;
+    height: 85%;
+    vertical-align:center;
+}
 .rounded-circlelike{
     border-radius: 50%;
     width: 12%;

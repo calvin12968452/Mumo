@@ -35,6 +35,35 @@
                                                onStateChange:function(e){e.data===YT.PlayerState.ENDED&&o(!1)}}})}
 
     </script>
+    <script type="text/javascript">
+        var localData = localStorage.getItem('userData');
+        localData = JSON.parse(localData);
+  
+        userName = localData.userName;
+        userEmail = localData.userEmail;
+        userPwd = localData.userPwd;
+        id = localData.id;
+        gender = localData.gender;
+        constellation = localData.constellation;
+        birth = localData.birth;
+        country = localData.country;
+        city = localData.city;
+        photo = localData.photo;
+  
+        if(photo == undefined){photo = "";}
+        photo = photo.split(' ').join('+');
+  
+        console.log("userName : " + userName);
+        console.log("userEmail : " + userEmail);
+        console.log("userPwd : " + userPwd);
+        console.log("id : " + id);
+        console.log("gender : " + gender);
+        console.log("constellation : " + constellation);
+        console.log("birth : " + birth);
+        console.log("country : " + country);
+        console.log("city : " + city);
+        console.log("photo : " + photo);
+      </script>
 
 </head>
 <body>
@@ -73,10 +102,13 @@
     <div class="container" style="margin-bottom:50px; margin-top:100px"><!--和上面的間距-->
         <div class="row">
             <div class="col-lg-4" id="left"><!--left 是左邊欄位,占整個版面的3/12-->
-                <img class="rounded-circle" src="css/hua1.jpg" alt="image">
+                <img class="rounded-circle" src="css/img.png" alt="image">
+                <div class="p-image">
+                        <input class="file-upload" type="file" accept="image/*" style="display: none;">
+                </div>
                 <div class="left_text">
                     <dl class="row">
-                        <dt class="col-sm-12" style="font-size:40px; font-family:Microsoft JhengHei; color: #444444;">Hua</dt>
+                        <dt class="col-sm-12" style="font-size:40px; font-family:Microsoft JhengHei; color: #444444;"><div id="username">username</div></dt>
                         <dt class="col-sm-12"><img src="css/boy.png" alt="image" width="10%" height="80%"></dt>
                         </br>
                         </br>
@@ -87,15 +119,56 @@
 
                     <div class="row">
                         <dt class="col-sm-5" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">生日</dt>
-                        <dd class="col-sm-7" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">03/18</dd>
+                        <dd id="birth" class="col-sm-7" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">03/18</dd>
                         <dt class="col-sm-5" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">城市</dt>
-                        <dd class="col-sm-7" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">台灣-屏東</dd>
+                        <dd id="country city" class="col-sm-7" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">
+                            country - city
+                        </dd>
                         <dt class="col-sm-5"> <img id="dia" src="css/dia2.png" alt="image" width="30%" height="80%"></dt>
                         <p class="col-sm-7" style="font-size:18px; font-family:Microsoft JhengHei; color: #444444;">123456</p>
                     </div>
 
                     </br>
-                    <input type="image" class="rounded-circlelike" src="css/jennie1.jpg" alt="image" >
+                    <input type="image" class="rounded-circlelike" src="css/jennie1.jpg" alt="image"  data-toggle="modal" data-target="#myModal9" >
+                        <div class="modal" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h2 class="modal-title" id="myModalLabel" style="position:absolute;
+                                        left:20px;">Jennie</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-6 ml-auto">
+                                                    <img class="rounded-circlefriendcard" src="css/jennie1.jpg" alt="image">
+                                                    <p style="color:#888888">&nbsp;&nbsp;近日發行2則影片</p>
+                                                </div>
+                                                <div class="col-md-6" style="text-align:left;">
+                                                    <img src="css/girl.png" width="15%">&nbsp;&nbsp;Jennie<br/><br/>
+                                                    <img src="css/birthday.png" width="15%">
+                                                    &nbsp;&nbsp;1996/03/25<br/><br/>
+                                                    <img src="css/music.png" width= "15%">
+                                                    Favorite
+                                                    <img src="css/movie.png" width= "15%">
+                                                    </br><br/>
+                                                    <a style="margin-left:10%">Movie:&nbsp;動作片</a>
+                                                    <a style="margin-left:10%">Music:&nbsp;Kpop</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" data-dismiss="modal" onclick="javascript:location.href='file:///Users/chang/Downloads/Mumo-master%202/fuckthisshit/ras%202/Jennie's.html'" class="btn btn-info">拜訪</button>
+                                        <button type="button" data-dismiss="modal" class="btn btn-info">聊天</button>
+                                        <button onclick="myalert()" type="button" class="btn btn-outline-danger">封鎖</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
                     <input type="image" class="rounded-circlelike" src="css/lisa.jpg" alt="image" >
                     <input type="image" class="rounded-circlelike" src="css/rose3.jpg" alt="image" >
 
@@ -116,9 +189,18 @@
                         <dd class="col-sm-7" style="font-size:18px;">動作片</dd>
                         <dt class="col-sm-5" style="font-size:18px;">Music</dt>
                         <dd class="col-sm-7" style="font-size:18px;">Kpop</dd>
-
-
                     </dl>
+                    <div class="boxself_content">
+                            <a id="constellation" style="font-family: Microsoft JhengHei; font-size:20px;"></a>
+                        </br>
+                            <a id="constellation" style="font-family: Microsoft JhengHei; font-size:20px;">
+                            🌸慢熟氣質美女🌸</br>
+                            遇到狗狗眼睛會變愛心😍</br>
+                            韓劇 & 美劇 & K-POP & POP</br>
+                            客的壞鬼到底是不是爺爺👻</br>
+                            誰趕快來跟我一起討論😖😖</br>
+                            </a>
+                        </div>
                 </div>
             </div>
 
@@ -338,6 +420,20 @@
         </div>
     </div>
 
+    <script type="text/javascript">
+        document.getElementById("username").innerHTML = userName;
+        document.getElementById("birth").innerHTML = birth;
+        document.getElementById("country city").innerHTML = country + " - " + city;
+        if(gender == "Male"){
+            $('#gender').attr('src', 'css/boy.png');
+            var adj = "浪漫", whichGender = "男";
+        }else if(gender == "Female"){
+            $('#gender').attr('src', 'css/girl.png');
+            var adj = "可愛", whichGender = "女";
+        }
+        document.getElementById("constellation").innerHTML = adj + whichGender + "  - " + constellation;
+        if(photo != "" && photo != undefined){ $('.profile-pic').attr('src', "data:image/jpg;base64, " + photo); }
+      </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

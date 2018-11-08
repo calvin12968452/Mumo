@@ -178,7 +178,13 @@ body {
     height: 7%;
     vertical-align:middle;
 }
-
+.rounded-circlefriendcard{
+  border-radius: 50%;
+  vertical-align: 70%;
+  width: 85%;
+  height: 85%;
+  vertical-align:center;
+}
 .rounded-circlelike{
     border-radius: 50%;
     width: 12%;

@@ -134,6 +134,10 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/chatroom.html');
   });
 
+  app.get('/findfriend',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/finfriend.html');
+  });
+
 
   app.get('/multichat',function(req, res){
     res.sendFile(__dirname + '/template/userpages/chatroom.html');

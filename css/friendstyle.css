@@ -10,7 +10,10 @@ body {
     background-attachment: fixed;
     background-image: url(yaping.png);
 }
-
+/*用在MUMO LOGO*/
+.logo {
+      font-family: "Times New Roman", Georgia, Serif;
+}
 #left {
     height: 1100px;
     border: 1px solid #999;
@@ -48,8 +51,8 @@ body {
 .rounded-circlefriend{
     border-radius: 50%;
     vertical-align: 130%;
-    width: 85%;
-    height: 65%;
+    width: 65%;
+    height: 55%;
     margin-top: 10%;
     vertical-align:center;
 }
@@ -97,14 +100,14 @@ body {
 
 
 .boxfriend_content {
+    margin: auto;
+    height: auto;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
     border: 1px solid #999;
     padding: 20px;
     background: #fdebd0;
-    margin: auto;
-    height: 1000px;
-    max-height: 1015px;
-    overflow-x: hidden;
-    overflow-y: auto;
     /*border-radius:10px;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;*/
@@ -542,7 +545,7 @@ padding: 0px;
 }
 .box2 h2{
     display: inline-block;
-    
+
     font-family: Microsoft JhengHei;
     font-size: 28px;
     color:  #444444;

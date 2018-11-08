@@ -5,12 +5,10 @@ body {
     background-attachment: fixed;
     background-image: url(../yaping.png);
 }
-
-/* top */
-.logo {
-    font-family: Verdana,sans-serif;
+.logo{
+  font-family: "Times New Roman", Georgia, Serif;
 }
-
+/* top */
 #top-tools {
     _background-color: #fee;
     width: 80px;
@@ -32,7 +30,7 @@ body {
 
 .box2 {
     margin-top: 0px;
-    background: #fbf2f2;
+    background: white;
     border: 1px solid #ccc;
     padding: 20px;
     height: 750px;
@@ -64,11 +62,11 @@ body {
     border-radius: 15px 10px 10px 15px / 50%;
     font-family: Microsoft JhengHei;
     font-size: 20px;
-    color:  #444444; 
+    color:  #444444;
 }
 
 .box2 h2{
-    display: inline-block; 
+    display: inline-block;
     /*font-family: Microsoft Tai Le;*/
     font-family: Microsoft JhengHei;
     font-size: 28px;

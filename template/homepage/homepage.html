@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/css.css">
 <link rel="stylesheet" href="css/w3.css">
+<style>
+body {
+    font-family: "Times New Roman", Georgia, Serif;
+}
+</style>
 <body>
   <!-- <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -17,17 +22,17 @@
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-        <!--<a href="#home" class="w3-bar-item w3-button" style="font-size:200%;color:#01abaa;"><b>MUMO</b></a>-->
-        <div class="w3-bar-item">
-          <b style="font-size:180%;color:#01abaa;">M</b>
-          <b style="font-size:180%;color:#f7b75d;">U</b>
-          <b style="font-size:180%;color:#01abaa;">M</b>
-          <b style="font-size:180%;color:#f07658;">O</b>
-        </div>
+  <div class="w3-bar w3-white w3-padding w3-card">
+    <!--<div class="w3-bar-item" style="font-size:180%;color:#01abaa;"><b>MUMO</b></div>-->
+    <div class="w3-bar-item logo">
+        <b style="font-size:180%;color:#01abaa;">M</b>
+        <b style="font-size:180%;color:#f7b75d;">U</b>
+        <b style="font-size:180%;color:#01abaa;">M</b>
+        <b style="font-size:180%;color:#f07658;">O</b>
+    </div>
         <!-- Right-sided navbar links. Hide them on small screens -->
         <div class="center">
-            <div class="w3-right w3-hide-small" style="font-size:105%; position:relative;">
+            <div class="w3-right w3-hide-small" style="font-size:105%">
                 <a href="#intro" class="w3-bar-item w3-button">關於我們</a>
             </div>
         </div>
@@ -55,19 +60,20 @@
                             </a>
                         </div>
 
-                        <p class="w3-center">用MUMO帳號登入:</p>
+                        <p class="w3-center">用MUMO帳號登入：</p>
                         <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="name" required>
                         <input class="w3-input w3-border" type="text" placeholder="Enter Password" name="pw" required>
-                        <button class="w3-button w3-block w3-section w3-padding" style="background-color:#ffe869" type="submit">LOGIN</button>
+                        <button class="w3-button w3-block w3-section w3-padding" style="color: white; font-size: 20px;background-color: #f7b75d" type="submit">登入</button>
                     </div>
                 </form>
                 <div class="bottom-container">
                     <div class="w3-row">
                         <div class="w3-col">
-                            <a href="signup" class="btn">註冊</a>
+                            <a href="signup" class="btn" style="background-color: #01abaa">註冊</a>
                         </div>
+                      <hr>
                         <div class="w3-col">
-                            <a href="#" class="btn">忘記密碼?</a>
+                            <a href="#" class="btn" style="background-color: #01abaa">忘記密碼?</a>
                         </div>
                     </div>
                 </div>

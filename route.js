@@ -101,6 +101,10 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/userpage.html');
   });
 
+  app.get('/findfriend',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/findfriend.html');
+  });
+
   //route
   app.get('/normal',function(req, res){
     res.sendFile(__dirname + '/template/normal/normal.html');

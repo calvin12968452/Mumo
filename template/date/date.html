@@ -95,10 +95,6 @@
         <button onclick="window.location.href='/shop'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">配送禮物</button>
         <button onclick="window.location.href='/date_user'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">公主/王子的約會</button>
       </div>
-      <div id="top-tools" style="margin-top:10px;margin-bottom:10px;">
-              <input href="#" type="image" src="css/setting.png" alt="image" width="30%" height="30%"></br>
-              <input href="#" type="image" src="css/qu.png" alt="image" width="30%" height="30%">
-      </div>
     </div>
   </div>
 
@@ -107,15 +103,12 @@
 
     <!--Main-->
     <div class="col-lg-12">
-	<div class="box2 container" style="margin-top:100px">
+	<div class="box2 container" style="margin-top:100px; background-color:#ecd6c7">
 
             <!--broadcast-->
             <div style="margin-left:10px">
                 <div style="margin-bottom:10px">
-                    <button type="button" onclick="start()" class="btn btn-outline-secondary" data-toggle="modal" data-target="#testModal">測試直播功能</button>
-                    <!--<button type="button" class="btn btn-outline-success">start</button>
-                    <button type="button" class="btn btn-outline-warning">pause</button>
-                    <button type="button" class="btn btn-outline-danger">stop</button>-->
+                    <button type="button" onclick="start()" class="btn btn-outline-info" data-toggle="modal" data-target="#testModal">測試直播功能</button>
                 </div>
 
                 <!--Modal-->
@@ -168,7 +161,7 @@
 	            <section class="make-center">
                       <div class="alert alert-warning" role="alert">請輸入活動序號：</div>
 	              <input type="text" id="room-id" value="abcdef" autocorrect=off autocapitalize=off size=20>
-	              <button type="button" id="open-room" class="btn btn-success">開始正式直播</button>
+	              <button type="button" id="open-room" class="btn btn-info">開始正式直播</button>
 	              <button id="join-room" hidden="hidden">加入直播</button>
 	              <button id="open-or-join-room" hidden="hidden">Auto Open Or Join Room</button>
 

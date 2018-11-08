@@ -10,7 +10,10 @@ body {
     background-attachment: fixed;
     background-image: url(yaping.png);
 }
-
+/*用在MUMO LOGO*/
+.logo {
+      font-family: "Times New Roman", Georgia, Serif;
+}
 #left {
     height: 1100px;
     border: 1px solid #999;

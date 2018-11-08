@@ -1,5 +1,5 @@
 body {font-family: "Times New Roman", Georgia, Serif;
-    background-color:   #FDF4C9;
+    background: url(cover.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -442,4 +442,11 @@ input[type=submit]:hover {
         width: 100%;
         margin-top: 0;
     }
+}
+.menucenter {
+    width: 700px;
+	  margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:10px;
 }

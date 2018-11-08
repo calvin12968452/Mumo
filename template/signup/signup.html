@@ -91,7 +91,7 @@ function check(){
             return true;
         }
         else {
-            alert("密碼設定至少 4 碼以上"); 
+            alert("密碼設定至少 4 碼以上");
             return false;
         }
     }
@@ -109,7 +109,7 @@ function checkvendor(){
             return true;
         }
         else {
-            alert("密碼設定至少 4 碼以上"); 
+            alert("密碼設定至少 4 碼以上");
             return false;
         }
     }
@@ -125,8 +125,8 @@ function checkvendor(){
 <img class="w3-image" src="css/cover.png" alt="Cover" width="1600" height="800">
 <div class="w3-display-middle w3-margin w3-center">
     <h1 style="font-size:50px;">我是...</h1>
-    <button onclick="document.getElementById('normal').style.display='block'" style="width:auto; font-size:15px; background-color: #ffb85f;">一般會員</button>
-    <button onclick="document.getElementById('vendor').style.display='block'" style="width:auto; font-size:15px; background-color: #ffb85f;">廠商</button>
+    <button onclick="document.getElementById('normal').style.display='block'" style="width:auto; font-size:20px; background-color: #ffb85f;">一般會員</button>
+    <button onclick="document.getElementById('vendor').style.display='block'" style="width:auto; font-size:20px; background-color: #ffb85f;">廠商</button>
 </div>
 
 <!-- Normal Section -->
@@ -145,12 +145,13 @@ function checkvendor(){
             <label for="gender"><b>使用者性別 (Gender)</b></label>
             <div class="custom-control custom-radio">
                 <select name="gender">
-                    <option>Male</option>
-                    <option>Female</option>
+                    <option>男性 (Male)</option>
+                    <option>女性 (Female)</option>
+                    <option>其他 (Other)</option>
                 </select>
             </div>
 
-            <label for="constellation"><b>使用者星座 (Constellation)</b></label>
+            <label for="constellation"><b>使用者星座 (Horoscope)</b></label>
             <div class="custom-control custom-radio">
                 <select name="constellation">
                     <option>水瓶座 (Aquarius)</option>
@@ -177,7 +178,7 @@ function checkvendor(){
             <label for="city"><b>使用者城市 (City)</b></label>
             <input type="country" placeholder="City" name="city" required>
 
-            <label for="email"><b>信箱 (Email)</b></label>
+            <label for="email"><b>信箱 (E-mail)</b></label>
             <input type="email" placeholder="Email" name="email" required>
 
             <label for="password"><b>輸入密碼 (Password)</b></label>
@@ -205,8 +206,8 @@ function checkvendor(){
             <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
             <div class="clearfix">
-                <button type="button" onclick="document.getElementById('normal').style.display='none'" class="cancelbtn">上一頁</button>
-                <button type="submit" class="signupbtn" style="background-color:#ffe869; color:black" onClick="return check()" value="更新資料">確認</button>
+                <button type="button" onclick="document.getElementById('normal').style.display='none'" class="cancelbtn" style="background-color: #f7b75d">上一頁</button>
+                <button type="submit" class="signupbtn" style="background-color: #01abaa; color:black" onClick="return check()" value="更新資料">確認</button>
             </div>
         </div>
     </form>
@@ -222,7 +223,16 @@ function checkvendor(){
             <label for="vendor"><b>廠商名稱 (Vendor Name)</b></label>
             <input type="text" placeholder="Name" name="vendor" required>
 
-            <label for="password"><b>輸入密碼 (Pasword)</b></label>
+            <label for="add"><b>地址 (Address)</b></label>
+            <input type="text" placeholder="Address" name="add" required>
+
+            <label for="phone"><b>電話號碼 (Phone number) (ex:0900-000000)</b></label>
+            <input type="mobile" placeholder="Phone number" name="phone" pattern="\d{4}[\-]\d{6}" required>
+
+            <label for="web"><b>網頁 (Website)</b></label>
+            <input type="url" placeholder="website" name="web" required>
+
+            <label for="password"><b>輸入密碼 (Password)</b></label>
             <input name="pw" type="password" size="40" onKeyUp="pwStrength(this.value)" onBlur="pwStrength(this.value)">
             <tr>
                 <td>密碼強度：</td>
@@ -244,20 +254,12 @@ function checkvendor(){
             <label for="pwdretype"><b>確認密碼 (Retype Password)</b></label>
             <input type="password" placeholder="Retype Password" name="pwdretype" required>
 
-            <label for="add"><b>地址 (Address)</b></label>
-            <input type="text" placeholder="Address" name="add" required>
-
-            <label for="phone"><b>電話號碼 (Phone number) (ex:0900-000000)</b></label>
-            <input type="mobile" placeholder="Phone number" name="phone" pattern="\d{4}[\-]\d{6}" required>
-
-            <label for="web"><b>網頁 (Website)</b></label>
-            <input type="url" placeholder="website" name="web" required>
 
             <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
             <div class="clearfix">
-                <button type="button" onclick="document.getElementById('vendor').style.display='none'" class="cancelbtn">上一頁</button>
-                <button type="submit" class="signupbtn" style="background-color:#ffe869; color:black" onClick="return checkvendor()" value="更新資料" >確認</button>
+              <button type="button" onclick="document.getElementById('normal').style.display='none'" class="cancelbtn" style="background-color: #f7b75d">上一頁</button>
+              <button type="submit" class="signupbtn" style="background-color: #01abaa; color:black" onClick="return check()" value="更新資料">確認</button>
             </div>
         </div>
     </form>

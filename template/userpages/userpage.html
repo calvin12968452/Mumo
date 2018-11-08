@@ -139,7 +139,7 @@ var localData = localStorage.getItem('userData');
                     <HR color="black" size="10" width="90%"  align="center">
 
                     <dl class="row">
-                        <dt class="col-sm-12" style="font-family:comic sans ms; font-size:23px; color:  #444444;"><img src="css/music.png" width= "13%" height="50%"> Favorite <img src="css/movie.png" width= "13%" height="50%"></dt>
+                        <dt class="col-sm-12" style="font-family:comic sans ms; font-size:23px; color:  #444444;"><img src="css/music.png" width= "10%"> 最喜愛的 <img src="css/movie.png" width= "10%"></dt>
                         </br>
                         </br>
                         </br>
@@ -213,33 +213,6 @@ var localData = localStorage.getItem('userData');
                                                 <div class="col-lg-4">
                                                     <input  type="image"  class="rounded-circle1"  img  src="css/given.jpg" data-toggle="modal" data-target="#myModal4"></br>
                                                     <h2>Given</h2>
-                                                    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                                            <div class="modal-content">
-
-                                                                <div class="modal-header">
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                                    <h2 class="modal-title" id="myModalLabel" style="position:absolute;left:20px;">Minsoo 生活日誌</h2>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <div class="container-fluid">
-                                                                        <div class="row">
-                                                                            <div class="col-md-7 ml-auto">
-                                                                            </div>
-                                                                            <div class="col-md-5 ml-auto">
-                                                                                <div class="signature">
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" data-dismiss="modal">上傳</button>
-                                                                    <button type="button" data-dismiss="modal">取消</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <a href="#"><img class="rounded-circle1" src="css/kt.jpg" alt="image" >
@@ -326,6 +299,7 @@ var localData = localStorage.getItem('userData');
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
+                        
                     </div>
 
                     <!--個人生活影片-->
@@ -338,7 +312,7 @@ var localData = localStorage.getItem('userData');
 
 
                                 <!-- Modal -->
-                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                         <div class="modal-content">
 
@@ -369,8 +343,8 @@ var localData = localStorage.getItem('userData');
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" data-dismiss="modal">上傳</button>
-                                                <button type="button" data-dismiss="modal">取消</button>
+                                              <button type="button" data-dismiss="modal" class="btn btn-info">回應</button>
+                                              <button type="button" data-dismiss="modal" class="btn btn-info">關閉</button>
                                             </div>
                                         </div>
                                     </div>

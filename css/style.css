@@ -16,7 +16,7 @@ body {
       font-family: "Times New Roman", Georgia, Serif;
 }
 #left {
-    height: 1100px;
+    height: 1200px;
     border: 1px solid #999;
     background: #ecd6c7;
     /*border-radius:10px;
@@ -262,7 +262,7 @@ body {
     background: #fffdf8;
     border: 1px solid #ccc;
     padding: 20px;
-    height:1100px;
+    height:1200px;
     /*border-radius:10px;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;*/
@@ -285,7 +285,7 @@ body {
     padding: 20px;
     background: #fdebd0;
     height: auto;
-    max-height: 320px;
+    max-height: 370px;
     overflow-x: hidden;
     overflow-y: auto;
     /*border-radius:10px;

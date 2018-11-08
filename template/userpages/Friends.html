@@ -12,10 +12,32 @@
     <link rel="stylesheet" href="css/ja.java">
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="css/audiojs/audiojs/audio.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
-            audiojs.events.ready(function() {
-              audiojs.createAll();
-            });
+        audiojs.events.ready(function() {
+            audiojs.createAll();
+        });
+
+        function myalert() {
+            swal({
+                title: "確定要封鎖?",
+                text: "一旦封鎖將無法取消且本網站亦不負責後續任何責任",
+                icon: "warning",
+                buttons: ["取消", "確認"],
+                dangerMode: true,
+             })
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("封鎖成功", {
+                        icon: "success",
+                    });
+                } 
+                else {
+                    swal("再想清楚喔!");
+                }
+        });
+}
+
     </script>
 
 
@@ -383,7 +405,7 @@
                                     </ul>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary">開始搜尋</button>
+                                    <button type="button" onclick="location.href='findfriend'" class="btn btn-primary">開始搜尋</button>
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
                                 </div>
                             </div>
@@ -394,10 +416,10 @@
                     <div class="boxfriend_content">
                         <div class="row">
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/ba.png" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/tino.jpg" data-toggle="modal" data-target="#myModal2"></br>
                                 <a style="color:#888888;">
                                     <div>2則新影片</div>
-                                    <h2>大仙貝</h2>
+                                    <h2>Tino</h2>
                                 </a>
 
                                 <div class="modal" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -406,17 +428,17 @@
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 <h2 class="modal-title" id="myModalLabel" style="position:absolute;
-                                                left:20px;">大仙貝</h2>
+                                                left:20px;">Tino</h2>
                                             </div>
                                             <div class="modal-body">
                                                 <div class="container-fluid">
                                                     <div class="row">
                                                         <div class="col-md-6 ml-auto">
-                                                            <img class="rounded-circlefriendcard" src="css/ba.png" alt="image">
+                                                            <img class="rounded-circlefriendcard" src="css/tino.jpg" alt="image">
                                                             <p style="color:#888888">&nbsp;&nbsp;近日發行2則影片</p>
                                                         </div>
                                                         <div class="col-md-6" style="text-align:left;">
-                                                            <img src="css/boy.png" width="15%">&nbsp;&nbsp;大仙貝<br/><br/>
+                                                            <img src="css/boy.png" width="15%">&nbsp;&nbsp;Tino<br/><br/>
                                                             <img src="css/birthday.png" width="15%">
                                                             &nbsp;&nbsp;1995/10/18<br/><br/>
                                                             <img src="css/music.png" width= "15%">
@@ -433,7 +455,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" data-dismiss="modal" onclick="javascript:location.href='file:///Users/chang/Downloads/Mumo-master%202/fuckthisshit/ras%202/Jennie's.html'" class="btn btn-info">拜訪</button>
                                                 <button type="button" data-dismiss="modal" class="btn btn-info">聊天</button>
-                                                <button type="button" class="btn btn-outline-danger">封鎖</button>
+                                                <button onclick="myalert()" type="button" class="btn btn-outline-danger">封鎖</button>
                                             </div>
                                         </div>
                                     </div>
@@ -441,10 +463,10 @@
                             </div>
 
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/pin.png" data-toggle="modal" data-target="#myModal3"><br/>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/tonton.jpg" data-toggle="modal" data-target="#myModal3"><br/>
                                 <a style="color:#888888;">
                                     <div>1則新影片</div>
-                                    <h2>至秦</h2>
+                                    <h2>Don Don</h2>
                                 </a>
 
                                 <div class="modal" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -453,17 +475,17 @@
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 <h2 class="modal-title" id="myModalLabel" style="position:absolute;
-                                                left:20px;">至秦</h2>
+                                                left:20px;">Don Don</h2>
                                             </div>
                                             <div class="modal-body">
                                                 <div class="container-fluid">
                                                     <div class="row">
                                                         <div class="col-md-6 ml-auto">
-                                                            <img class="rounded-circlefriendcard" src="css/pin.png" alt="image">
+                                                            <img class="rounded-circlefriendcard" src="css/tonton.jpg" alt="image">
                                                             <p style="color:#888888">&nbsp;&nbsp;近日發行1則影片</p>
                                                         </div>
                                                         <div class="col-md-6" style="text-align:left;">
-                                                            <img src="css/girl.png" width="15%">&nbsp;&nbsp;至秦<br/><br/>
+                                                            <img src="css/boy.png" width="15%">&nbsp;&nbsp;Don Don<br/><br/>
                                                             <img src="css/birthday.png" width="15%">
                                                             &nbsp;&nbsp;1996/10/21<br/><br/>
                                                             <img src="css/music.png" width= "15%">
@@ -477,45 +499,136 @@
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
-                                              <button type="button" data-dismiss="modal" onclick="javascript:location.href='file:///Users/chang/Downloads/Mumo-master%202/fuckthisshit/ras%202/Jennie's.html'" class="btn btn-info">拜訪</button>
-                                              <button type="button" data-dismiss="modal" class="btn btn-info">聊天</button>
-                                              <button type="button" class="btn btn-outline-danger">封鎖</button>
+                                                <button type="button" data-dismiss="modal" onclick="javascript:location.href='file:///Users/chang/Downloads/Mumo-master%202/fuckthisshit/ras%202/Jennie's.html'" class="btn btn-info">拜訪</button>
+                                                <button type="button" data-dismiss="modal" class="btn btn-info">聊天</button>
+                                                <button onclick="myalert()" type="button" class="btn btn-outline-danger">封鎖</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/jie.png" data-toggle="modal" data-target="#myModal2"><br/>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/yp.jpg" data-toggle="modal" data-target="#myModal4"><br/>
                                 <a style="color:#888888;">
                                     <div>3則新影片</div>
-                                    <h2>Wang JJ</h2>
+                                    <h2>Yaping</h2>
+                                </a>
+                                <div class="modal" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h2 class="modal-title" id="myModalLabel" style="position:absolute;
+                                                left:20px;">Yaping</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6 ml-auto">
+                                                            <img class="rounded-circlefriendcard" src="css/yp.jpg" alt="image">
+                                                            <p style="color:#888888">&nbsp;&nbsp;近日發行3則影片</p>
+                                                        </div>
+                                                        <div class="col-md-6" style="text-align:left;">
+                                                            <img src="css/girl.png" width="15%">&nbsp;&nbsp;Yaping<br/><br/>
+                                                            <img src="css/birthday.png" width="15%">
+                                                            &nbsp;&nbsp;1997/09/20<br/><br/>
+                                                            <img src="css/music.png" width= "15%">
+                                                            Favorite
+                                                            <img src="css/movie.png" width= "15%">
+                                                            </br><br/>
+                                                            <a style="margin-left:10%">Movie:&nbsp;動作片、愛情片</a>
+                                                            <a style="margin-left:10%">Music:&nbsp;pop、kpop</a>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" data-dismiss="modal" onclick="javascript:location.href='file:///Users/chang/Downloads/Mumo-master%202/fuckthisshit/ras%202/Jennie's.html'" class="btn btn-info">拜訪</button>
+                                                <button type="button" data-dismiss="modal" class="btn btn-info">聊天</button>
+                                                <button onclick="myalert()" type="button" class="btn btn-outline-danger">封鎖</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top:20px;">
+                            <div class="col-lg-4 text-center">
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/june.jpg" data-toggle="modal" data-target="#myModal2"></br>
+                                <a style="color:#888888;">
+                                    <div>0則新影片</div>
+                                    <h2>阿郡</h2>
+                                </a>
+
+                            </div>
+                            <div class="col-lg-4 text-center">
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/fish.jpg" data-toggle="modal" data-target="#myModal2"></br>
+                                <a style="color:#888888;">
+                                    <div>0則新影片</div>
+                                    <h2>碩魚</h2>
+                                </a>
+
+                            </div>
+                            <div class="col-lg-4 text-center">
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/yee.png" data-toggle="modal" data-target="#myModal2"></br>
+                                <a style="color:#888888;">
+                                    <div>3則新影片</div>
+                                    <h2>Yee Chen</h2>
                                 </a>
 
                             </div>
                         </div>
                         <div class="row" style="margin-top:20px;">
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/yalin.jpg" data-toggle="modal" data-target="#myModal2"></br>
-                                <a style="color:#888888;">
-                                    <div>0則新影片</div>
-                                    <h2>雅琳</h2>
-                                </a>
-
-                            </div>
-                            <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/tonton.jpg" data-toggle="modal" data-target="#myModal2"></br>
-                                <a style="color:#888888;">
-                                    <div>0則新影片</div>
-                                    <h2>DonDon</h2>
-                                </a>
-
-                            </div>
-                            <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/tino.jpg" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/ba.png" data-toggle="modal" data-target="#myModal2"></br>
                                 <a style="color:#888888;">
                                     <div>3則新影片</div>
-                                    <h2>Tino</h2>
+                                    <h2>大仙貝</h2>
+                                </a>
+
+                            </div>
+                            <div class="col-lg-4 text-center">
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/jennie1.jpg" data-toggle="modal" data-target="#myModal2"></br>
+                                <a style="color:#888888;">
+                                    <div>0則新影片</div>
+                                    <h2>Jennie</h2>
+                                </a>
+
+                            </div>
+                            <div class="col-lg-4 text-center">
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/rosenb.jpg" data-toggle="modal" data-target="#myModal2"></br>
+                                <a style="color:#888888;">
+                                    <div>0則新影片</div>
+                                    <h2>Rose</h2>
+                                </a>
+
+                            </div>
+                            
+                        </div>
+                        <div class="row" style="margin-top:20px;">
+                            <div class="col-lg-4 text-center">
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/loco.jpg" data-toggle="modal" data-target="#myModal2"></br>
+                                <a style="color:#888888;">
+                                    <div>3則新影片</div>
+                                    <h2>Loco</h2>
+                                </a>
+
+                            </div>
+                            <div class="col-lg-4 text-center">
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/mt.jpg" data-toggle="modal" data-target="#myModal2"></br>
+                                <a style="color:#888888;">
+                                    <div>0則新影片</div>
+                                    <h2>Mati</h2>
+                                </a>
+
+                            </div>
+                            <div class="col-lg-4 text-center">
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/ilhoon.jpg" data-toggle="modal" data-target="#myModal2"></br>
+                                <a style="color:#888888;">
+                                    <div>0則新影片</div>
+                                    <h2>Ilhoon</h2>
                                 </a>
 
                             </div>

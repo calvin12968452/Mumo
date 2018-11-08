@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/friendstyle.css">
     <link rel="stylesheet" href="css/ja.java">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="css/audiojs/audiojs/audio.min.js"></script>
     <script>
@@ -17,7 +18,11 @@
               audiojs.createAll();
             });
     </script>
-   
+   <script>
+       function alert(){
+            swal("交友邀請已送出!", "請耐心等待對方回覆喔^0^!", "success");
+       }
+   </script>
 
 
 
@@ -77,7 +82,7 @@
 
     <!-- Navbar (sit on top) -->
     <link rel="stylesheet" href="css/w3.css">
-    <div class="w3-top">
+    <div class="w3-top logo">
       <div class="w3-bar w3-white w3-padding w3-card">
             <div class="w3-bar-item"><b style="font-size:180%;color:#01abaa;">M</b>
                 <b style="font-size:180%;color:#f7b75d;">U</b>
@@ -411,11 +416,11 @@
                                                 <div class="container-fluid">
                                                     <div class="row">
                                                         <div class="col-md-6 ml-auto">
-                                                            <img class="rounded-circlefriendcard" src="css/ba.png" alt="image">
+                                                            <img class="rounded-circlefriendcard" src="css/chu.png" alt="image">
                                                             <p style="color:#888888">&nbsp;&nbsp;近日發行2則影片</p>
                                                         </div>
                                                         <div class="col-md-6" style="text-align:left;">
-                                                            <img src="css/girl.png" width="20%" height="15%">&nbsp;&nbsp;Hua Chu<br/><br/>
+                                                            <img src="css/girl.png" width="15%">&nbsp;&nbsp;Hua Chu<br/><br/>
                                                             <img src="css/birthday.png" width="15%" height="15%">
                                                             &nbsp;&nbsp;1997/10/24<br/><br/>
                                                             <img src="css/music.png" width= "15%" height="13%">
@@ -429,9 +434,9 @@
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" data-dismiss="modal" onclick="javascript:location.href='file:///Users/chang/Downloads/Mumo-master%202/fuckthisshit/ras%202/Jennie's.html'" class="btn btn-primary">交友邀請</button>
-                                                <button type="button" data-dismiss="modal" class="btn btn-primary">聊天</button>
-                                                <button type="button" data-dismiss="modal" class="btn btn-secondary">封鎖</button>
+                                                <button type="button" data-dismiss="modal" onclick="alert()" class="btn btn-info">交友邀請</button>
+                                                <button type="button" class="btn btn-outline-danger">封鎖</button>
+
                                             </div>
                                         </div>
                                     </div>
@@ -439,10 +444,10 @@
                             </div>
 
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/pin.png" data-toggle="modal" data-target="#myModal3"><br/>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/beauty.png" data-toggle="modal" data-target="#myModal3"><br/>
                                 <a style="color:#888888;">
                                     <div>1則新影片</div>
-                                    <h2>至秦</h2>
+                                    <h2>P 醬</h2>
                                 </a>
 
                                 <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -451,81 +456,81 @@
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 <h2 class="modal-title" id="myModalLabel" style="position:absolute;
-                                                left:20px;">至秦</h2>
+                                                left:20px;">P 醬</h2>
                                             </div>
                                             <div class="modal-body">
                                                 <div class="container-fluid">
                                                     <div class="row">
                                                         <div class="col-md-6 ml-auto">
-                                                            <img class="rounded-circlefriendcard" src="css/pin.png" alt="image">
+                                                            <img class="rounded-circlefriendcard" src="css/beauty.png" alt="image">
                                                             <p style="color:#888888">&nbsp;&nbsp;近日發行1則影片</p>
                                                         </div>
-                                                        <div class="col-md-6 ml-auto">
-                                                            <img src="css/girl.png" width="20%" height="15%">&nbsp;&nbsp;Rose<br/><br/>
+                                                        <div class="col-md-6 ml-auto" style="text-align:left;">
+                                                            <img src="css/boy.png" width="15%">&nbsp;&nbsp;P 醬<br/><br/>
                                                             <img src="css/birthday.png" width="15%" height="15%">
-                                                            &nbsp;&nbsp;1996/10/21<br/><br/>
+                                                            &nbsp;&nbsp;1996/03/21<br/><br/>
                                                             <img src="css/music.png" width= "15%" height="13%">
                                                             Favorite
                                                             <img src="css/movie.png" width= "15%" height="13%">
                                                             </br><br/>
                                                             <a style="margin-left:10%">Movie:&nbsp;記錄片</a>
-                                                            <a style="margin-left:10%">Music:&nbsp;pop</a>
+                                                            <a style="margin-left:10%">Music:&nbsp;kpop</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" data-dismiss="modal">拜訪</button>
-                                                <button type="button" data-dismiss="modal">聊天</button>
-                                                <button type="button" data-dismiss="modal">送禮</button>
+                                                <button type="button" data-dismiss="modal" onclick="alert()" class="btn btn-info">交友邀請</button>
+                                                <button type="button" class="btn btn-outline-danger">封鎖</button>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/jie.png" data-toggle="modal" data-target="#myModal2"><br/>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/hua.png" data-toggle="modal" data-target="#myModal2"><br/>
                                 <a style="color:#888888;">
                                     <div>3則新影片</div>
-                                    <h2>Wang JJ</h2>
+                                    <h2>Hua</h2>
                                 </a>
 
                             </div>
                         </div>
                         <div class="row" style="margin-top:20px;">
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/yalin.jpg" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/jie.png" data-toggle="modal" data-target="#myModal2"></br>
                                 <a style="color:#888888;">
                                     <div>0則新影片</div>
-                                    <h2>雅琳</h2>
+                                    <h2>JJ Wang</h2>
                                 </a>
 
                             </div>
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/tonton.jpg" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/han.jpg" data-toggle="modal" data-target="#myModal2"></br>
                                 <a style="color:#888888;">
                                     <div>0則新影片</div>
-                                    <h2>DonDon</h2>
+                                    <h2>漢偉</h2>
                                 </a>
 
                             </div>
-                            <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/tino.jpg" data-toggle="modal" data-target="#myModal2"></br>
-                                <a style="color:#888888;">
-                                    <div>3則新影片</div>
-                                    <h2>Tino</h2>
-                                </a>
-
-                            </div>
-                        </div>
-
-                        <div class="row" style="margin-top:20px;">
-
                             <div class="col-lg-4 text-center">
                                 <input  type="image"  class="rounded-circlefriend"  img  src="css/jia.png" data-toggle="modal" data-target="#myModal2"></br>
                                 <a style="color:#888888;">
-                                    <div>4則新影片</div>
+                                    <div>3則新影片</div>
                                     <h2>旻珈</h2>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:20px;">
+
+                            <div class="col-lg-4 text-center">
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/long.png" data-toggle="modal" data-target="#myModal2"></br>
+                                <a style="color:#888888;">
+                                    <div>4則新影片</div>
+                                    <h2>鍾蓉蓉</h2>
                                 </a>
 
                             </div>
@@ -539,10 +544,10 @@
 
                             </div>
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/long.png" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/pin.png" data-toggle="modal" data-target="#myModal2"></br>
                                 <a style="color:#888888;">
                                     <div>0則新影片</div>
-                                    <h2>鍾蓉蓉</h2>
+                                    <h2>至秦</h2>
                                 </a>
 
 
@@ -550,26 +555,26 @@
                         </div>
                         <div class="row" style="margin-top:20px;">
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/han.jpg" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/yalin.jpg" data-toggle="modal" data-target="#myModal2"></br>
                                 <a style="color:#888888;">
                                     <div>2則新影片</div>
-                                    <h2>Yaping</h2>
+                                    <h2>雅琳</h2>
                                 </a>
 
                             </div>
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/beauty.png" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/min.png" data-toggle="modal" data-target="#myModal2"></br>
                                 <a style="color:#888888;">
                                     <div>1則新影片</div>
-                                    <h2>P 醬</h2>
+                                    <h2>Min</h2>
                                 </a>
 
                             </div>
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/yee.png" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/whee.png" data-toggle="modal" data-target="#myModal2"></br>
                                 <a style="color:#888888;">
                                     <div>3則新影片</div>
-                                    <h2>Yee Chen</h2>
+                                    <h2>Wheelin</h2>
                                 </a>
 
                             </div>

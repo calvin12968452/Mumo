@@ -70,7 +70,7 @@ module.exports = function(app, express, ls, passport){
   });
 
   app.get('/group1',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/group.html');
+    res.sendFile(__dirname + '/template/userpages/group1.html');
   });
 
   app.get('/Jennie',function(req, res){
@@ -101,6 +101,10 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/userpage.html');
   });
 
+  app.get('/findfriend',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/findfriend.html');
+  });
+
   //route
   app.get('/normal',function(req, res){
     res.sendFile(__dirname + '/template/normal/normal.html');
@@ -128,6 +132,10 @@ module.exports = function(app, express, ls, passport){
 
   app.get('/chatroom',function(req, res){
     res.sendFile(__dirname + '/template/userpages/chatroom.html');
+  });
+
+  app.get('/findfriend',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/finfriend.html');
   });
 
 

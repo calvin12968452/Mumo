@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="css/audiojs/audiojs/audio.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
     <script>
             audiojs.events.ready(function() {
               audiojs.createAll();
@@ -38,7 +43,7 @@
     <script type="text/javascript">
         var localData = localStorage.getItem('userData');
         localData = JSON.parse(localData);
-  
+
         userName = localData.userName;
         userEmail = localData.userEmail;
         userPwd = localData.userPwd;
@@ -49,10 +54,10 @@
         country = localData.country;
         city = localData.city;
         photo = localData.photo;
-  
+
         if(photo == undefined){photo = "";}
         photo = photo.split(' ').join('+');
-  
+
         console.log("userName : " + userName);
         console.log("userEmail : " + userEmail);
         console.log("userPwd : " + userPwd);
@@ -109,7 +114,7 @@
                 <div class="left_text">
                     <dl class="row">
                         <dt class="col-sm-12" style="font-size:40px; font-family:Microsoft JhengHei; color: #444444;"><div id="username">username</div></dt>
-                        <dt class="col-sm-12"><img src="css/boy.png" alt="image" width="10%" height="80%"></dt>
+                        <dt class="col-sm-12"><img id="gender" src="css/boy.png" alt="image" width="10%" height="80%"></dt>
                         </br>
                         </br>
                         </br>
@@ -168,7 +173,7 @@
                                 </div>
                             </div>
                         </div>
-                    
+
                     <input type="image" class="rounded-circlelike" src="css/lisa.jpg" alt="image" >
                     <input type="image" class="rounded-circlelike" src="css/rose3.jpg" alt="image" >
 
@@ -226,19 +231,19 @@
                                             <div class="row">
                                                 <div class="col-lg-4">
                                                     <a href="#">
-                                                        <img class="rounded-circle1" src="css/jennie1.jpg" alt="image">
+                                                        <img class="rounded-circle1" src="css/kdrama.jpg" alt="image">
                                                         <h2>日韓影集</h2>
                                                     </a>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <a href="#">
-                                                        <img class="rounded-circle1" src="css/lisa.jpg" alt="image">
+                                                        <img class="rounded-circle1" src="css/kshow.jpg" alt="image">
                                                         <h2>日韓綜藝</h2>
                                                     </a>
                                                 </div>
                                                 <div class="col-lg-4 ">
                                                     <a href="#">
-                                                        <img class="rounded-circle1" src="css/jisoo.png" alt="image">
+                                                        <img class="rounded-circle1" src="css/twshow.jpg" alt="image">
                                                         <h2>台灣綜藝</h2>
                                                     </a>
                                                 </div>
@@ -253,13 +258,13 @@
                                             <div class="row">
                                                 <div class="col-lg-4">
                                                     <a href="#">
-                                                        <img class="rounded-circle1" src="css/min.jpg" alt="image">
+                                                        <img class="rounded-circle1" src="css/cshow.jpg" alt="image">
                                                         <h2>中國綜藝</h2>
                                                     </a>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <a href="#">
-                                                        <img class="rounded-circle1" src="css/rose3.jpg" alt="image">
+                                                        <img class="rounded-circle1" src="css/cdrama.jpg" alt="image">
                                                         <h2>中文影集</h2>
                                                     </a>
                                                 </div>

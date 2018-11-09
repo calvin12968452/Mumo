@@ -78,7 +78,7 @@ var localData = localStorage.getItem('userData');
 
       <!-- Float links to the right. Hide them on small screens -->
       <div class="menucenter" style="font-family:Microsoft JhengHei;">
-        <button onclick="window.location.href='/userpage'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">我的主頁<span class="sr-only">(current)</span></button>
+        <button onclick="window.location.href='/userpage_upload'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">我的主頁<span class="sr-only">(current)</span></button>
         <button onclick="window.location.href='/friends'" class="w3-bar-item w3-button w3-hide-small w3-hover-white">交友</button>
         <div class="w3-dropdown-hover w3-hide-small">
           <button class="w3-button" title="Notifications">聊天室<i class="fa fa-caret-down"></i></button>
@@ -106,7 +106,7 @@ var localData = localStorage.getItem('userData');
                 <div class="left_text">
                     <dl class="row">
                         <dt class="col-sm-12" style="font-size:40px; font-family:Microsoft JhengHei;"><div id="username">username</div></dt>
-                        <dt class="col-sm-12"><img id="gender" src="css/girl.png" alt="image" width="10%"></dt>
+                        <dt class="col-sm-12"><img id="gender" src="css/boy.png" alt="image" width="10%"></dt>
                         </br>
                         </br>
                         </br>
@@ -126,46 +126,7 @@ var localData = localStorage.getItem('userData');
                     </div>
 
                     </br>
-                    <input type="image" class="rounded-circlelike" src="css/jennie1.jpg" alt="image"  data-toggle="modal" data-target="#myModal9" >
-                        <div class="modal" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h2 class="modal-title" id="myModalLabel" style="position:absolute;
-                                        left:20px;">Jennie</h2>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-md-6 ml-auto">
-                                                    <img class="rounded-circlefriendcard" src="css/jennie1.jpg" alt="image">
-                                                    <p style="color:#888888">&nbsp;&nbsp;近日發行2則影片</p>
-                                                </div>
-                                                <div class="col-md-6" style="text-align:left;">
-                                                    <img src="css/girl.png" width="15%">&nbsp;&nbsp;Jennie<br/><br/>
-                                                    <img src="css/birthday.png" width="15%">
-                                                    &nbsp;&nbsp;1996/03/25<br/><br/>
-                                                    <img src="css/music.png" width= "15%">
-                                                    Favorite
-                                                    <img src="css/movie.png" width= "15%">
-                                                    </br><br/>
-                                                    <a style="margin-left:10%">Movie:&nbsp;動作片</a>
-                                                    <a style="margin-left:10%">Music:&nbsp;Kpop</a>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" data-dismiss="modal" onclick="javascript:location.href='file:///Users/chang/Downloads/Mumo-master%202/fuckthisshit/ras%202/Jennie's.html'" class="btn btn-info">拜訪</button>
-                                        <button type="button" data-dismiss="modal" class="btn btn-info">聊天</button>
-                                        <button onclick="myalert()" type="button" class="btn btn-outline-danger">封鎖</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
+                    <input type="image" class="rounded-circlelike" src="css/jennie1.jpg" alt="image" >
                     <input type="image" class="rounded-circlelike" src="css/lisa.jpg" alt="image" >
                     <input type="image" class="rounded-circlelike" src="css/rose3.jpg" alt="image" >
 
@@ -178,7 +139,7 @@ var localData = localStorage.getItem('userData');
                     <HR color="black" size="10" width="90%"  align="center">
 
                     <dl class="row">
-                        <dt class="col-sm-12" style="font-family:comic sans ms; font-size:23px; color:  #444444;"><img src="css/music.png" width= "10%"> 最喜愛的 <img src="css/movie.png" width= "10%"></dt>
+                        <dt class="col-sm-12" style="font-family:comic sans ms; font-size:23px; color:  #444444;"><img src="css/music.png" width= "13%" height="50%"> Favorite <img src="css/movie.png" width= "13%" height="50%"></dt>
                         </br>
                         </br>
                         </br>
@@ -189,7 +150,7 @@ var localData = localStorage.getItem('userData');
                         <dd class="col-sm-7" style="font-size:18px; color: #444444;">Kpop</dd>
                     </dl>
                     <div class="boxself_content">
-                        <a id="constellation" style="font-family: Microsoft JhengHei; font-size:20px;"></a>
+                        <a id="constellation" style="font-family: Microsoft JhengHei; font-size:20px;">浪漫雙魚男</a>
                     </br>
                         <a id="constellation" style="font-family: Microsoft JhengHei; font-size:20px;">
                         🌸慢熟氣質美女🌸</br>
@@ -252,6 +213,33 @@ var localData = localStorage.getItem('userData');
                                                 <div class="col-lg-4">
                                                     <input  type="image"  class="rounded-circle1"  img  src="css/given.jpg" data-toggle="modal" data-target="#myModal4"></br>
                                                     <h2>Given</h2>
+                                                    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                            <div class="modal-content">
+
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                    <h2 class="modal-title" id="myModalLabel" style="position:absolute;left:20px;">Minsoo 生活日誌</h2>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row">
+                                                                            <div class="col-md-7 ml-auto">
+                                                                            </div>
+                                                                            <div class="col-md-5 ml-auto">
+                                                                                <div class="signature">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" data-dismiss="modal">上傳</button>
+                                                                    <button type="button" data-dismiss="modal">取消</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <a href="#"><img class="rounded-circle1" src="css/kt.jpg" alt="image" >
@@ -338,21 +326,24 @@ var localData = localStorage.getItem('userData');
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
-                        
                     </div>
 
                     <!--個人生活影片-->
                     <div class="mb-3">
-                        <h4 style="text-align:center font-size: 30px;" id="uploaded">我的生活日誌</h4>
+                        <h4 style="text-align:center font-size: 30px;">我的生活日誌</h4>
                         <div class="box3_content">
                             <div class="row">
                                 <input type="image" src="css/plus.png" name="image" width="40" height="40" style="margin-bottom:3%; margin-left:90%;" data-toggle="modal" data-target="#myModal">
 
 
-
+<style>
+.centerMore {
+    min-height: calc(140% - (1.75rem * 2));
+}
+</style>
                                 <!-- Modal -->
                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg centerMore" role="document">
                                         <div class="modal-content">
 
                                             <div class="modal-header">
@@ -365,8 +356,24 @@ var localData = localStorage.getItem('userData');
                                                 <div class="container-fluid">
                                                     <div class="row">
                                                         <div class="col-md-7 ml-auto">
-                                                             <div class="embed-responsive embed-responsive-16by9">
+                                                             <!--<div class="embed-responsive embed-responsive-16by9">
                                                                 <iframe width="898" height="520" src="https://www.youtube.com/embed/Fz8bjQZOrNw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                                            </div>-->
+                                                            <label for="basic-url">生活日誌上傳</label>
+                                                            <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="basic-addon3">影片網址</span>
+                                                                </div>
+                                                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                                            </div>
+                                                            <div class="input-group">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                                                    <label class="custom-file-label" for="inputGroupFile04">圖片選擇</label>
+                                                                </div>
+                                                                <div class="input-group-append">
+                                                                    <button class="btn btn-outline-secondary" type="button">確定</button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5 ml-auto">
@@ -382,8 +389,10 @@ var localData = localStorage.getItem('userData');
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
-                                              <button type="button" data-dismiss="modal" class="btn btn-info">上傳</button>
-                                              <button type="button" data-dismiss="modal" class="btn btn-info">取消</button>
+                                                <!--<button type="button" data-dismiss="modal">上傳</button>
+                                                <button type="button" data-dismiss="modal">取消</button>-->
+                                                <button type="button" onclick="window.location.href='/userpage#uploaded'" data-dismiss="modal" class="btn btn-info">上傳</button>
+                                                <button type="button" data-dismiss="modal" class="btn btn-info">取消</button>
                                             </div>
                                         </div>
                                     </div>
@@ -403,7 +412,7 @@ var localData = localStorage.getItem('userData');
                                                 left:20px;">我的生活日誌</h2>
 
                                             </div>
-                                            <div class="modal-body">
+                                            <!--<div class="modal-body">
                                                 <div class="container-fluid">
                                                     <div class="row">
                                                         <div class="col-md-7 ml-auto">
@@ -431,7 +440,7 @@ var localData = localStorage.getItem('userData');
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                             <div class="modal-footer">
                                               <button type="button" data-dismiss="modal" class="btn btn-info">回應</button>
                                               <button type="button" data-dismiss="modal" class="btn btn-info">關閉</button>
@@ -440,7 +449,7 @@ var localData = localStorage.getItem('userData');
                                     </div>
                                 </div>
 
-                                <img class="myImg" src="css/whee.jpg" alt="image" data-toggle="modal" data-target="#myModal3">
+                                <!--<img class="myImg" src="css/whee.jpg" alt="image" data-toggle="modal" data-target="#myModal3">-->
                                 <!-- Modal -->
                                 <div class="modal" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">

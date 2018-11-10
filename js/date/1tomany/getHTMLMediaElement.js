@@ -167,7 +167,7 @@ function getHTMLMediaElement(mediaElement, config) {
         volumeSlider.appendChild(slider);
     }
 
-    if (buttons.has('full-screen')) {
+    /*if (buttons.has('full-screen')) {
         var zoom = document.createElement('div');
         zoom.className = 'control ' + (config.toggle.has('zoom-in') ? 'zoom-out selected' : 'zoom-in');
 
@@ -234,7 +234,7 @@ function getHTMLMediaElement(mediaElement, config) {
         document.addEventListener('fullscreenchange', screenStateChange, false);
         document.addEventListener('mozfullscreenchange', screenStateChange, false);
         document.addEventListener('webkitfullscreenchange', screenStateChange, false);
-    }
+    }*/
 
     if (buttons.has('volume-slider') || buttons.has('full-screen') || buttons.has('record-audio') || buttons.has('record-video')) {
         mediaElementContainer.appendChild(volumeControl);

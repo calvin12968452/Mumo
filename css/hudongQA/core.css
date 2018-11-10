@@ -1,0 +1,245 @@
+/* this is my custom CSS */
+
+@charset "UTF-8";
+
+/* CSS Document */
+
+/*body {
+    font-family: "微軟正黑體", sans-serif;
+    color: #000;
+    margin: 0 auto;
+    font-size: 30px;
+    min-width: 1100px;
+    background-color: #faf4d9;
+}*/
+.opacity_0 {
+    opacity: 0;
+}
+.opacity_100 {
+    opacity: 100;
+}
+a:hover {
+    filter: brightness(110%);
+    text-decoration: none;
+}
+a:focus {
+    outline: 0;
+}
+/*h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+}*/
+
+/* ----------- index   ----------- */
+
+.footer {
+    background-image: url(../img/index/footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 68px;
+}
+.index_container_bg {
+    min-height: 732px;
+    background-image: url(../img/index/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.index_container_bg .index_container {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 732px;
+}
+.index_container_bg .index_container .slogan {
+    position: absolute;
+    left: 400px;
+    top: 73px;
+}
+.index_container_bg .index_container .bear {
+    position: absolute;
+    left: 0px;
+    top: 371px;
+}
+.index_container_bg .index_container .go {
+    position: absolute;
+    left: 981px;
+    top: 631px;
+}
+.index_container_bg .index_container .talk {
+    position: absolute;
+    left: 399px;
+    top: 301px;
+}
+.index_container_bg .index_container .logo {
+    position: absolute;
+    left: 20px;
+    top: 76px;
+}
+.index_container_bg .index_container .test_btn {
+    position: absolute;
+    left: 401px;
+    top: 660px;
+}
+.index_container_bg .index_container .rule_btn {
+    position: absolute;
+    left: 617px;
+    top: 660px;
+}
+.index_container_bg .index_container .fb {
+    position: absolute;
+    left: 1038px;
+    top: 156px;
+}
+
+/* ----------- modal   ----------- */
+
+.myclose {
+    cursor: pointer;
+    position: absolute;
+    right: 225px;
+    top: 10px;
+    z-index: 1;
+}
+.myclose:hover {
+    filter: brightness(110%);
+}
+.modal-dialog {}
+.modal-backdrop {}
+.modal-QAcontent {
+    border: 5px solid #7d4c0e;
+    /*width: 730px;*/
+    margin-left: 27%; 
+    margin-right: 27%;
+}
+.QAbody {
+    padding: 0px;
+}
+
+/* ----------- pages   ----------- */
+
+.pages_container_bg {
+    min-height: 732px;
+    background-image: url(../img/pages/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.pages_container_bg .pages_container {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+.pages_container_bg .pages_container .logo {
+    position: absolute;
+    left: 0px;
+    top: 79px;
+}
+.pages_container_bg .pages_container .slogan {
+    position: absolute;
+    left: 312px;
+    top: 54px;
+}
+.pages_container_bg .pages_container .fb {
+    position: absolute;
+    left: 1038px;
+    top: 110px;
+}
+
+/* ----------- pop   ----------- */
+
+.rule_btn {
+    position: absolute;
+    left: 258px;
+    top: 1659px;
+}
+
+/* ----------- slash_area   ----------- */
+
+.pages_container_bg .pages_container .slash_area {
+    position: absolute;
+    left: 0px;
+    top: 201px;
+    width: 550px;
+    height: 487px;
+    background-image: url(../img/pages/slash_bg.png);
+    position: relative;
+    font-size: 18px;
+    line-height: 36px;
+    color: #776765;
+}
+.pages_container_bg .pages_container .slash_area .mybtn {
+    text-align: center;
+}
+.pages_container_bg .pages_container .slash_area a .mybtn:hover {
+    filter: brightness(110%);
+    text-decoration: none;
+}
+.pages_container_bg .pages_container .slash_area .slash_area_container {
+    width: 470px;
+    margin: 0 auto;
+}
+.question {
+    /*padding-top: 40px;*/
+    margin-bottom: 10px;
+}
+.question .number {
+    font-size: 40px;
+    color: #5ea6d7;
+    float: left;
+    width: 80px;
+    display: inline-block;
+    font-weight: bold;
+}
+.question .q_text {
+    font-size: 20px;
+    color: #5ea6d7;
+    float: right;
+    width: 390px;
+    display: inline-block;
+}
+.answer .radio {
+    margin-bottom: 20px;
+}
+.answer .radio label p {
+    font-size: 18px;
+    line-height: 25px;
+    color: #776765;
+    padding-left: 20px;
+    float: right;
+    width: 450px;
+    margin-bottom: 0px;
+}
+.answer .radio label input[type=radio] {
+    position: relative;
+    top: 5px;
+    float: left;
+}
+[type="radio"].with-gap:checked+label:after {
+    background-color: #FFA500 !important;
+}
+[type="radio"].with-gap:checked+label:before,
+[type="radio"].with-gap:checked+label:after {
+    border: 2px solid #FFA500 !important;
+}
+
+/* ----------- result   ----------- */
+
+.slash_area_container {
+    position: relative;
+}
+.slash_area .illu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.slash_area_container.result .result_word {}
+.slash_area_container.result .result_word {}
+.slash_area_container.result .result_word span {
+    color: #5ea6d7;
+}
+.slash_area_container.result .mybtn {
+    position: relative;
+    margin-bottom: 20px;
+}

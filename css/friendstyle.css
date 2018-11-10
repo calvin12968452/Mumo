@@ -93,16 +93,19 @@ body {
     border: 1px solid #ccc;
     padding: 20px;
     height:1200px;
+    overflow-y: auto;
     /*border-radius:10px;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;*/
 }
 
 
+
+
 .boxfriend_content {
     margin: auto;
     height: auto;
-    max-height: 1000px;
+    max-height: 840px;
     overflow-x: hidden;
     overflow-y: auto;
     border: 1px solid #999;

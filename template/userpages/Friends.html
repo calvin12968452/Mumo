@@ -35,9 +35,11 @@
                 else {
                     swal("再想清楚喔!");
                 }
-        });
-}
-
+            });
+        }
+        function receive() {
+            swal("領取成功", "趕快送禮物給喜歡的朋友吧 <3", "success");
+        }
     </script>
 
 
@@ -239,9 +241,9 @@
             <div class="col-lg-8 mt-lg-0 mt-3" >
 
                 <div class="box2">
-                    <h4>
+                    <!--<h4>
                         你的好友
-                    </h4>
+                    </h4>--><h4>趣味問答</h4>
                     <button type="button" class="btn btn-outline-danger float-right" data-toggle="modal" data-target="#exampleModalCenter">尋找新朋友</button>
                     <!-- Modal -->
                     <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -462,7 +464,181 @@
                         </div>
                     </div>
 
+                        <!-- hudongQA start point-->
+                        <!--<h4>趣味問答</h4>-->
+                            <div class="boxfriend_content">
 
+                                            <div class="q_list test">
+                <h5 style="font-family: Microsoft JhengHei;">【韓劇《客：The Guest》──心智薄弱的人千萬不要看這部…】</h5>
+                <img src="css/hudongQA/picture/theguest.png" width="15%" class="float-right">
+                <p style="text-align: center; font-family: Microsoft JhengHei;">「韓國真正的驅魔劇──《客：The Guest》」</p>
+                <div class="slash_area_container">
+                    <p style="font-family: Microsoft JhengHei;">
+                        <p><span style="color: #E46C0A; font-weight: bold;">
+                           「他來自東海的深處。」“그것은 동쪽 바다 깊은 곳에서 온다.”
+                        </span></p>
+                        <p><span style="font-weight: bold; color: #666;">
+　　                        他的起源，在東海不知名的小村莊裡，又被稱作「朴日圖」。
+                        </span></p>
+                        <p><span style="font-weight:bold; color: #666;">
+　　                        不論男女、不論年齡，都可能被他附身，20年前在某個小村莊殘忍的殺害村民。過了漫長歲月，他都不再露面。然而，主角們居住的城市再次傳出有人被附身，犯下了可怕的殺人案。
+                        </span></p>
+                        <p style="text-align: right; color: #495057; font-family: Microsoft JhengHei;">你…準備好接受挑戰了嗎？</p>
+                    </p>
+                    <a href="javascript:void(0)" onclick="next('t')">
+                        <div class="mybtn float-right">
+                            <img src="css/hudongQA/picture/start_btn.png">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="q_list q1">
+                <div class="slash_area_container" style="font-family: Microsoft JhengHei;">
+                    <div class="question clearfix">
+                        <p class="number">Q1</p>
+                        <p class="q_text">請問《客：The Guest》是屬於哪種類型的連續劇？</p>
+                    </div>
+                    <div class="row">
+                    <div class="answer col-sm-6">
+                        <div class="radio">
+                            <label style="margin-left: 80px">
+                                <input type="radio" name="qq" value="0">
+                                <p>青春、愛情片</p>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label style="margin-left: 80px">
+                                <input type="radio" name="qq" value="1">
+                                <p>驅魔、驚悚片</p>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label style="margin-left: 80px">
+                                <input type="radio" name="qq" value="0">
+                                <p>動畫、卡通片</p>
+                            </label>
+                        </div>
+                    </div>
+                        <div class="answer col-sm-6">
+                            <img src="css/hudongQA/picture/q1.jpg" width="100%">
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" onclick="next(1)">
+                        <div class="float-right">
+                        <img src="css/hudongQA/picture/next_btn.png">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="q_list q2">
+                <div class="slash_area_container" style="font-family: Microsoft JhengHei;">
+                    <div class="question clearfix">
+                        <p class="number">Q2</p>
+                        <p class="q_text">哪一個不是被附身的特徵？</p>
+                    </div>
+                    <div class="answer row">
+                        <div class="radio col-sm-6">
+                            <label style="margin-left: 80px">
+                                <input type="radio" name="qq" value="0">
+                                <p>右眼視力模糊</p>
+                            </label>
+                        </div>
+                        <div class="radio col-sm-6">
+                            <label style="margin-left: 80px">
+                                <input type="radio" name="qq" value="0">
+                                <p>會很想喝水</p>
+                            </label>
+                        </div>
+                        <div class="radio col-sm-6">
+                            <label style="margin-left: 80px">
+                                <input type="radio" name="qq" value="0">
+                                <p>嘴巴發出詭異呢喃聲</p>
+                            </label>
+                        </div>
+                        <div class="radio col-sm-6">
+                            <label style="margin-left: 80px">
+                                <input type="radio" name="qq" value="1">
+                                <p>一直不停嘔吐</p>
+                            </label>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" onclick="next(2)" class="float-right">
+                        <img src="css/hudongQA/picture/next_btn.png">
+                    </a>
+                </div>
+            </div>
+
+            <div class="q_list q3" style="font-family: Microsoft JhengHei;">
+                <div class="slash_area_container">
+                    <div class="question clearfix">
+                        <p class="number">Q3</p>
+                        <p class="q_text">華平的爺爺曾說過自己聞不了汽油味，所以不能坐汽車。可是在劇情裡，華平在爺爺家發現了一個紙盒子，請問裡面裝了什麼？</p>
+                    </div>
+                    <div class="answer row">
+                        <div class="radio col-sm-6">
+                            <label style="margin-left: 80px">
+                                <input type="radio" name="qq" value="0">
+                                <p>早期別人寫給爺爺的情書</p>
+                            </label>
+                        </div>
+                        <div class="radio col-sm-6">
+                            <label style="margin-left: 80px">
+                                <input type="radio" name="qq" value="0">
+                                <p>汽車鑰匙</p>
+                            </label>
+                        </div>
+                        <div class="radio col-sm-6">
+                            <label style="margin-left: 80px">
+                                <input type="radio" name="qq" value="1">
+                                <p>許多的車票</p>
+                            </label>
+                        </div>
+                        <div class="radio col-sm-6">
+                            <label style="margin-left: 80px">
+                                <input type="radio" name="qq" value="0">
+                                <p>香水</p>
+                            </label>
+                        </div>
+                    </div>
+                        <a href="javascript:void(0)" onclick="next(3)">
+                            <img src="css/hudongQA/picture/next_btn.png"  class="float-right">
+                        </a>
+                </div>
+            </div>
+
+            <div class="q_list result1">
+                <div class="slash_area_container result">
+                    <h5 style="font-family: Microsoft JhengHei;">【韓劇《客：The Guest》──心智薄弱的人千萬不要看這部…】</h5>
+                    <img src="css/hudongQA/picture/theguest.png" width="15%" class="float-right">
+                    <p class="result_word" style="padding-top:20px; padding-bottom:20px; margin-left:50px">
+                        真不塊是追劇高手，<br>
+                        這麼細節的問題都可以正確回答，<br>
+                        恭喜你獲得：<span>問答獎勵金5元</span>，<br>
+                        記得即時領取唷！<br>
+                        <button onclick="receive()" type="button" class="btn btn-info" style="margin-left:250px">領取獎勵</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="q_list result2">
+                <div class="slash_area_container result">
+                    <h5 style="font-family: Microsoft JhengHei;">【韓劇《客：The Guest》──心智薄弱的人千萬不要看這部…】</h5>
+                    <img src="css/hudongQA/picture/theguest.png" width="15%" class="float-right">
+                    <p class="result_word" style="padding-top:20px; padding-bottom:20px; margin-left:50px">
+                        很可惜...<br>
+                        差一點點就可以全對了呢！<br>
+                        不過別氣餒，送給你安慰獎，<br>
+                        恭喜你獲得：<span style="color: #e32b85";>問答安慰金3元</span>，<br>
+                        記得即時領取唷！<br>
+                        <button onclick="receive()" type="button" class="btn btn-info" style="margin-left:250px">領取獎勵</button>
+                    </p>
+                </div>
+            </div>
+                            </div><!--hudongQA end-->
+
+                    <h4>
+                        你的好友
+                    </h4>
                     <div class="boxfriend_content">
                         <div class="row">
                             <div class="col-lg-4 text-center">
@@ -602,6 +778,7 @@
                                     </div>
                                 </div>
 
+
                             </div>
                         </div>
                         <div class="row" style="margin-top:20px;">
@@ -684,10 +861,27 @@
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
     </div>
+
+
+        <link rel="stylesheet" href="css/hudongQA/core.css">
+        <div class="modal" tabindex="-1" role="dialog" id="please_check">
+           <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-QAcontent">
+                    <div class="myclose"><img src="css/hudongQA/picture/myclose.png" data-dismiss="modal"></div>
+                     <!--Modal body--> 
+                    <div class="modal-body QAbody">
+                        <img src="css/hudongQA/picture/please_guest.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -695,10 +889,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <!--if something broken, please try to remove the comment mark,
+        but... the please_check of hudongQA will conflict.
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
     <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
     <script type="text/javascript">
         document.getElementById("username").innerHTML = userName;
         document.getElementById("birth").innerHTML = birth;
@@ -723,6 +918,54 @@
     $('#myModal button').click(function () {
         $('#myModal iframe').removeAttr('src');
     });
+
+    $(function () {
+        $(".q_list").hide();
+        $(".test").show();
+    });
+    </script>
+    <script>
+    var v = 0;
+    function next(q) {
+        if (q == 't') {
+            $(".q_list").hide();
+            $(".q1").show();
+        }
+        if (q == 1) {
+            l = $(".q1 .answer input:checked").length;
+            v = $(".q1 .answer input:checked").val();
+            if(!l){
+                $("#please_check").modal('show');
+            }else{
+                $(".q_list").hide();
+                $(".q2").show();
+            }
+        }
+        if (q == 2) {
+            l = $(".q2 .answer input:checked").length;
+            v = v + $(".q2 .answer input:checked").val();
+            if(!l){
+                $("#please_check").modal("show");
+            }else{
+                $(".q_list").hide();
+                $(".q3").show();
+            }
+        }
+        if (q == 3) {
+            l = $(".q3 .answer input:checked").length;
+            v = v + $(".q3 .answer input:checked").val();
+            if(!l){
+                $("#please_check").modal("show");
+            }else{
+                $(".q_list").hide();
+                if(v==111) {
+                    $(".result1").show();
+                }else{
+                    $(".result2").show();
+                }
+            }
+        }
+    }
     </script>
 </body>
 </html>

@@ -19,9 +19,28 @@
             });
     </script>
    <script>
-       function alert(){
+        function myalert() {
+            swal({
+                title: "確定要封鎖?",
+                text: "一旦封鎖將無法取消且本網站亦不負責後續任何責任",
+                icon: "warning",
+                buttons: ["取消", "確認"],
+                dangerMode: true,
+             })
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("封鎖成功", {
+                        icon: "success",
+                    });
+                }
+                else {
+                    swal("再想清楚喔!");
+                }
+            });
+        }
+        function alert(){
             swal("交友邀請已送出!", "請耐心等待對方回覆喔^0^!", "success");
-       }
+        }
    </script>
 
 
@@ -448,13 +467,13 @@
                     <div class="boxfriend_content">
                         <div class="row">
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/chu.png" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/chu.png" data-toggle="modal" data-target="#myModalBoo"></br>
                                 <a style="color:#888888;">
                                     <div>2則新影片</div>
                                     <h2>Hua Chu</h2>
                                 </a>
 
-                                <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal fade" id="myModalBoo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -485,7 +504,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" data-dismiss="modal" onclick="alert()" class="btn btn-info">交友邀請</button>
-                                                <button type="button" class="btn btn-outline-danger">封鎖</button>
+                                                <button type="button" class="btn btn-outline-danger" onclick="myalert()">封鎖</button>
 
                                             </div>
                                         </div>
@@ -531,7 +550,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" data-dismiss="modal" onclick="alert()" class="btn btn-info">交友邀請</button>
-                                                <button type="button" class="btn btn-outline-danger">封鎖</button>
+                                                <button type="button" class="btn btn-outline-danger" onclick="myalert()">封鎖</button>
 
                                             </div>
                                         </div>
@@ -539,68 +558,319 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/hua.png" data-toggle="modal" data-target="#myModal2"><br/>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/hua.png" data-toggle="modal" data-target="#myModalHua"><br/>
                                 <a style="color:#888888;">
                                     <div>3則新影片</div>
                                     <h2>Hua</h2>
                                 </a>
 
+                                <div class="modal fade" id="myModalHua" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h2 class="modal-title" id="myModalLabel" style="position:absolute;
+                                                left:20px;">Hua</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6 ml-auto">
+                                                            <img class="rounded-circlefriendcard" src="css/hua.png" alt="image">
+                                                            <p style="color:#888888">&nbsp;&nbsp;近日發行3則影片</p>
+                                                        </div>
+                                                        <div class="col-md-6 ml-auto" style="text-align:left;">
+                                                            <img src="css/boy.png" width="15%">&nbsp;&nbsp;Hua<br/><br/>
+                                                            <img src="css/birthday.png" width="15%" height="15%">
+                                                            &nbsp;&nbsp;1996/03/18<br/><br/>
+                                                            <img src="css/music.png" width= "15%" height="13%">
+                                                            Favorite
+                                                            <img src="css/movie.png" width= "15%" height="13%">
+                                                            </br><br/>
+                                                            <a style="margin-left:10%">Movie:&nbsp;愛情片</a>
+                                                            <a style="margin-left:10%">Music:&nbsp;kpop</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" data-dismiss="modal" onclick="alert()" class="btn btn-info">交友邀請</button>
+                                                <button type="button" class="btn btn-outline-danger" onclick="myalert()">封鎖</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row" style="margin-top:20px;">
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/jie.png" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/jie.png" data-toggle="modal" data-target="#myModalJie"></br>
                                 <a style="color:#888888;">
                                     <div>0則新影片</div>
                                     <h2>JJ Wang</h2>
                                 </a>
 
+                                <div class="modal fade" id="myModalJie" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h2 class="modal-title" id="myModalLabel" style="position:absolute;
+                                                left:20px;">JJ Wang</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6 ml-auto">
+                                                            <img class="rounded-circlefriendcard" src="css/jie.png" alt="image">
+                                                            <p style="color:#888888">&nbsp;&nbsp;近日發行0則影片</p>
+                                                        </div>
+                                                        <div class="col-md-6 ml-auto" style="text-align:left;">
+                                                            <img src="css/boy.png" width="15%">&nbsp;&nbsp;JJ Wang<br/><br/>
+                                                            <img src="css/birthday.png" width="15%" height="15%">
+                                                            &nbsp;&nbsp;1997/07/15<br/><br/>
+                                                            <img src="css/music.png" width= "15%" height="13%">
+                                                            Favorite
+                                                            <img src="css/movie.png" width= "15%" height="13%">
+                                                            </br><br/>
+                                                            <a style="margin-left:10%">Movie:&nbsp;警匪片</a>
+                                                            <a style="margin-left:10%">Music:&nbsp;流行樂</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" data-dismiss="modal" onclick="alert()" class="btn btn-info">交友邀請</button>
+                                                <button type="button" class="btn btn-outline-danger" onclick="myalert()">封鎖</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/han.jpg" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/han.jpg" data-toggle="modal" data-target="#myModalUncle"></br>
                                 <a style="color:#888888;">
                                     <div>0則新影片</div>
                                     <h2>漢偉</h2>
                                 </a>
 
+                                <div class="modal fade" id="myModalUncle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h2 class="modal-title" id="myModalLabel" style="position:absolute;
+                                                left:20px;">漢偉</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6 ml-auto">
+                                                            <img class="rounded-circlefriendcard" src="css/han.jpg" alt="image">
+                                                            <p style="color:#888888">&nbsp;&nbsp;近日發行0則影片</p>
+                                                        </div>
+                                                        <div class="col-md-6 ml-auto" style="text-align:left;">
+                                                            <img src="css/boy.png" width="15%">&nbsp;&nbsp;漢偉<br/><br/>
+                                                            <img src="css/birthday.png" width="15%" height="15%">
+                                                            &nbsp;&nbsp;1997/09/27<br/><br/>
+                                                            <img src="css/music.png" width= "15%" height="13%">
+                                                            Favorite
+                                                            <img src="css/movie.png" width= "15%" height="13%">
+                                                            </br><br/>
+                                                            <a style="margin-left:10%">Movie:&nbsp;科幻/奇幻片</a>
+                                                            <a style="margin-left:10%">Music:&nbsp;kpop</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" data-dismiss="modal" onclick="alert()" class="btn btn-info">交友邀請</button>
+                                                <button type="button" class="btn btn-outline-danger" onclick="myalert()">封鎖</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/jia.png" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/jia.png" data-toggle="modal" data-target="#myModalJia"></br>
                                 <a style="color:#888888;">
                                     <div>3則新影片</div>
                                     <h2>旻珈</h2>
                                 </a>
 
+                                <div class="modal fade" id="myModalJia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h2 class="modal-title" id="myModalLabel" style="position:absolute;
+                                                left:20px;">旻珈</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6 ml-auto">
+                                                            <img class="rounded-circlefriendcard" src="css/jia.png" alt="image">
+                                                            <p style="color:#888888">&nbsp;&nbsp;近日發行3則影片</p>
+                                                        </div>
+                                                        <div class="col-md-6 ml-auto" style="text-align:left;">
+                                                            <img src="css/girl.png" width="15%">&nbsp;&nbsp;旻珈<br/><br/>
+                                                            <img src="css/birthday.png" width="15%" height="15%">
+                                                            &nbsp;&nbsp;1997/10/09<br/><br/>
+                                                            <img src="css/music.png" width= "15%" height="13%">
+                                                            Favorite
+                                                            <img src="css/movie.png" width= "15%" height="13%">
+                                                            </br><br/>
+                                                            <a style="margin-left:10%">Movie:&nbsp;動畫/卡通片</a>
+                                                            <a style="margin-left:10%">Music:&nbsp;流行樂</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" data-dismiss="modal" onclick="alert()" class="btn btn-info">交友邀請</button>
+                                                <button type="button" class="btn btn-outline-danger" onclick="myalert()">封鎖</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="row" style="margin-top:20px;">
 
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/long.png" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/long.png" data-toggle="modal" data-target="#myModalLong"></br>
                                 <a style="color:#888888;">
                                     <div>4則新影片</div>
                                     <h2>鍾蓉蓉</h2>
                                 </a>
 
+                                <div class="modal fade" id="myModalLong" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h2 class="modal-title" id="myModalLabel" style="position:absolute;
+                                                left:20px;">鍾蓉蓉</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6 ml-auto">
+                                                            <img class="rounded-circlefriendcard" src="css/long.png" alt="image">
+                                                            <p style="color:#888888">&nbsp;&nbsp;近日發行4則影片</p>
+                                                        </div>
+                                                        <div class="col-md-6 ml-auto" style="text-align:left;">
+                                                            <img src="css/girl.png" width="15%">&nbsp;&nbsp;鍾蓉蓉<br/><br/>
+                                                            <img src="css/birthday.png" width="15%" height="15%">
+                                                            &nbsp;&nbsp;1996/10/31<br/><br/>
+                                                            <img src="css/music.png" width= "15%" height="13%">
+                                                            Favorite
+                                                            <img src="css/movie.png" width= "15%" height="13%">
+                                                            </br><br/>
+                                                            <a style="margin-left:10%">Movie:&nbsp;喜劇片</a>
+                                                            <a style="margin-left:10%">Music:&nbsp;輕音樂</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" data-dismiss="modal" onclick="alert()" class="btn btn-info">交友邀請</button>
+                                                <button type="button" class="btn btn-outline-danger" onclick="myalert()">封鎖</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/wan.png" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/wan.png" data-toggle="modal" data-target="#myModalWan"></br>
                                 <a style="color:#888888;">
                                     <div>1則新影片</div>
                                     <h2>婉綾</h2>
                                 </a>
 
-
+                                <div class="modal fade" id="myModalWan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h2 class="modal-title" id="myModalLabel" style="position:absolute;
+                                                left:20px;">婉綾</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6 ml-auto">
+                                                            <img class="rounded-circlefriendcard" src="css/wan.png" alt="image">
+                                                            <p style="color:#888888">&nbsp;&nbsp;近日發行1則影片</p>
+                                                        </div>
+                                                        <div class="col-md-6 ml-auto" style="text-align:left;">
+                                                            <img src="css/girl.png" width="15%">&nbsp;&nbsp;婉綾<br/><br/>
+                                                            <img src="css/birthday.png" width="15%" height="15%">
+                                                            &nbsp;&nbsp;1998/08/08<br/><br/>
+                                                            <img src="css/music.png" width= "15%" height="13%">
+                                                            Favorite
+                                                            <img src="css/movie.png" width= "15%" height="13%">
+                                                            </br><br/>
+                                                            <a style="margin-left:10%">Movie:&nbsp;懸疑片</a>
+                                                            <a style="margin-left:10%">Music:&nbsp;巴薩諾瓦</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" data-dismiss="modal" onclick="alert()" class="btn btn-info">交友邀請</button>
+                                                <button type="button" class="btn btn-outline-danger" onclick="myalert()">封鎖</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-4 text-center">
-                                <input  type="image"  class="rounded-circlefriend"  img  src="css/pin.png" data-toggle="modal" data-target="#myModal2"></br>
+                                <input  type="image"  class="rounded-circlefriend"  img  src="css/pin.png" data-toggle="modal" data-target="#myModalPin"></br>
                                 <a style="color:#888888;">
                                     <div>0則新影片</div>
                                     <h2>至秦</h2>
                                 </a>
 
-
+                                <div class="modal fade" id="myModalPin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h2 class="modal-title" id="myModalLabel" style="position:absolute;
+                                                left:20px;">至秦</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6 ml-auto">
+                                                            <img class="rounded-circlefriendcard" src="css/pin.png" alt="image">
+                                                            <p style="color:#888888">&nbsp;&nbsp;近日發行0則影片</p>
+                                                        </div>
+                                                        <div class="col-md-6 ml-auto" style="text-align:left;">
+                                                            <img src="css/girl.png" width="15%">&nbsp;&nbsp;至秦<br/><br/>
+                                                            <img src="css/birthday.png" width="15%" height="15%">
+                                                            &nbsp;&nbsp;1998/09/01<br/><br/>
+                                                            <img src="css/music.png" width= "15%" height="13%">
+                                                            Favorite
+                                                            <img src="css/movie.png" width= "15%" height="13%">
+                                                            </br><br/>
+                                                            <a style="margin-left:10%">Movie:&nbsp;恐怖片</a>
+                                                            <a style="margin-left:10%">Music:&nbsp;嘻哈音樂</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" data-dismiss="modal" onclick="alert()" class="btn btn-info">交友邀請</button>
+                                                <button type="button" class="btn btn-outline-danger" onclick="myalert()">封鎖</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row" style="margin-top:20px;">

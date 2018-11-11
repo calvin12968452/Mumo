@@ -217,15 +217,15 @@ function myalert() {
 
           <div class="row" style="text-align: center">
             <div class="col-1">
-              <img src="css/june.jpg" class="w3-circle" style="width: 65%; height: 55%;" onclick="document.getElementById('modal-content3').style.display='block'"><br/>
+              <img src="css/june.jpg" class="w3-circle" style="width: 65%; height: 55%;" onclick="document.getElementById('modal-contentJune').style.display='block'"><br/>
               <h2 style="font-size: 25px;">阿郡</h2>
             </div>
             <div class="col-2">
-              <img src="css/fish.jpg" class="w3-circle" style="width: 65%; height: 55%;" onclick="document.getElementById('modal-content4').style.display='block'"><br/>
+              <img src="css/fish.jpg" class="w3-circle" style="width: 65%; height: 55%;" onclick="document.getElementById('modal-contentFish').style.display='block'"><br/>
               <h2 style="font-size: 25px;">碩魚</h2>
             </div>
             <div class="col-3">
-              <img src="css/yee.png" class="w3-circle" style="width: 65%; height: 55%;" onclick="document.getElementById('modal-content5').style.display='block'"><br/>
+              <img src="css/yee.png" class="w3-circle" style="width: 65%; height: 55%;" onclick="document.getElementById('modal-contentYee').style.display='block'"><br/>
               <h2 style="font-size: 25px;">Yee</h2>
             </div>
           </div>
@@ -323,12 +323,12 @@ function myalert() {
             <div class="col-60">
               <img src="css/boy.png" width="10%">&nbsp;Don Don<br/><br/>
               <img src="css/birthday.png" width="10%">
-              1997/05/10<br/><br/>
+              2000/11/14<br/><br/>
               <img src="css/music.png" width= "10%">
               Favorite
               <img src="css/movie.png" width= "10%"><br/><br/>
-              <a style="margin-left:10%">Movie:&nbsp;喜劇片</a>
-              <a style="margin-left:10%">Music:&nbsp;KPOP</a>
+              <a style="margin-left:10%">Movie:&nbsp;武俠片</a>
+              <a style="margin-left:10%">Music:&nbsp;爵士樂</a>
             </div>
           </div>
         </div>
@@ -358,7 +358,7 @@ function myalert() {
               <img src="css/music.png" width= "10%">
               Favorite
               <img src="css/movie.png" width= "10%"><br/><br/>
-              <a style="margin-left:10%">Movie:&nbsp;>愛情片</a>
+              <a style="margin-left:10%">Movie:&nbsp;愛情片</a>
               <a style="margin-left:10%">Music:&nbsp;KPOP</a>
             </div>
           </div>
@@ -370,7 +370,96 @@ function myalert() {
       </div>
     </div>
 
+    <div class="w3-modal" id="modal-contentJune">
+      <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="margin-top: -50px; margin-bottom: 50px;max-width:500px">
+        <span onclick="document.getElementById('modal-contentJune').style.display='none'" class="close" title="Close Modal">&times;</span>
 
+        <div class="modal-header">
+          <h2>阿郡</h2>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-40">
+              <img class="w3-circle" src="css/june.jpg" width="100%">
+            </div>
+            <div class="col-60">
+              <img src="css/girl.png" width="10%">&nbsp;阿郡<br/><br/>
+              <img src="css/birthday.png" width="10%">
+              1996/11/15<br/><br/>
+              <img src="css/music.png" width= "10%">
+              Favorite
+              <img src="css/movie.png" width= "10%"><br/><br/>
+              <a style="margin-left:10%">Movie:&nbsp;古裝劇</a>
+              <a style="margin-left:10%">Music:&nbsp;流行樂</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <input style="width:40%" type="number" id="amount" name="amount" placeholder="請選擇數量">
+          <button class="button" onclick="myalert()">送禮</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-modal" id="modal-contentFish">
+      <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="margin-top: -50px; margin-bottom: 50px;max-width:500px">
+        <span onclick="document.getElementById('modal-contentFish').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <div class="modal-header">
+          <h2>碩魚</h2>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-40">
+              <img class="w3-circle" src="css/fish.jpg" width="100%">
+            </div>
+            <div class="col-60">
+              <img src="css/boy.png" width="10%">&nbsp;碩魚<br/><br/>
+              <img src="css/birthday.png" width="10%">
+              1996/02/24<br/><br/>
+              <img src="css/music.png" width= "10%">
+              Favorite
+              <img src="css/movie.png" width= "10%"><br/><br/>
+              <a style="margin-left:10%">Movie:&nbsp;恐怖片</a>
+              <a style="margin-left:10%">Music:&nbsp;嘻哈</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <input style="width:30%" type="number" id="amount" name="amount" placeholder="請選擇數量">
+          <button class="button" onclick="myalert()">送禮</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-modal" id="modal-contentYee">
+      <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="margin-top: -50px; margin-bottom: 50px;max-width:500px">
+        <span onclick="document.getElementById('modal-contentYee').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <div class="modal-header">
+          <h2>Yee</h2>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-40">
+              <img class="w3-circle" src="css/yee.png" width="100%">
+            </div>
+            <div class="col-60">
+              <img src="css/boy.png" width="10%">&nbsp;Yee<br/><br/>
+              <img src="css/birthday.png" width="10%">
+              1997/03/21<br/><br/>
+              <img src="css/music.png" width= "10%">
+              Favorite
+              <img src="css/movie.png" width= "10%"><br/><br/>
+              <a style="margin-left:10%">Movie:&nbsp;賀歲片</a>
+              <a style="margin-left:10%">Music:&nbsp;流行樂</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <input style="width:30%" type="number" id="amount" name="amount" placeholder="請選擇數量">
+          <button class="button" onclick="myalert()">送禮</button>
+        </div>
+      </div>
+    </div>
 
     <!-- Pagination -->
     <div class="center">

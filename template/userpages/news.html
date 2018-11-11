@@ -14,6 +14,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="css/audiojs/audiojs/audio.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
             audiojs.events.ready(function() {
               audiojs.createAll();
@@ -36,6 +37,37 @@
                                                 o(r.getPlayerState()!==YT.PlayerState.CUED)},
                                                 onStateChange:function(e){e.data===YT.PlayerState.ENDED&&o(!1)}}})}
 
+    </script>
+    <script type="text/javascript">
+        var localData = localStorage.getItem('userData');
+        localData = JSON.parse(localData);
+        console.log("localData : " + localData);
+
+        var userName = localData.userName;
+        var userEmail = localData.userEmail;
+        var userPwd = localData.userPwd;
+        var id = localData.id;
+        var gender = localData.gender;
+        var constellation = localData.constellation;
+        var birth = localData.birth;
+        var country = localData.country;
+        var city = localData.city;
+        var photo = localData.photo;
+
+        if(photo == undefined){photo = "";}
+
+        photo = photo.split(' ').join('+');
+
+        console.log("userName : " + userName);
+        console.log("userEmail : " + userEmail);
+        console.log("userPwd : " + userPwd);
+        console.log("id : " + id);
+        console.log("gender : " + gender);
+        console.log("constellation : " + constellation);
+        console.log("birth : " + birth);
+        console.log("country : " + country);
+        console.log("city : " + city);
+        console.log("photo : " + photo);
     </script>
 </head>
 <body>
@@ -222,7 +254,34 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        document.getElementById("username").innerHTML = userName;
+        document.getElementById("birth").innerHTML = birth;
+        document.getElementById("country city").innerHTML = country + " - " + city;
+        if(gender == "Male"){
+            $('#gender').attr('src', 'css/boy.png');
+            var adj = "浪漫", whichGender = "男";
+        }else if(gender == "Female"){
+            $('#gender').attr('src', 'css/girl.png');
+            var adj = "可愛", whichGender = "女";
+        }
+        document.getElementById("constellation").innerHTML = adj + whichGender + "  - " + constellation;
+        if(photo != "" && photo != undefined){ $('.profile-pic').attr('src', "data:image/jpg;base64, " + photo); }
+    </script>
+    <script>
+    $('#link').click(function () {
+        var src = 'http://www.youtube.com/v/FSi2fJALDyQ&amp;autoplay=1';
+        $('#myModal').modal('show');
+        $('#myModal iframe').attr('src', src);
+    });
 
+    $('#myModal button').click(function () {
+        $('#myModal iframe').removeAttr('src');
+    });
+    </script>
 
 
     <script type="text/javascript">

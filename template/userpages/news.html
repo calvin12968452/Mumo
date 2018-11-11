@@ -20,6 +20,27 @@
               audiojs.createAll();
             });
     </script>
+    <script>
+        function myalert() {
+            swal({
+                title: "確定要參加此人的約會?",
+                text: "一旦參加取消將需要審查若是無故參加缺席系統將會有懲罰",
+                icon: "warning",
+                buttons: ["取消", "確認"],
+                dangerMode: true,
+             })
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("參加成功您的邀請代碼為 j23hya1fij0nghl9kmw 請複製", {
+                        icon: "success",
+                    });
+                }
+                else {
+                    swal("或許有更好對象^0^!");
+                }
+            });
+        }
+    </script>
      <script>
             function onYouTubeIframeAPIReady(){var e=document.getElementById("youtube-audio"),
                                                 t=document.createElement("img");
@@ -117,7 +138,7 @@
             <span class="w3-opacity" style="color: red;font-weight: bold;">15個人已報名</span></br>
           </div>
           <div class="col-right">
-            <button class="button button-1" onclick="alert()">
+            <button class="button button-1" onclick="myalert()">
               <i class="fa fa-bookmark"></i>
               報名
             </button>
@@ -152,7 +173,7 @@
             <span class="w3-opacity" style="color: red;font-weight: bold;">10個人已報名</span></br>
           </div>
           <div class="col-right">
-            <button class="button button-1" onclick="alert()">
+            <button class="button button-1" onclick="myalert()">
               <i class="fa fa-bookmark"></i>
               報名
             </button>
@@ -185,7 +206,7 @@
               <span class="w3-opacity" style="color: red;font-weight: bold;">報名人數已滿</span></br>
             </div>
             <div class="col-right">
-              <button class="button button-1" onclick="alert()">
+              <button class="button button-1" onclick="myalert()">
                 <i class="fa fa-bookmark"></i>
                 報名
               </button>
@@ -218,7 +239,7 @@
                 <span class="w3-opacity" style="color: red;font-weight: bold;">14個人已報名</span></br>
               </div>
               <div class="col-right">
-                <button class="button button-1" onclick="alert()">
+                <button class="button button-1" onclick="myalert()">
                   <i class="fa fa-bookmark"></i>
                   報名
                 </button>

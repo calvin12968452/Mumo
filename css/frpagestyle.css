@@ -74,6 +74,7 @@ body {
     padding-right: 5%;
     width: 50%;
     height: 300px;
+    margin-bottom: 50px;
 }
 /*rgba(230, 230, 250, 0.25)*/
 .box2 {
@@ -105,7 +106,7 @@ body {
     padding: 20px;
     background: #ecd6c7;
     height: 1000px;
-    max-height: 730px;
+    max-height: 800px;
     overflow-x: hidden;
     overflow-y: auto;
     /*border-radius:10px;
@@ -424,6 +425,19 @@ button.close {
 .mwt_border{
 width: auto;
 height: auto;
+text-align: left;
+color: #696969;
+background: #ecd6c7;
+position: relative;
+border: solid 1px #999;
+margin-left: 50px;
+margin-right: -20px;
+top: -50px;
+padding: 15px;
+}
+/*.mwt_border{
+width: auto;
+height: auto;
 text-align: center;
 color: #fff;
 background: #252525;
@@ -432,98 +446,7 @@ border: solid 1px #252525;
 margin-left: 80px;
 top: -50px;
 padding: 0px;
-}
-/*箭頭右*/
-.signature .mwt_border .arrow_r_int{
-    width:0px;
-    height:0px;
-    border-width:15px;
-    border-style:solid;
-    border-color:transparent transparent transparent #252525;
-    position:absolute;
-    top:20%;
-    right:-30px;
-}
-/*箭頭右-邊框*/
-.signature .mwt_border .arrow_r_out{
-    width:0px;
-    height:0px;
-    border-width:15px;
-    border-style:solid;
-    border-color:transparent transparent transparent #252525;
-    position:absolute;
-    top:20%;
-    right:-29px;
-}
-
-/*箭頭左*/
-.signature .mwt_border .arrow_l_int{
-    width:0px;
-    height:0px;
-    border-width:15px;
-    border-style:solid;
-    border-color:transparent #252525 transparent  transparent ;
-    position:absolute;
-    top:20%;
-    left:-30px;
-}
-/*箭頭左-邊框*/
-.signature .mwt_border .arrow_l_out{
-    width:0px;
-    height:0px;
-    border-width:15px;
-    border-style:solid;
-    border-color:transparent #252525 transparent transparent ;
-    position:absolute;
-    top:20%;
-    left:-29px;
-}
-
-/*箭頭上*/
-.signature .mwt_border .arrow_t_int{
-    width:0px;
-    height:0px;
-    border-width:15px;
-    border-style:solid;
-    border-color:transparent transparent #252525 transparent ;
-    position:absolute;
-    top:-30px;
-    left:40px;
-}
-/*箭頭上-邊框*/
-.signature .mwt_border .arrow_t_out{
-    width:0px;
-    height:0px;
-    border-width:15px;
-    border-style:solid;
-    border-color:transparent transparent #252525 transparent ;
-    position:absolute;
-    top:-29px;
-    left:40px;
-}
-
-/*箭頭下*/
-.signature .mwt_border .arrow_b_int{
-    width:0px;
-    height:0px;
-    border-width:15px;
-    border-style:solid;
-    border-color:#252525 transparent transparent transparent ;
-    position:absolute;
-    bottom:-30px;
-    right:50px;
-}
-/*箭頭下-邊框*/
-.signature .mwt_border .arrow_b_out{
-    width:0px;
-    height:0px;
-    border-width:15px;
-    border-style:solid;
-    border-color:#252525 transparent transparent transparent ;
-    position:absolute;
-    bottom:-29px;
-    right:50px;
-}
+}*/
 .signature .signature-profile{
     width: 60px; 
     height: 60px;
@@ -558,4 +481,86 @@ padding: 0px;
     padding: 0px;
     width: 100%;
     font-family: comic sans ms;
+}
+
+/* June's Life */
+/*lifeperson01*/
+.rounded-circle01{
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    vertical-align:middle;
+}
+
+/*like 01*/
+.button-like01 {
+  border: 2px solid #8a8a8a;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 12px;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  border-radius: 30px;
+  color: #8a8a8a;
+  transition: all ease 0.4s;
+}
+
+.button-like01 span {
+  margin-left: 10px;
+}
+
+.button-like01 .fa,
+.button-like01 span {
+  transition: all ease 0.4s;
+}
+
+.button-like01:focus {
+  background-color: transparent;
+}
+
+.button-like01:focus .fa,
+.button-like01:focus span {
+  color: #8a8a8a;
+}
+
+.button-like01:hover {
+  border-color: #cc4b37;
+  background-color: transparent;
+}
+
+.button-like01:hover .fa,
+.button-like01:hover span {
+  color: #cc4b37;
+}
+
+.liked {
+  background-color: #cc4b37;
+  border-color: #cc4b37;
+}
+
+.liked .fa,
+.liked {
+  color: #fefefe;
+}
+
+.liked:focus {
+  background-color: #cc4b37;
+}
+
+.liked:focus .fa,
+.liked:focus span {
+  color: #fefefe;
+}
+
+.liked:hover {
+  background-color: #cc4b37;
+  border-color: #cc4b37;
+}
+
+.liked:hover .fa,
+.liked:hover span {
+  color: #fefefe;
 }

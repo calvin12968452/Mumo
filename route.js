@@ -73,8 +73,9 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/group1.html');
   });
 
-  app.get('/Jennie',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/Jennie.html');
+  // page of friends
+  app.get('/June',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/June.html');
   });
 
   app.get('/message',function(req, res){

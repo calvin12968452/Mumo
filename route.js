@@ -70,7 +70,7 @@ module.exports = function(app, express, ls, passport){
   });
 
   app.get('/group1',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/group1.html');
+    res.sendFile(__dirname + '/template/userpages/group.html');
   });
 
   app.get('/Jennie',function(req, res){
@@ -97,17 +97,12 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/coupon.html');
   });
 
+  app.get('/mycoupon',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/mycoupon.html');
+  });
+
   app.get('/userpage',function(req, res){
     res.sendFile(__dirname + '/template/userpages/userpage.html');
-  });
-
-
-  app.get('/userpage_upload',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/makeFoolOfJudge/userpage_clone.html');
-  });
-
-  app.get('/findfriend',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/findfriend.html');
   });
 
   //route
@@ -137,10 +132,6 @@ module.exports = function(app, express, ls, passport){
 
   app.get('/chatroom',function(req, res){
     res.sendFile(__dirname + '/template/userpages/chatroom.html');
-  });
-
-  app.get('/findfriend',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/finfriend.html');
   });
 
 

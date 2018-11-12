@@ -70,7 +70,7 @@ module.exports = function(app, express, ls, passport){
   });
 
   app.get('/group1',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/group.html');
+    res.sendFile(__dirname + '/template/userpages/group1.html');
   });
 
   // page of friends

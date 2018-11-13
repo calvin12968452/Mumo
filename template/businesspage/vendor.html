@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="css/vendor.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="/js/jquery.min.js" type="text/javascript"></script>
-<script src="/js/ajaxupload.js" type="text/javascript"></script>
+<!--<script src="/js/jquery.min.js" type="text/javascript"></script>
+<script src="/js/ajaxupload.js" type="text/javascript"></script>-->
 </head>
 
 <body>
@@ -115,6 +115,43 @@
                 </div>
                 </br>
             </div>
+
+                            <!--<img class="profile-pic rounded-circle border border-secondary" src="css/img.png" alt="image">
+                <div class="p-image">
+                    <input class="file-upload" type="file" accept="image/*" style="display: none;">
+                </div>-->
+                   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+<script>
+                    $(document).ready(function() {
+        var readURL = function(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('.profile-pic').attr('src', e.target.result);
+                    var photo_link =  e.target.result;
+                    console.log("photo link : " + photo_link.replace("data:image/jpeg;base64,", ""));
+                    console.log("typeof link : " + typeof photo_link);
+                    show_savebtn();
+                    //save_photo(photo_link.replace("data:image/jpeg;base64,", ""));
+                    // The link is a text based on base64.
+                    // The link can be save to database in the future.
+                    // When user is online, check the text if existed at server and then send to client with query.
+                    // Check in ac.html and userpage.html and replace the photo link with the one from database.
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $(".file-upload").on('change', function(){
+            readURL(this);
+        });
+        $(".profile-pic").on('click', function() {
+           $(".file-upload").click();
+        });
+    });
+</script>
+
         <!-- End Left Column -->
         </div>
 
@@ -131,19 +168,25 @@
                     <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
                         <div class="imgcontainer">
                             <span onclick="document.getElementById('more').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
-                                <form id="img-upload-form" method="post" accept-charset="utf-8" onsubmit="return submitImageForm(this)">
-                                    <img id="logo-img" onclick="document.getElementById('add-new-logo').click();" src="css/img.png"/>
-                                    <input type="file" style="display: none" id="add-new-logo" name="file" accept="image/*" onchange="addNewLogo(this)"/>
+                                <!--<form id="img-upload-form" method="post" accept-charset="utf-8" onsubmit="return submitImageForm(this)">-->
+                                    <!--<img id="logo-img" onclick="document.getElementById('add-new-logo').click();" src="css/img.png"/>
+                                    <input type="file" style="display: none" id="add-new-logo" name="file" accept="image/*" onchange="addNewLogo(this)"/>-->
+
+                            <img class="profile-pic rounded-circle border border-secondary" src="css/img.png" alt="image">
+                <div class="p-image">
+                    <input class="file-upload" type="file" accept="image/*" style="display: none;">
+                </div>
+
                                 </form>
                         </div>
 
-                        <form class="w3-container" action="/action_page.php">
+                        <form class="w3-container">
                             <div class="row">
                                 <div class="col-1">
                                     <label for="name">優惠名稱:</label>
                                 </div>
                                 <div class="col-2">
-                                    <input type="text" id="name" name="couponname" placeholder="The Incredible Movie Offer">
+                                    <input type="text" id="name"  placeholder="The Incredible Movie Offer">
                                 </div>
                             </div>
                             <div class="row">
@@ -151,7 +194,7 @@
                                     <label for="date">發布期間:</label>
                                 </div>
                                 <div class="col-2">
-                                    <input style="width:30%" type="date" id="date" name="date"> 至 <input style="width:30%" type="date" id="date" name="date">
+                                    <input style="width:30%" type="date" id="date" > 至 <input style="width:30%" type="date" id="date" >
                                 </div>
                             </div>
                             <div class="row">
@@ -159,7 +202,7 @@
                                     <label for="discount">限量:</label>
                                 </div>
                                 <div class="col-2">
-                                    <input style="width:30%"type="number" id="amount" name="amount" placeholder="30">
+                                    <input style="width:30%"type="number" id="amount"  placeholder="30">
                                 </div>
                             </div>
                             <div class="row">
@@ -167,11 +210,13 @@
                                     <label for="discount">優惠說明:</label>
                                 </div>
                                 <div class="col-2">
-                                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:80px"></textarea>
+                                    <textarea id="subject"  placeholder="Write something.." style="height:80px"></textarea>
                                 </div>
                             </div>
                             <div class="row">
-                                <input type="submit" value="確認">
+
+                                <!--<a href="vendor_upload"><input type="submit" value="submit"></a>-->
+                                <button value="確認" onclick="window.location.href='/vendor_upload'" class="w3-right sub"><a href="vendor_upload" style="text-decoration: none">確認</a></button>
                             </div>
                         </form>
                     </div>
@@ -185,7 +230,7 @@
                 <div class="w3-container w3-card w3-round w3-margin" style="background-color: #e3ffed;">
                     <h3 style="color: #339966; font-weight: bold;">買三送一 TRAIN TO BUSAN/ 50 張</h3>
                     <span class="w3-right w3-opacity">發布期間: 2018/8/1 至 2018/8/20</span></br>
-                    <span class="w3-right w3-opacity" style="color: black;font-weight: bold;">已領8張 尚有42張</span></br>
+                    <span class="w3-right w3-opacity" style="color: black;font-weight: bold;">已領42張 尚有8張</span></br>
                     <i class="w3-right fa fa-heart" style="color: #cc4b37"><span> 99 Likes</i></span>
                     <hr>
                     <div class="row">
@@ -195,7 +240,7 @@
                         <div class="col-2">
                             <p>限量: 50 張</br>
                             優惠說明: </br>
-                            ● 使用期間 2018/8/1 到 2018/8/20。</br>
+                            ● 使用期間 2018/11/11 到 2018/11/30。</br>
                             ● 週一至週五 早上9:00到12:00  </br>
                             請將 QR CODE 交付店家掃描，即可獲得優惠卷乙張。</p>
                         </div>

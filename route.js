@@ -70,12 +70,11 @@ module.exports = function(app, express, ls, passport){
   });
 
   app.get('/group1',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/group1.html');
+    res.sendFile(__dirname + '/template/userpages/group.html');
   });
 
-  // page of friends
-  app.get('/June',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/June.html');
+  app.get('/Jennie',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/Jennie.html');
   });
 
   app.get('/message',function(req, res){
@@ -106,15 +105,6 @@ module.exports = function(app, express, ls, passport){
     res.sendFile(__dirname + '/template/userpages/userpage.html');
   });
 
-  app.get('/userpage_upload',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/makeFoolOfJudge/userpage_clone.html');
-  });
-
-  app.get('/findfriend',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/findfriend.html');
-  });
-
-
   //route
   app.get('/normal',function(req, res){
     res.sendFile(__dirname + '/template/normal/normal.html');
@@ -122,6 +112,10 @@ module.exports = function(app, express, ls, passport){
 
   app.get('/vendor',function(req, res){
     res.sendFile(__dirname + '/template/businesspage/vendor.html');
+  });
+
+  app.get('/vendor_upload',function(req, res){
+    res.sendFile(__dirname + '/template/businesspage/vendor_upload.html');
   });
 
   app.get('/signup',function(req, res){

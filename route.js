@@ -70,11 +70,11 @@ module.exports = function(app, express, ls, passport){
   });
 
   app.get('/group1',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/group.html');
+    res.sendFile(__dirname + '/template/userpages/group1.html');
   });
 
-  app.get('/Jennie',function(req, res){
-    res.sendFile(__dirname + '/template/userpages/Jennie.html');
+  app.get('/June',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/June.html');
   });
 
   app.get('/message',function(req, res){
@@ -103,6 +103,14 @@ module.exports = function(app, express, ls, passport){
 
   app.get('/userpage',function(req, res){
     res.sendFile(__dirname + '/template/userpages/userpage.html');
+  });
+
+  app.get('/userpage_upload',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/makeFoolOfJudge/userpage_clone.html');
+  });
+
+  app.get('/findfriend',function(req, res){
+    res.sendFile(__dirname + '/template/userpages/findfriend.html');
   });
 
   //route
